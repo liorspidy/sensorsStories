@@ -1,0 +1,112 @@
+.bookPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 4rem);
+    position: relative;
+}
+
+.book {
+    object-fit: contain;
+    z-index: 2;
+}
+
+.book img:hover {
+    scale: 1.05;
+    transition: all 1s;
+    filter: drop-shadow(0px 2px 120px rgba(0, 0, 0, 0.2));
+}
+
+.book img {
+    width: 26rem;
+    filter: drop-shadow(0px 2px 75px rgba(0, 0, 0, 0.3));
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.bookDescBox {
+    width: 55rem;
+    padding: 4rem;
+    direction: rtl;
+    background-color: rgb(246, 251, 255);
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.bookDesc1 {
+    font-size: 1.5rem;
+}
+
+.bookDesc2 {
+    font-weight: bold;
+    font-family: "Rubik-Bold";
+    font-size: 1.1rem;
+}
+
+.cloud1 {
+    width: 5rem;
+    opacity: 0.8;
+}
+
+.cloud2 {
+    width: 12rem;
+}
+
+.cloud3 {
+    width: 18rem;
+    opacity: 0.5;
+}
+
+.bookDesc {
+    text-align: start;
+    width: 100%;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: -20rem;
+    scale: 0.07;
+    cursor: pointer;
+    transition: all 0.8s;
+    filter: brightness(1);
+    z-index: 5;
+}
+
+.arrow:hover {
+    filter: brightness(0.9);
+    animation: arrowmove 0.5s linear infinite;
+    transition: all 0.8s;
+}
+
+.descBox {
+    position: relative;
+}
+
+.ortzeva {
+    scale: 0.5;
+    margin: 0;
+    position: absolute;
+    top: -19rem;
+    left: 6rem;
+    z-index: 2;
+}
+
+@keyframes arrowmove {
+    0% {
+        transform: translateY(0rem);
+    }
+
+    25% {
+        transform: translateY(-3rem);
+    }
+
+    75% {
+        transform: translateY(3rem);
+    }
+
+    100% {
+        transform: translateY(0rem);
+    }
+}

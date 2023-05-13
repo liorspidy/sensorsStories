@@ -1,25 +1,28 @@
-import React from "react";
-import logo from "../../images/logo.jpeg";
-import styles from "./Header.module.css";
-
+import React from 'react';
+import logo from '../../images/logoEmpty.png';
+import classes from './Header.module.css';
+import { Link } from 'react-router-dom';
 function Header() {
   return (
-    <nav className={styles.header}>
-      <div className={styles.header__logo}>
-        <a href="/">
-          <img className={styles.logo} src={logo} alt="Logo" />
-        </a>
-      </div>
-      <div className={styles.header__nav}>
-        <a className={`${styles.header__nav}-link`} href="/">
+    <nav className={classes.header}>
+      <Link to="/">
+        <div className={classes.header_logo}>
+          <img className={classes.logo} src={logo} alt="Logo" />
+        </div>
+      </Link>
+      <div className={classes.header_nav}>
+        <Link className={classes.header_link} to="/about">
           אודות
-        </a>
-        <a className={`${styles.header__nav}-link`} href="/about">
+        </Link>
+        <Link className={classes.header_link} to="/contact">
+          צרו קשר
+        </Link>
+        <Link className={classes.header_link} to="/classes">
           סדנאות
-        </a>
-        <a className={`${styles.header__nav}-link`} href="/contact">
-          ראיונות
-        </a>
+        </Link>
+        <Link className={classes.header_link} to="/media">
+          מדיה
+        </Link>
       </div>
     </nav>
   );
