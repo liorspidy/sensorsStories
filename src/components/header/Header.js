@@ -37,34 +37,34 @@ function Header() {
         </motion.a>
         <motion.a
           className={classes.header_link}
-          onClick={() =>
-            window.scrollTo({
-              top: document.getElementById("contact").offsetTop,
-              behavior: "smooth",
-            })
-          }
+          // onClick={() =>
+          //   window.scrollTo({
+          //     top: document.getElementById("contact").offsetTop,
+          //     behavior: "smooth",
+          //   })
+          // }
         >
           צרו קשר
         </motion.a>
         <motion.a
           className={classes.header_link}
-          onClick={() =>
-            window.scrollTo({
-              top: document.getElementById("classes").offsetTop,
-              behavior: "smooth",
-            })
-          }
+          // onClick={() =>
+          //   window.scrollTo({
+          //     top: document.getElementById("classes").offsetTop,
+          //     behavior: "smooth",
+          //   })
+          // }
         >
           סדנאות
         </motion.a>
         <motion.a
           className={classes.header_link}
-          onClick={() =>
-            window.scrollTo({
-              top: document.getElementById("media").offsetTop,
-              behavior: "smooth",
-            })
-          }
+          // onClick={() =>
+          //   window.scrollTo({
+          //     top: document.getElementById("media").offsetTop,
+          //     behavior: "smooth",
+          //   })
+          // }
         >
           מדיה
         </motion.a>
