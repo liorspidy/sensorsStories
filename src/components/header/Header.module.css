@@ -7,6 +7,8 @@
   height: 4rem;
   z-index: 10;
   font-family: "Rubik-Bold";
+  /* position: sticky;
+  top: 0; */
 }
 
 .header_logo {
@@ -27,6 +29,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
 
 .header_link:hover {

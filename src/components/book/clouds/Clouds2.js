@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import classes from "../Book.module.css";
 
-const Clouds = () => {
+const Clouds2 = () => {
   return (
     <div style={{ width: 0, height: 0 }}>
       <motion.div
         className={classes.cloud1}
-        initial={{ y: -180, x: -1600 }}
-        animate={{ y: -180, x: 600 }}
+        initial={{ y: -280, x: 100 }}
+        animate={{ y: -280, x: -1600 }}
         transition={{ duration: 130 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -20,8 +20,8 @@ const Clouds = () => {
       </motion.div>
       <motion.div
         className={classes.cloud2}
-        initial={{ y: -480, x: -1400 }}
-        animate={{ y: -480, x: 0 }}
+        initial={{ y: -280, x: -1400 }}
+        animate={{ y: -280, x: 0 }}
         transition={{ duration: 130 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -48,8 +48,8 @@ const Clouds = () => {
       </motion.div>
       <motion.div
         className={classes.cloud1}
-        initial={{ y: -330, x: 0 }}
-        animate={{ y: -330, x: -1000 }}
+        initial={{ y: -230, x: 0 }}
+        animate={{ y: -230, x: -1000 }}
         transition={{ duration: 130 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -62,10 +62,10 @@ const Clouds = () => {
       </motion.div>
 
       <motion.div
-        className={classes.cloud1}
-        initial={{ y: -370, x: -1200 }}
-        animate={{ y: -370, x: 300 }}
-        transition={{ duration: 110 }}
+        className={classes.cloud2}
+        initial={{ y: -470, x: -1700 }}
+        animate={{ y: -470, x: 300 }}
+        transition={{ duration: 90 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path
@@ -78,8 +78,8 @@ const Clouds = () => {
 
       <motion.div
         className={classes.cloud3}
-        initial={{ y: -580, x: -1700 }}
-        animate={{ y: -580, x: 1200 }}
+        initial={{ y: -180, x: -1700 }}
+        animate={{ y: -180, x: 1200 }}
         transition={{ duration: 180 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -94,4 +94,4 @@ const Clouds = () => {
   );
 };
 
-export default Clouds;
+export default Clouds2;

@@ -1,7 +1,9 @@
-import React from 'react';
-import logo from '../../images/logoEmpty.png';
-import classes from './Header.module.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import logo from "../../images/logoEmpty.png";
+import classes from "./Header.module.css";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 function Header() {
   return (
     <nav className={classes.header}>
@@ -11,18 +13,61 @@ function Header() {
         </div>
       </Link>
       <div className={classes.header_nav}>
-        <Link className={classes.header_link} to="/about">
-          אודות
-        </Link>
-        <Link className={classes.header_link} to="/contact">
+        <motion.a
+          className={classes.header_link}
+          onClick={() =>
+            window.scrollTo({
+              top: document.getElementById("book").offsetTop,
+              behavior: "smooth",
+            })
+          }
+        >
+          הספר
+        </motion.a>
+        <motion.a
+          className={classes.header_link}
+          onClick={() =>
+            window.scrollTo({
+              top: document.getElementById("author").offsetTop,
+              behavior: "smooth",
+            })
+          }
+        >
+          הסופרת
+        </motion.a>
+        <motion.a
+          className={classes.header_link}
+          onClick={() =>
+            window.scrollTo({
+              top: document.getElementById("contact").offsetTop,
+              behavior: "smooth",
+            })
+          }
+        >
           צרו קשר
-        </Link>
-        <Link className={classes.header_link} to="/classes">
+        </motion.a>
+        <motion.a
+          className={classes.header_link}
+          onClick={() =>
+            window.scrollTo({
+              top: document.getElementById("classes").offsetTop,
+              behavior: "smooth",
+            })
+          }
+        >
           סדנאות
-        </Link>
-        <Link className={classes.header_link} to="/media">
+        </motion.a>
+        <motion.a
+          className={classes.header_link}
+          onClick={() =>
+            window.scrollTo({
+              top: document.getElementById("media").offsetTop,
+              behavior: "smooth",
+            })
+          }
+        >
           מדיה
-        </Link>
+        </motion.a>
       </div>
     </nav>
   );

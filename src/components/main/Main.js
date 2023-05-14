@@ -1,13 +1,15 @@
-import { Routes, Route } from 'react-router-dom';
-import Book from '../book/Book';
-import classes from './Main.module.css';
+import { Routes, Route } from "react-router-dom";
+import Book from "../book/Book";
+import classes from "./Main.module.css";
+import Author from "../author/Author";
+import Title from "../title/Title";
 
 const Main = () => {
   return (
     <div className={classes.main}>
-      <Routes>
-        <Route path="/" element={<Book />} />
-      </Routes>
+      <Title />
+      <Book />
+      <Author />
     </div>
   );
 };

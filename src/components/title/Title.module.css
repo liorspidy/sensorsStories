@@ -1,0 +1,21 @@
+.title img {
+  max-width: 60rem;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.title {
+  margin: -2rem auto;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 4rem);
+}
+
+@media screen and (max-width: 1076px) {
+  .title img {
+    max-width: 40rem;
+    object-fit: contain;
+  }
+}
