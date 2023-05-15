@@ -19,7 +19,7 @@ const Book = () => {
     offscreen: { opacity: 0 },
     onscreen: {
       opacity: 1,
-      transition: { delay: 2, duration: 1 },
+      transition: { delay: 1.5, duration: 1 },
     },
   };
 

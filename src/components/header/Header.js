@@ -37,6 +37,17 @@ function Header() {
         </motion.a>
         <motion.a
           className={classes.header_link}
+          onClick={() =>
+            window.scrollTo({
+              top: document.getElementById("meet").offsetTop,
+              behavior: "smooth",
+            })
+          }
+        >
+          החישנים
+        </motion.a>
+        <motion.a
+          className={classes.header_link}
           // onClick={() =>
           //   window.scrollTo({
           //     top: document.getElementById("contact").offsetTop,

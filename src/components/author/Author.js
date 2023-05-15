@@ -1,7 +1,9 @@
 import classes from "./Author.module.css";
 import ketty from "../../images/ketty.jpeg";
 import madadon from "../../images/madadon1.png";
+import ortzeva2 from "../../images/ortzeva2.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Author = () => {
   const aboutBoxVarients = {
@@ -15,10 +17,20 @@ const Author = () => {
   };
 
   const madadonVarients = {
-    offscreen: { x: 500 },
+    offscreen: { x: 100, opacity: 0 },
     onscreen: {
       x: 0,
-      transition: { type: "spring", bounce: 0.5, delay: 2, duration: 1 },
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, delay: 2.5, duration: 1 },
+    },
+  };
+
+  const ortzeva2Varients = {
+    offscreen: { y: 50, opacity: 0 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.3, delay: 2, duration: 1 },
     },
   };
 
@@ -53,21 +65,35 @@ const Author = () => {
             חישנים", נותן גישה פשוטה ופותח שער באופן ממצה אל גוף ידע ענק שנצבר
             במחברתה לאורך מסע חייה האישיים והמקצועיים.
           </p>
-          <div className={classes.tellmemore}>
-            <h3>ספרו לי עוד..</h3>
-          </div>
+          <Link to={"/about-me"}>
+            <div className={classes.tellmemore}>
+              <h3>ספרו לי עוד..</h3>
+            </div>
+          </Link>
         </motion.div>
       </div>
-      <motion.div
-        variants={madadonVarients}
-        whileHover={{
-          rotate: [0, -1, 1, -1, 1, 0],
-          transition: { duration: 0.4 },
-        }}
-        className={classes.madadon}
-      >
-        <img src={madadon} alt="מדדון" />
-      </motion.div>
+      <div className={classes.photos}>
+        <motion.div
+          variants={ortzeva2Varients}
+          whileHover={{
+            rotate: [0, -1, 1, -1, 1, 0],
+            transition: { duration: 0.4 },
+          }}
+          className={classes.ortzeva2}
+        >
+          <img src={ortzeva2} alt="מדדון" />
+        </motion.div>
+        <motion.div
+          variants={madadonVarients}
+          whileHover={{
+            rotate: [0, -1, 1, -1, 1, 0],
+            transition: { duration: 0.4 },
+          }}
+          className={classes.madadon}
+        >
+          <img src={madadon} alt="מדדון" />
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

@@ -2,15 +2,64 @@
   max-width: 60rem;
   object-fit: contain;
   z-index: 1;
+  animation: floatUpDown 3s ease-in-out infinite;
 }
 
 .title {
-  margin: -2rem auto;
-  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: calc(100vh - 4rem);
+}
+
+.scrollDown {
+  width: 2rem;
+  height: 4rem;
+  border: 3px solid #b7b7b7;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin-top: 2rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.21);
+  z-index: 1;
+}
+
+.scrollDownCircle {
+  background-color: #b7b7b7;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  margin: 2rem 0;
+  animation: scrollIcon 2s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -2%, 0);
+  }
+}
+
+@keyframes scrollIcon {
+  0%,
+  100% {
+    transform: translate3d(0, -150%, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media screen and (max-width: 1076px) {

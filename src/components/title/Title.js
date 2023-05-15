@@ -12,6 +12,20 @@ const Title = () => {
       transition={{ duration: 2 }}
     >
       <img src={title} alt="title" />
+      <motion.div
+        className={classes.scrollDown}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2 }}
+        onClick={() =>
+          window.scrollTo({
+            top: document.getElementById("book").offsetTop,
+            behavior: "smooth",
+          })
+        }
+      >
+        <div className={classes.scrollDownCircle}></div>
+      </motion.div>
       <Clouds2 />
     </motion.div>
   );

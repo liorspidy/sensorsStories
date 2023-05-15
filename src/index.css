@@ -32,3 +32,17 @@ code {
   font-weight: 900;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Rubik-Italic";
+  src: url("./fonts/Rubik-Italic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik-Light";
+  src: url("./fonts/Rubik-Light.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}

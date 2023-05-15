@@ -1,0 +1,107 @@
+.Characters {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.chars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 3rem;
+}
+
+.title {
+  font-family: "Rubik-Bold";
+  text-align: end;
+  width: 90%;
+  font-size: 1.5rem;
+  color: #f37b87;
+  padding-right: 6rem;
+}
+
+.sensorsBox,
+.sensorsBox.blured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: #bcbcbc91;
+  border-radius: 80px 80px 60px 60px;
+  max-width: 16rem;
+  height: 35rem;
+  border: 1px solid #ffffffa3;
+  transition: scale 0.3s, filter 0.3s;
+}
+
+.sensorsBox.blured {
+  scale: 0.95;
+  filter: blur(1px) brightness(0.9);
+}
+
+.sensorImg img {
+  width: 12rem;
+  height: 18rem;
+  object-fit: contain;
+  padding: 1rem;
+  filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.1));
+  z-index: 2;
+}
+
+.sensorImg::after {
+  left: 3rem;
+  bottom: 0.7rem;
+  content: "";
+  display: block;
+  width: 6.5rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #00000030;
+  filter: blur(7px);
+  z-index: 1;
+}
+
+.sensorImg {
+  position: relative;
+  margin-top: 1rem;
+  border-radius: 80px 80px 60px 60px;
+  background-image: linear-gradient(
+    0deg,
+    hsl(240deg 44% 94%) 0%,
+    hsl(240deg 44% 95%) 21%,
+    hsl(240deg 44% 97%) 58%,
+    hsl(241deg 44% 98%) 77%,
+    hsl(241deg 44% 99%) 87%,
+    hsl(241deg 44% 99%) 93%,
+    hsl(241deg 44% 98%) 97%,
+    hsl(240deg 44% 97%) 99%,
+    hsl(240deg 44% 95%) 100%,
+    hsl(240deg 44% 94%) 100%
+  );
+}
+
+.charDesc {
+  direction: rtl;
+  color: #4d4d4d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.charDescQuote {
+  font-style: italic;
+  font-size: 1.05rem;
+  font-family: "Rubik-Italic";
+  padding: 0 2rem;
+  margin-bottom: 0;
+}
+.charDescInvite {
+  font-family: "Rubik-Bold";
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+}

@@ -6,9 +6,9 @@ const Clouds2 = () => {
     <div style={{ width: 0, height: 0 }}>
       <motion.div
         className={classes.cloud1}
-        initial={{ y: -280, x: 100 }}
-        animate={{ y: -280, x: -1600 }}
-        transition={{ duration: 130 }}
+        initial={{ y: -120, x: 100 }}
+        animate={{ y: -120, x: -1600 }}
+        transition={{ duration: 150 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path
@@ -20,8 +20,8 @@ const Clouds2 = () => {
       </motion.div>
       <motion.div
         className={classes.cloud2}
-        initial={{ y: -280, x: -1400 }}
-        animate={{ y: -280, x: 0 }}
+        initial={{ y: -380, x: -1200 }}
+        animate={{ y: -380, x: 0 }}
         transition={{ duration: 130 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -34,9 +34,9 @@ const Clouds2 = () => {
       </motion.div>
       <motion.div
         className={classes.cloud3}
-        initial={{ y: -280, x: 300 }}
-        animate={{ y: -280, x: -1200 }}
-        transition={{ duration: 80 }}
+        initial={{ y: -420, x: 300 }}
+        animate={{ y: -420, x: -1200 }}
+        transition={{ duration: 180 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path
@@ -48,8 +48,8 @@ const Clouds2 = () => {
       </motion.div>
       <motion.div
         className={classes.cloud1}
-        initial={{ y: -230, x: 0 }}
-        animate={{ y: -230, x: -1000 }}
+        initial={{ y: -1130, x: 900 }}
+        animate={{ y: -1130, x: -1000 }}
         transition={{ duration: 130 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -63,9 +63,9 @@ const Clouds2 = () => {
 
       <motion.div
         className={classes.cloud2}
-        initial={{ y: -470, x: -1700 }}
-        animate={{ y: -470, x: 300 }}
-        transition={{ duration: 90 }}
+        initial={{ y: -1270, x: -900 }}
+        animate={{ y: -1270, x: 300 }}
+        transition={{ duration: 120 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path
@@ -78,8 +78,8 @@ const Clouds2 = () => {
 
       <motion.div
         className={classes.cloud3}
-        initial={{ y: -180, x: -1700 }}
-        animate={{ y: -180, x: 1200 }}
+        initial={{ y: -280, x: -1700 }}
+        animate={{ y: -280, x: 1200 }}
         transition={{ duration: 180 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">

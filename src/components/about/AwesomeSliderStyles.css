@@ -1,0 +1,25 @@
+.awssld {
+  height: 45rem;
+  width: 45rem;
+  --slider-height-percentage: 100%;
+  --slider-transition-duration: 669ms;
+  --organic-arrow-thickness: 0px;
+  --organic-arrow-border-radius: 0px;
+  --organic-arrow-height: 0px;
+  --organic-arrow-color: transparent;
+  --control-button-width: 0%;
+  --control-button-height: 0%;
+  --control-button-background: transparent;
+  --control-bullet-color: transparent;
+  --control-bullet-active-color: transparent;
+  --loader-bar-color: transparent;
+  --loader-bar-height: 0px;
+}
+
+.nav.awssld__bullet {
+  display: none !important;
+}
+
+.awssld__timer.awssld__timer--animated.awssld__timer--run {
+  background-color: transparent;
+}

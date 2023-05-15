@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
-  position: relative;
 }
 
 .aboutBox {
@@ -34,8 +34,7 @@
   width: 90%;
   padding-right: 2rem;
   position: relative;
-  margin-bottom: 14rem;
-  nargin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .parboxImg img {
@@ -44,7 +43,7 @@
   height: 445px;
   border-radius: 50%;
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.2)) brightness(1.1);
-  rotate: 355deg;
+  rotate: -5deg;
   object-fit: cover;
   position: relative;
   right: -7rem;
@@ -67,6 +66,7 @@
   direction: rtl;
   background-color: aliceblue;
   border-radius: 50px;
+  color: #4d4d4d;
 }
 
 .tellmemore {
@@ -86,20 +86,50 @@
   transition: all 0.8;
 }
 
+.tellmemore a {
+  color: white;
+  text-decoration: none;
+}
+
 .tellmemore:hover {
   transition: all 0.8;
   opacity: 0.8;
 }
 
-.madadon {
-  position: absolute;
-  right: 2rem;
-  bottom: 1rem;
-}
-
 .madadon img {
   object-fit: contain;
   width: 28rem;
+}
+
+.ortzeva2 img {
+  object-fit: contain;
+  width: 8rem;
+}
+
+.ortzeva2 {
+  position: relative;
+}
+
+.ortzeva2::after {
+  left: 0rem;
+  bottom: -0.4rem;
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #0000003a;
+  filter: blur(5px);
+  z-index: 1;
+}
+
+.photos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0;
 }
 
 @media screen and (max-width: 1180px) {

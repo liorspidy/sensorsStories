@@ -4,7 +4,7 @@
   align-items: center;
   padding: 0.5rem 1rem;
   background-color: #ffef5c;
-  height: 5rem;
+  height: 7rem;
   gap: 2rem;
 }
 
@@ -17,6 +17,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .iconRow {
