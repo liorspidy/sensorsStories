@@ -21,6 +21,7 @@
   font-size: 1.5rem;
   color: #f37b87;
   padding-right: 6rem;
+  filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
 }
 
 .sensorsBox,
