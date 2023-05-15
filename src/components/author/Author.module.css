@@ -60,7 +60,7 @@
 .par {
   min-width: 36rem;
   max-width: 70rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   padding: 3rem 2rem;
   padding-left: 9rem;
   direction: rtl;
@@ -128,16 +128,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 70%;
   margin: 0;
 }
 
 @media screen and (max-width: 1180px) {
   .madadon {
-    position: absolute;
     right: 2rem;
     bottom: 1rem;
   }
+
   .madadon img {
     object-fit: contain;
     width: 24rem;

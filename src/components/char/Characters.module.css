@@ -69,19 +69,17 @@
   position: relative;
   margin-top: 1rem;
   border-radius: 80px 80px 60px 60px;
-  background-image: linear-gradient(
-    0deg,
-    hsl(240deg 44% 94%) 0%,
-    hsl(240deg 44% 95%) 21%,
-    hsl(240deg 44% 97%) 58%,
-    hsl(241deg 44% 98%) 77%,
-    hsl(241deg 44% 99%) 87%,
-    hsl(241deg 44% 99%) 93%,
-    hsl(241deg 44% 98%) 97%,
-    hsl(240deg 44% 97%) 99%,
-    hsl(240deg 44% 95%) 100%,
-    hsl(240deg 44% 94%) 100%
-  );
+  background-image: linear-gradient(0deg,
+      hsl(240deg 44% 94%) 0%,
+      hsl(240deg 44% 95%) 21%,
+      hsl(240deg 44% 97%) 58%,
+      hsl(241deg 44% 98%) 77%,
+      hsl(241deg 44% 99%) 87%,
+      hsl(241deg 44% 99%) 93%,
+      hsl(241deg 44% 98%) 97%,
+      hsl(240deg 44% 97%) 99%,
+      hsl(240deg 44% 95%) 100%,
+      hsl(240deg 44% 94%) 100%);
 }
 
 .charDesc {
@@ -100,8 +98,213 @@
   padding: 0 2rem;
   margin-bottom: 0;
 }
+
 .charDescInvite {
   font-family: "Rubik-Bold";
   padding: 0 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1382px) {
+  .sensorImg img {
+    width: 10rem;
+    height: 14rem;
+    object-fit: contain;
+    padding: 1rem;
+    filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.1));
+    z-index: 2;
+  }
+
+  .sensorImg::after {
+    left: 2.2rem;
+    bottom: 0.7rem;
+    width: 6.5rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 1224px) {
+  .charDescQuote {
+    font-style: italic;
+    font-size: 1rem;
+    font-family: "Rubik-Italic";
+    padding: 0 2rem;
+    margin-bottom: 0;
+  }
+
+  .charDescInvite {
+    font-family: "Rubik-Bold";
+    font-size: 0.9rem;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+  }
+
+
+}
+
+@media (max-width: 1084px) {
+  .Characters {
+    height: 100%;
+  }
+
+  .chars {
+    flex-direction: column;
+    margin: 0 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .sensorsBox,
+  .sensorsBox.blured {
+    flex-direction: row;
+    width: 38rem;
+    height: 18rem;
+    max-width: 40rem;
+  }
+
+  .sensorImg img {
+    width: 12rem;
+    height: 16rem;
+  }
+
+  .sensorImg {
+    margin: 1rem;
+  }
+
+  .charDescQuote {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+
+  .charDescInvite {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .sensorImg::after {
+    left: 2.6rem;
+    bottom: 0.7rem;
+    width: 6.5rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .Characters {
+    height: 100%;
+  }
+
+  .chars {
+    flex-direction: column;
+    margin: 0 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .sensorsBox,
+  .sensorsBox.blured {
+    flex-direction: row;
+    width: 28rem;
+    height: 12rem;
+    max-width: 40rem;
+    border-radius: 60px 60px 50px 50px;
+  }
+
+  .sensorImg img {
+    width: 8rem;
+    height: 10rem;
+    border-radius: 60px 60px 50px 50px;
+  }
+
+  .sensorImg {
+    margin: 1rem;
+  }
+
+  .charDescQuote {
+    font-size: 0.9rem;
+    text-align: start;
+    margin-bottom: 0;
+  }
+
+  .charDescInvite {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-family: "Rubik-Bold";
+    text-align: end;
+    width: 80%;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #f37b87;
+    text-align: center;
+  }
+
+  .sensorImg::after {
+    left: 1.6rem;
+    bottom: 0.7rem;
+    width: 5rem;
+    height: 1rem;
+    filter: blur(4px);
+  }
+}
+
+@media (max-width: 500px) {
+  .Characters {
+    height: 100%;
+  }
+
+  .chars {
+    flex-direction: column;
+    margin: 0 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .sensorsBox,
+  .sensorsBox.blured {
+    flex-direction: row;
+    width: 20rem;
+    height: 12rem;
+    max-width: 40rem;
+    border-radius: 50px;
+  }
+
+  .sensorImg img {
+    width: 6rem;
+    height: 9rem;
+  }
+
+  .sensorImg {
+    margin: 1rem;
+    border-radius: 50px;
+  }
+
+  .charDescQuote {
+    font-size: 0.7rem;
+    text-align: start;
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+
+  .charDescInvite {
+    font-size: 0.65rem;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-family: "Rubik-Bold";
+    text-align: end;
+    width: 80%;
+    padding: 0;
+    font-size: 1rem;
+    color: #f37b87;
+    text-align: center;
+  }
+
+  .sensorImg::after {
+    left: 1.2rem;
+    bottom: 0.9rem;
+    width: 3.5rem;
+    height: 1rem;
+    filter: blur(4px);
+  }
 }

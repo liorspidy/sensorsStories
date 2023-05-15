@@ -1,9 +1,8 @@
-import { Routes, Route } from "react-router-dom";
-import Book from "../book/Book";
-import classes from "./Main.module.css";
-import Author from "../author/Author";
-import Title from "../title/Title";
-import Characters from "../char/Characters";
+import Book from '../book/Book';
+import classes from './Main.module.css';
+import Author from '../author/Author';
+import Title from '../title/Title';
+import Characters from '../char/Characters';
 
 const Main = () => {
   return (
