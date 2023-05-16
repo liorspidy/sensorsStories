@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import classes from "../Book.module.css";
+import classes from "./Clouds.module.css";
 
 const Clouds = () => {
   return (
     <div style={{ width: 0, height: 0 }}>
       <motion.div
         className={classes.cloud1}
-        initial={{ y: -180, x: -1600 }}
-        animate={{ y: -180, x: 600 }}
-        transition={{ duration: 130 }}
+        initial={{ x: -700 }}
+        animate={{ x: 600 }}
+        transition={{ duration: 100 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path
@@ -20,9 +20,9 @@ const Clouds = () => {
       </motion.div>
       <motion.div
         className={classes.cloud2}
-        initial={{ y: -480, x: -1400 }}
-        animate={{ y: -480, x: 0 }}
-        transition={{ duration: 130 }}
+        initial={{ x: -800 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 100 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path
@@ -34,9 +34,9 @@ const Clouds = () => {
       </motion.div>
       <motion.div
         className={classes.cloud3}
-        initial={{ y: -280, x: 300 }}
-        animate={{ y: -280, x: -1200 }}
-        transition={{ duration: 80 }}
+        initial={{ x: 500 }}
+        animate={{ x: -1000 }}
+        transition={{ duration: 90 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path
@@ -47,24 +47,9 @@ const Clouds = () => {
         </svg>
       </motion.div>
       <motion.div
-        className={classes.cloud1}
-        initial={{ y: -330, x: 0 }}
-        animate={{ y: -330, x: -1000 }}
-        transition={{ duration: 130 }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-          <path
-            d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
-            fill="#fff"
-            transform="matrix(.77976 0 0 .78395-299.99-418.63)"
-          />
-        </svg>
-      </motion.div>
-
-      <motion.div
-        className={classes.cloud1}
-        initial={{ y: -370, x: -1200 }}
-        animate={{ y: -370, x: 300 }}
+        className={classes.cloud4}
+        initial={{ x: 0 }}
+        animate={{ x: -1000 }}
         transition={{ duration: 110 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -77,10 +62,25 @@ const Clouds = () => {
       </motion.div>
 
       <motion.div
-        className={classes.cloud3}
-        initial={{ y: -580, x: -1700 }}
-        animate={{ y: -580, x: 1200 }}
-        transition={{ duration: 180 }}
+        className={classes.cloud5}
+        initial={{ x: -500 }}
+        animate={{ x: 300 }}
+        transition={{ duration: 100 }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+          <path
+            d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
+            fill="#fff"
+            transform="matrix(.77976 0 0 .78395-299.99-418.63)"
+          />
+        </svg>
+      </motion.div>
+
+      <motion.div
+        className={classes.cloud6}
+        initial={{ x: -700 }}
+        animate={{ x: 1200 }}
+        transition={{ duration: 90 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path

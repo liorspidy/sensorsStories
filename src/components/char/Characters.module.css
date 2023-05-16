@@ -17,7 +17,7 @@
 .title {
   font-family: "Rubik-Bold";
   text-align: end;
-  width: 90%;
+  width: 100%;
   font-size: 1.5rem;
   color: #f37b87;
   padding-right: 6rem;
@@ -44,8 +44,8 @@
 }
 
 .sensorImg img {
-  width: 12rem;
-  height: 18rem;
+  width: 13rem;
+  height: 17rem;
   object-fit: contain;
   padding: 1rem;
   filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.1));
@@ -70,17 +70,19 @@
   position: relative;
   margin-top: 1rem;
   border-radius: 80px 80px 60px 60px;
-  background-image: linear-gradient(0deg,
-      hsl(240deg 44% 94%) 0%,
-      hsl(240deg 44% 95%) 21%,
-      hsl(240deg 44% 97%) 58%,
-      hsl(241deg 44% 98%) 77%,
-      hsl(241deg 44% 99%) 87%,
-      hsl(241deg 44% 99%) 93%,
-      hsl(241deg 44% 98%) 97%,
-      hsl(240deg 44% 97%) 99%,
-      hsl(240deg 44% 95%) 100%,
-      hsl(240deg 44% 94%) 100%);
+  background-image: linear-gradient(
+    0deg,
+    hsl(240deg 44% 94%) 0%,
+    hsl(240deg 44% 95%) 21%,
+    hsl(240deg 44% 97%) 58%,
+    hsl(241deg 44% 98%) 77%,
+    hsl(241deg 44% 99%) 87%,
+    hsl(241deg 44% 99%) 93%,
+    hsl(241deg 44% 98%) 97%,
+    hsl(240deg 44% 97%) 99%,
+    hsl(240deg 44% 95%) 100%,
+    hsl(240deg 44% 94%) 100%
+  );
 }
 
 .charDesc {
@@ -98,6 +100,7 @@
   font-family: "Rubik-Italic";
   padding: 0 2rem;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .charDescInvite {
@@ -126,21 +129,30 @@
 
 @media (max-width: 1224px) {
   .charDescQuote {
-    font-style: italic;
-    font-size: 1rem;
-    font-family: "Rubik-Italic";
-    padding: 0 2rem;
-    margin-bottom: 0;
+    font-size: 0.9rem;
   }
 
   .charDescInvite {
-    font-family: "Rubik-Bold";
-    font-size: 0.9rem;
-    padding: 0 2rem;
-    margin-bottom: 1rem;
+    font-size: 0.7rem;
   }
 
+  .sensorsBox,
+  .sensorsBox.blured {
+    width: 12rem;
+    height: 29rem;
+  }
 
+  .sensorImg img {
+    width: 9rem;
+    height: 12rem;
+  }
+
+  .sensorImg::after {
+    left: 2rem;
+    bottom: 0.7rem;
+    width: 5rem;
+    height: 1.5rem;
+  }
 }
 
 @media (max-width: 1084px) {

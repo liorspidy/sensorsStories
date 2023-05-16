@@ -46,3 +46,10 @@ code {
   font-weight: 900;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Rubik-LightItalic";
+  src: url("./fonts/Rubik-LightItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}

@@ -81,7 +81,16 @@ const Author = () => {
           }}
           className={classes.ortzeva2}
         >
-          <img src={ortzeva2} alt="מדדון" />
+          <img
+            src={ortzeva2}
+            alt="אור וצבע"
+            onClick={() =>
+              window.scrollTo({
+                top: document.getElementById("meet").offsetTop,
+                behavior: "smooth",
+              })
+            }
+          />
         </motion.div>
         <motion.div
           variants={madadonVarients}
@@ -91,7 +100,16 @@ const Author = () => {
           }}
           className={classes.madadon}
         >
-          <img src={madadon} alt="מדדון" />
+          <img
+            src={madadon}
+            alt="מדדון"
+            onClick={() =>
+              window.scrollTo({
+                top: document.getElementById("meet").offsetTop,
+                behavior: "smooth",
+              })
+            }
+          />
         </motion.div>
       </div>
     </motion.div>

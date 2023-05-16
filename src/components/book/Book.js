@@ -7,8 +7,9 @@ import ortzeva from "../../images/ortzeva.png";
 
 const Book = () => {
   const bookVarients = {
-    offscreen: { x: -1000, rotate: -40 },
+    offscreen: { y: 50, x: -1000, rotate: -40 },
     onscreen: {
+      y: 50,
       x: 30,
       rotate: -7,
       transition: { duration: 1 },
@@ -28,6 +29,11 @@ const Book = () => {
     onscreen: { y: 0, opacity: 1, transition: { delay: 1, duration: 1 } },
   };
 
+  const reccVarients = {
+    offscreen: { x: 50, opacity: 0 },
+    onscreen: { x: 0, opacity: 1, transition: { delay: 2, duration: 2 } },
+  };
+
   return (
     <motion.div
       id="book"
@@ -36,12 +42,26 @@ const Book = () => {
       whileInView={"onscreen"}
       viewport={{ once: true, amount: 0.01 }}
     >
-      {/* <motion.div className={classes.title} variants={ortzevaVarients}>
-        <h1>סיפורי חישנים</h1>
-      </motion.div> */}
+      <motion.div className={classes.reccomendation} variants={reccVarients}>
+        <p>
+          "הספר עוזר לילדים להתמודד עם תסכולים ועם היכולת להביע את עצמם באמצעות
+          ההבנה פנימה ולמצוא מילים לתחושות ולרגשות. הילדים וההורים חווים דרך
+          הסיפורים וההקשבה לקיחת אחריות ובניית תקשורת נכונה ואיכותית. ממליצה
+          באהבה לקרוא אותו"
+        </p>
+        <h5>ליאורה רנרט</h5>
+      </motion.div>
       <div className={classes.bookmain}>
         <motion.div className={classes.book} variants={bookVarients}>
           <img src={book} alt="bookImage" />
+          <motion.div
+            className={classes.buyNow}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2 }}
+          >
+            !לרכישה
+          </motion.div>
         </motion.div>
 
         <div className={classes.descBox}>
@@ -51,7 +71,7 @@ const Book = () => {
             alt="ortzeva"
             transition={{ duration: 1 }}
             whileHover={{
-              rotate: [0, -3, 3, -3, 3, 0],
+              rotate: [0, -1, 1, -1, 1, 0],
               transition: { duration: 0.4 },
             }}
             variants={ortzevaVarients}
@@ -82,6 +102,7 @@ const Book = () => {
               של כל אחד מאיתנו.
             </p>
           </motion.div>
+
           <motion.div
             className={classes.arrow}
             variants={descVarients}
@@ -96,8 +117,25 @@ const Book = () => {
           </motion.div>
         </div>
       </div>
+      <div className={classes.bottomRec}>
+        <motion.div className={classes.reccomendation2} variants={reccVarients}>
+          <p>
+            "ספר זה פותח צוהר ליצירת שיח חשוב מאוד עם ילדים על רגשות ורצונות
+            פנימיים, שאולי אף הם בעצמם לא מודעים אליהם."
+          </p>
+          <h5>ספרי צמרת</h5>
+        </motion.div>
+        <motion.div className={classes.reccomendation3} variants={reccVarients}>
+          <p>
+            "סיפרתי את הסיפור לשני אחים בגילאים 6 ו8 ששמחו לשמוע שהבעיה שלהם לא
+            רק שלהם. זהו ספר שמביא לתקשורת מיטיבה, להקשבה לגוף ולקיחת אחריות של
+            הצדדים השונים.."
+          </p>
+          <h5>נאוה וינגרטן – "מה למה"</h5>
+        </motion.div>
+      </div>
 
-      <Clouds />
+      {/* <Clouds /> */}
     </motion.div>
   );
 };

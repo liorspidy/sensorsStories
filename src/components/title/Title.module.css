@@ -1,7 +1,6 @@
 .title img {
-  max-width: 60rem;
+  width: 60rem;
   object-fit: contain;
-  z-index: 1;
   animation: floatUpDown 3s ease-in-out infinite;
 }
 
@@ -11,6 +10,8 @@
   align-items: center;
   flex-direction: column;
   height: calc(100vh - 4rem);
+  position: relative;
+  z-index: 1;
 }
 
 .scrollDown {
@@ -37,7 +38,6 @@
 }
 
 @keyframes floatUpDown {
-
   0%,
   100% {
     transform: translate3d(0, 0, 0);
@@ -49,7 +49,6 @@
 }
 
 @keyframes scrollIcon {
-
   0%,
   100% {
     transform: translate3d(0, -150%, 0);
@@ -64,14 +63,14 @@
   }
 }
 
-@media screen and (max-width: 1076px) {
+@media screen and (max-width: 1250px) {
   .title img {
     max-width: 40rem;
     object-fit: contain;
   }
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width: 680px) {
   .title img {
     width: 32rem;
     object-fit: contain;
@@ -88,7 +87,7 @@
   }
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width: 550px) {
   .title img {
     width: 26rem;
     object-fit: contain;
@@ -97,15 +96,13 @@
   }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width: 450px) {
   .title img {
     width: 20rem;
     object-fit: contain;
     z-index: 1;
     animation: floatUpDown 3s ease-in-out infinite;
   }
-
-
 
   .scrollDown {
     width: 1.5rem;

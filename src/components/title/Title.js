@@ -5,27 +5,27 @@ import { motion } from "framer-motion";
 
 const Title = () => {
   return (
-    <motion.div
-      className={classes.title}
-      initial={{ y: -200, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 2 }}
-    >
-      <img src={title} alt="title" />
+    <motion.div>
       <motion.div
-        className={classes.scrollDown}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
-        onClick={() =>
-          window.scrollTo({
-            top: document.getElementById("book").offsetTop,
-            behavior: "smooth",
-          })
-        }
+        className={classes.title}
+        initial={{ y: -300, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 2 }}
       >
-        <div className={classes.scrollDownCircle}></div>
+        <img src={title} alt="title" />
+        <motion.div
+          className={classes.scrollDown}
+          onClick={() =>
+            window.scrollTo({
+              top: document.getElementById("book").offsetTop,
+              behavior: "smooth",
+            })
+          }
+        >
+          <div className={classes.scrollDownCircle}></div>
+        </motion.div>
       </motion.div>
+
       <Clouds2 />
     </motion.div>
   );
