@@ -4,7 +4,8 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .aboutBox {
@@ -52,11 +53,11 @@
   border: 3px solid rgba(106, 106, 106, 0.572);
 }
 
-.parboxImg img:hover {
+/* .parboxImg img:hover {
   transition: all 0.8s;
   scale: 1.05;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2)) brightness(1.1);
-}
+} */
 
 .par {
   min-width: 36rem;
