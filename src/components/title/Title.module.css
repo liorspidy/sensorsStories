@@ -1,5 +1,13 @@
+.titleBox {
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 5rem);
+}
+
 .title img {
-  width: 60rem;
+  max-width: 50%;
   object-fit: contain;
   animation: floatUpDown 3s ease-in-out infinite;
 }
@@ -38,6 +46,7 @@
 }
 
 @keyframes floatUpDown {
+
   0%,
   100% {
     transform: translate3d(0, 0, 0);
@@ -49,6 +58,7 @@
 }
 
 @keyframes scrollIcon {
+
   0%,
   100% {
     transform: translate3d(0, -150%, 0);

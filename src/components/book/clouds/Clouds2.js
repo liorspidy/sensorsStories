@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-import classes from "./Clouds.module.css";
+import { motion } from 'framer-motion';
+import classes from './Clouds.module.css';
 
 const Clouds2 = () => {
   return (
-    <div style={{ width: 0, height: 0 }}>
+    <div className={classes.clouds}>
       <motion.div
         className={classes.cloud1}
         initial={{ x: 1200 }}

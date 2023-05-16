@@ -1,11 +1,11 @@
-import title from "../../images/title.png";
-import Clouds2 from "../book/clouds/Clouds2";
-import classes from "./Title.module.css";
-import { motion } from "framer-motion";
+import title from '../../images/title.png';
+import Clouds2 from '../book/clouds/Clouds2';
+import classes from './Title.module.css';
+import { motion } from 'framer-motion';
 
 const Title = () => {
   return (
-    <motion.div>
+    <motion.div className={classes.titleBox}>
       <motion.div
         className={classes.title}
         initial={{ y: -300, opacity: 0 }}
@@ -17,8 +17,8 @@ const Title = () => {
           className={classes.scrollDown}
           onClick={() =>
             window.scrollTo({
-              top: document.getElementById("book").offsetTop,
-              behavior: "smooth",
+              top: document.getElementById('book').offsetTop,
+              behavior: 'smooth',
             })
           }
         >

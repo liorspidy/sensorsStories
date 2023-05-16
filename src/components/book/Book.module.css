@@ -1,11 +1,13 @@
 .bookPage {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
   height: 100vh;
-  margin: 4rem;
+  /* margin: 4rem; */
+  width: 80%;
+  margin: 0 auto;
 }
 
 .title {
@@ -45,9 +47,11 @@
   transition: scale 0.5s;
   z-index: 1;
 }
+
 .reccomendation {
   top: 3rem;
 }
+
 .reccomendation p,
 .reccomendation2 p,
 .reccomendation3 p {
@@ -216,6 +220,7 @@
   .bookPage {
     margin: 0 4rem;
   }
+
   .ortzeva {
     scale: 0.3;
     margin: 0;
@@ -224,6 +229,7 @@
     right: -22rem;
     z-index: 2;
   }
+
   .reccomendation,
   .reccomendation2,
   .reccomendation3 {
@@ -242,6 +248,7 @@
     transition: scale 0.5s;
     z-index: 1;
   }
+
   .reccomendation {
     top: 1.5rem;
   }
