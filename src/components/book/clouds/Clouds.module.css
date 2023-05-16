@@ -1,0 +1,40 @@
+.cloud1 {
+  width: 5rem;
+  opacity: 0.8;
+  position: absolute;
+  top: 5rem;
+}
+
+.cloud2 {
+  width: 12rem;
+  opacity: 0.2;
+  position: absolute;
+  top: 20rem;
+}
+
+.cloud3 {
+  width: 18rem;
+  opacity: 0.5;
+  position: absolute;
+  top: 11rem;
+}
+
+.cloud4 {
+  width: 5rem;
+  opacity: 0.8;
+  position: absolute;
+  top: 27rem;
+}
+
+.cloud5 {
+  width: 12rem;
+  position: absolute;
+  top: 9rem;
+}
+
+.cloud6 {
+  width: 18rem;
+  opacity: 0.5;
+  position: absolute;
+  top: 29rem;
+}
