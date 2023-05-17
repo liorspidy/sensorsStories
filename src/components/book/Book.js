@@ -1,15 +1,15 @@
-import { motion } from "framer-motion";
-import book from "../../images/book.jpg";
-import classes from "./Book.module.css";
-import Clouds from "./clouds/Clouds";
-import arrow from "../../images/down-arrow-download-svgrepo-com.svg";
-import ortzeva from "../../images/ortzeva.png";
+import { motion } from 'framer-motion';
+import book from '../../images/book.jpg';
+import classes from './Book.module.css';
+import Clouds from './clouds/Clouds';
+import arrow from '../../images/down-arrow-download-svgrepo-com.svg';
+import ortzeva from '../../images/ortzeva.png';
 
 const Book = () => {
   const bookVarients = {
-    offscreen: { y: 50, x: -1000, rotate: -40 },
+    offscreen: { y: 20, x: -1000, rotate: -40 },
     onscreen: {
-      y: 50,
+      y: 20,
       x: 30,
       rotate: -7,
       transition: { duration: 1 },
@@ -38,8 +38,8 @@ const Book = () => {
     <motion.div
       id="book"
       className={classes.bookPage}
-      initial={"offscreen"}
-      whileInView={"onscreen"}
+      initial={'offscreen'}
+      whileInView={'onscreen'}
       viewport={{ once: true, amount: 0.01 }}
     >
       <motion.div className={classes.reccomendation} variants={reccVarients}>
@@ -108,8 +108,8 @@ const Book = () => {
             variants={descVarients}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById("author").offsetTop,
-                behavior: "smooth",
+                top: document.getElementById('author').offsetTop,
+                behavior: 'smooth',
               })
             }
           >

@@ -1,12 +1,12 @@
 .bookPage {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   position: relative;
   height: 100vh;
-  /* margin: 4rem; */
-  width: 80%;
+  width: 95%;
+  padding: 1rem;
   margin: 0 auto;
 }
 
@@ -34,7 +34,7 @@
 .reccomendation3 {
   direction: rtl;
   font-family: "Rubik-LightItalic";
-  font-size: 0.9rem;
+  font-size: clamp(0.6rem, 80%, 1.5rem);
   max-width: 25rem;
   position: relative;
   background: rgba(255, 255, 255, 0.15);
@@ -49,7 +49,7 @@
 }
 
 .reccomendation {
-  top: 3rem;
+  top: 2rem;
 }
 
 .reccomendation p,
@@ -67,13 +67,14 @@
 }
 
 .reccomendation2 {
-  margin-right: -18rem;
-  max-width: 24rem;
+  margin-left: 10rem;
+  max-width: 26rem;
+  top: -1rem;
 }
 
 .reccomendation3 {
-  margin-right: -16rem;
-  max-width: 32rem;
+  /* margin-right: -16rem; */
+  max-width: 35rem;
   top: -3rem;
 }
 
@@ -115,7 +116,7 @@
 }
 
 .book img {
-  max-width: 24rem;
+  max-width: 22rem;
   filter: drop-shadow(0px 2px 75px rgba(0, 0, 0, 0.3));
   transition: all 1s;
   cursor: pointer;
@@ -167,7 +168,7 @@
 .arrow {
   position: absolute;
   left: -9rem;
-  bottom: -26rem;
+  bottom: -25rem;
   scale: 0.07;
   cursor: pointer;
   transition: all 0.8s;
@@ -210,10 +211,11 @@
 
 .bottomRec {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 100%;
   position: relative;
+  gap: 6rem;
 }
 
 @media screen and (max-width: 1305px) {
@@ -253,16 +255,6 @@
     top: 1.5rem;
   }
 
-  .reccomendation2 {
-    margin-right: -14rem;
-    max-width: 20rem;
-  }
-
-  .reccomendation3 {
-    margin-right: -16rem;
-    max-width: 26rem;
-    top: -3rem;
-  }
 
   .bookDesc1 {
     font-size: 1.1rem;

@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -14,6 +14,7 @@
   align-items: center;
   width: 100%;
   padding: 1.5rem;
+  gap: 2rem;
 }
 
 .contactDetails {
@@ -41,7 +42,7 @@
 }
 
 .form {
-  width: 85%;
+  width: 100%;
   direction: rtl;
   font-family: "Rubik-Bold";
   font-size: 1.2rem;
@@ -128,12 +129,12 @@
 
 .momandgirl {
   object-fit: contain;
-  width: 24rem;
+  width: 80%;
 }
 
 .hearts {
   object-fit: contain;
-  width: 10rem;
+  width: 35%;
 }
 
 .sent {
@@ -178,7 +179,7 @@
   .ContactComp {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 auto;
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
@@ -207,11 +208,24 @@
 
   .momandgirl {
     object-fit: contain;
-    width: 20rem;
+    width: 15rem;
   }
 
   .hearts {
     object-fit: contain;
-    width: 8rem;
+    width: 6rem;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .title {
+    font-family: "Rubik-Bold";
+    text-align: end;
+    width: 80%;
+    padding: 0;
+    font-size: 1rem;
+    color: #f37b87;
+    text-align: center;
   }
 }

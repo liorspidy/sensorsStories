@@ -26,7 +26,7 @@ const Title = () => {
         </motion.div>
       </motion.div>
 
-      <Clouds2 />
+      {/* <Clouds2 /> */}
     </motion.div>
   );
 };

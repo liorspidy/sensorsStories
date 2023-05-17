@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -18,7 +18,7 @@
 .title {
   font-family: "Rubik-Bold";
   text-align: end;
-  width: 90%;
+  width: 100%;
   font-size: 1.5rem;
   color: #f37b87;
   padding-right: 6rem;
@@ -62,7 +62,7 @@
 .par {
   min-width: 36rem;
   max-width: 70rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 3rem 2rem;
   padding-left: 9rem;
   direction: rtl;
@@ -136,7 +136,60 @@
   margin: 0;
 }
 
-@media screen and (max-width: 1180px) {
+@media (max-width: 1540px) {
+  .par {
+    min-width: 36rem;
+    max-width: 70rem;
+    font-size: 1.2rem;
+    padding: 3rem 2rem;
+    padding-left: 9rem;
+    direction: rtl;
+    background-color: aliceblue;
+    border-radius: 50px;
+    color: #4d4d4d;
+  }
+
+  .parboxImg img {
+    width: 310px;
+    height: 405px;
+  }
+
+  .madadon img {
+    object-fit: contain;
+    width: 24rem;
+    cursor: pointer;
+  }
+
+  .ortzeva2 img {
+    object-fit: contain;
+    width: 6rem;
+    cursor: pointer;
+  }
+}
+
+
+
+@media (max-width: 1180px) {
+  .author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .parbox {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 95%;
+    padding-right: 3rem;
+    position: relative;
+    margin: 0 auto;
+  }
+
   .madadon {
     right: 2rem;
     bottom: 1rem;
@@ -160,18 +213,32 @@
     height: 1.3rem;
   }
 
+  .photos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0;
+  }
+
   .par {
     font-size: 1rem;
+    padding: 2rem;
+    padding-left: 9rem;
+    direction: rtl;
+    background-color: aliceblue;
+    border-radius: 50px;
+    color: #4d4d4d;
   }
 
   .parboxImg img {
-    width: 280px;
-    height: 365px;
+    width: 260px;
+    height: 330px;
   }
 
   .tellmemore {
     font-size: 0.9rem;
     left: 1rem;
-    left: 24rem;
+    left: 22rem;
   }
 }
