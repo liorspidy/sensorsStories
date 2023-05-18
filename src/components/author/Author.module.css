@@ -170,7 +170,7 @@
     height: 1.5rem;
   }
 }
-
+/* 
 @media (max-width: 1360px) {
   .par {
     font-size: 1.2rem;
@@ -191,7 +191,7 @@
     width: 7em;
     cursor: pointer;
   }
-}
+} */
 
 @media (max-width: 1240px) {
   .parboxImg img {

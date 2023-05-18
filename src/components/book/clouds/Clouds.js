@@ -7,7 +7,7 @@ const Clouds = () => {
       <motion.div
         className={classes.cloud1}
         initial={{ x: "10vw" }}
-        animate={{ x: "90vw" }}
+        animate={{ x: "80vw" }}
         transition={{ duration: 100 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -49,7 +49,7 @@ const Clouds = () => {
       <motion.div
         className={classes.cloud4}
         initial={{ x: "20vw" }}
-        animate={{ x: "90vw" }}
+        animate={{ x: "70vw" }}
         transition={{ duration: 110 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -63,7 +63,7 @@ const Clouds = () => {
 
       <motion.div
         className={classes.cloud5}
-        initial={{ x: "90vw" }}
+        initial={{ x: "85vw" }}
         animate={{ x: "0vw" }}
         transition={{ duration: 100 }}
       >

@@ -141,7 +141,7 @@ const Book = () => {
         </motion.div>
       </div>
 
-      <Clouds />
+      {/* <Clouds /> */}
     </motion.div>
   );
 };

@@ -78,7 +78,7 @@ const Clouds2 = () => {
 
       <motion.div
         className={classes.cloud6}
-        initial={{ x: "95vw" }}
+        initial={{ x: "75vw" }}
         animate={{ x: "15vw" }}
         transition={{ duration: 90 }}
       >
