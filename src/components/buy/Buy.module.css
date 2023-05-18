@@ -44,6 +44,12 @@
   width: 17rem;
   filter: drop-shadow(0 2px 30px rgb(255, 255, 255));
   cursor: pointer;
+  transition: scale 0.6s;
+}
+
+.storeImg img:hover {
+  scale: 1.05;
+  transition: scale 0.6s;
 }
 
 .kids img {
