@@ -1,5 +1,5 @@
 .ContactComp {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,6 +175,30 @@
   color: rgb(74, 165, 53);
 }
 
+@media screen and (min-width: 1400px) {
+  .form {
+    min-height: 70vh;
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+  }
+
+  .contactDiv input {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    height: 100%;
+    padding: 1.5%;
+    margin: 0 auto;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .contactDiv textarea {
+    min-height: 12rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 1000px) {
   .ContactComp {
     display: flex;
@@ -218,7 +242,6 @@
 }
 
 @media (max-width: 500px) {
-
   .title {
     font-family: "Rubik-Bold";
     text-align: end;

@@ -1,11 +1,11 @@
 .Characters {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 95%;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .chars {
@@ -72,17 +72,19 @@
   position: relative;
   margin-top: 1rem;
   border-radius: 80px 80px 60px 60px;
-  background-image: linear-gradient(0deg,
-      hsl(240deg 44% 94%) 0%,
-      hsl(240deg 44% 95%) 21%,
-      hsl(240deg 44% 97%) 58%,
-      hsl(241deg 44% 98%) 77%,
-      hsl(241deg 44% 99%) 87%,
-      hsl(241deg 44% 99%) 93%,
-      hsl(241deg 44% 98%) 97%,
-      hsl(240deg 44% 97%) 99%,
-      hsl(240deg 44% 95%) 100%,
-      hsl(240deg 44% 94%) 100%);
+  background-image: linear-gradient(
+    0deg,
+    hsl(240deg 44% 94%) 0%,
+    hsl(240deg 44% 95%) 21%,
+    hsl(240deg 44% 97%) 58%,
+    hsl(241deg 44% 98%) 77%,
+    hsl(241deg 44% 99%) 87%,
+    hsl(241deg 44% 99%) 93%,
+    hsl(241deg 44% 98%) 97%,
+    hsl(240deg 44% 97%) 99%,
+    hsl(240deg 44% 95%) 100%,
+    hsl(240deg 44% 94%) 100%
+  );
 }
 
 .charDesc {

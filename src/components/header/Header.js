@@ -25,7 +25,7 @@ function Header() {
     };
   }, []);
   return (
-    <nav className={classes.header}>
+    <nav className={classes.header} id="main">
       <Link to="/">
         <div className={classes.header_logo}>
           <img className={classes.logo} src={logo} alt="Logo" />

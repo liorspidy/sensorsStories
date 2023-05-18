@@ -3,11 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 5rem);
+  min-height: calc(100vh - 5rem);
 }
 
 .title img {
-  max-width: 50%;
+  max-width: 60%;
   object-fit: contain;
   animation: floatUpDown 3s ease-in-out infinite;
 }
@@ -17,7 +17,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: calc(100vh - 4rem);
   position: relative;
   z-index: 1;
 }
@@ -46,7 +45,6 @@
 }
 
 @keyframes floatUpDown {
-
   0%,
   100% {
     transform: translate3d(0, 0, 0);
@@ -58,7 +56,6 @@
 }
 
 @keyframes scrollIcon {
-
   0%,
   100% {
     transform: translate3d(0, -150%, 0);

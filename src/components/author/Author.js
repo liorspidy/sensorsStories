@@ -49,6 +49,11 @@ const Author = () => {
         <motion.div className={classes.parbox} variants={parboxVarients}>
           <div className={classes.parboxImg}>
             <img src={ketty} alt="קטי בירמן" />
+            <Link to={"/about-me"}>
+              <div className={classes.tellmemore}>
+                <h3>ספרו לי עוד..</h3>
+              </div>
+            </Link>
           </div>
           <p className={classes.par}>
             קטי ילידת 1961, נשואה לעדי, אם למעין, רעות ונתנאלה וסבתא לשיר,
@@ -65,11 +70,6 @@ const Author = () => {
             חישנים", נותן גישה פשוטה ופותח שער באופן ממצה אל גוף ידע ענק שנצבר
             במחברתה לאורך מסע חייה האישיים והמקצועיים.
           </p>
-          <Link to={"/about-me"}>
-            <div className={classes.tellmemore}>
-              <h3>ספרו לי עוד..</h3>
-            </div>
-          </Link>
         </motion.div>
       </div>
       <div className={classes.photos}>
