@@ -6,8 +6,8 @@ const Clouds = () => {
     <div style={{ width: 0, height: 0 }}>
       <motion.div
         className={classes.cloud1}
-        initial={{ x: -700 }}
-        animate={{ x: 600 }}
+        initial={{ x: "10vw" }}
+        animate={{ x: "90vw" }}
         transition={{ duration: 100 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -20,8 +20,8 @@ const Clouds = () => {
       </motion.div>
       <motion.div
         className={classes.cloud2}
-        initial={{ x: -800 }}
-        animate={{ x: 0 }}
+        initial={{ x: "20vw" }}
+        animate={{ x: "70vw" }}
         transition={{ duration: 100 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -34,8 +34,8 @@ const Clouds = () => {
       </motion.div>
       <motion.div
         className={classes.cloud3}
-        initial={{ x: 500 }}
-        animate={{ x: -1000 }}
+        initial={{ x: "50vw" }}
+        animate={{ x: "-10vw" }}
         transition={{ duration: 90 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -48,8 +48,8 @@ const Clouds = () => {
       </motion.div>
       <motion.div
         className={classes.cloud4}
-        initial={{ x: 0 }}
-        animate={{ x: -1000 }}
+        initial={{ x: "20vw" }}
+        animate={{ x: "90vw" }}
         transition={{ duration: 110 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -63,8 +63,8 @@ const Clouds = () => {
 
       <motion.div
         className={classes.cloud5}
-        initial={{ x: -500 }}
-        animate={{ x: 300 }}
+        initial={{ x: "90vw" }}
+        animate={{ x: "0vw" }}
         transition={{ duration: 100 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -78,8 +78,8 @@ const Clouds = () => {
 
       <motion.div
         className={classes.cloud6}
-        initial={{ x: -700 }}
-        animate={{ x: 1200 }}
+        initial={{ x: "40vw" }}
+        animate={{ x: "75vw" }}
         transition={{ duration: 90 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
