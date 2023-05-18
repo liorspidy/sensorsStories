@@ -142,6 +142,35 @@
   margin: 0;
 }
 
+@media (max-width: 1424px) {
+  .par {
+    font-size: 1.2rem;
+  }
+  .parboxImg img {
+    width: 320px;
+    height: 415px;
+  }
+
+  .madadon img {
+    object-fit: contain;
+    width: 22rem;
+    cursor: pointer;
+  }
+
+  .ortzeva2 img {
+    object-fit: contain;
+    width: 5em;
+    cursor: pointer;
+  }
+
+  .ortzeva2::after {
+    left: 0rem;
+    bottom: -0.4rem;
+    width: 5.5rem;
+    height: 1.5rem;
+  }
+}
+
 @media (max-width: 1360px) {
   .par {
     font-size: 1.2rem;

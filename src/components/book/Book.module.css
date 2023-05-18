@@ -257,6 +257,20 @@
   }
 }
 
+@media (max-width: 1424px) {
+  .bookDesc1 {
+    font-size: 1.4rem;
+  }
+
+  .bookDesc2 {
+    font-size: 1rem;
+  }
+
+  .book img {
+    max-width: 22rem;
+  }
+}
+
 @media screen and (max-width: 1330px) {
   .ortzeva {
     scale: 0.3;

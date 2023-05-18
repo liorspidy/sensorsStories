@@ -111,6 +111,13 @@
   margin-bottom: 2rem;
 }
 
+@media (max-width: 1424px) {
+  .sensorImg img {
+    width: 12rem;
+    height: 15rem;
+  }
+}
+
 @media (max-width: 1382px) {
   .sensorImg img {
     width: 10rem;
