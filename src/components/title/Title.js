@@ -8,7 +8,7 @@ const Title = () => {
     <motion.div className={classes.titleBox}>
       <motion.div
         className={classes.title}
-        initial={{ y: -300, opacity: 0 }}
+        initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 2 }}
       >
@@ -25,8 +25,7 @@ const Title = () => {
           <div className={classes.scrollDownCircle}></div>
         </motion.div>
       </motion.div>
-
-      {/* <Clouds2 /> */}
+      <Clouds2 />
     </motion.div>
   );
 };

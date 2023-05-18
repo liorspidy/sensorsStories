@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import book from '../../images/book.jpg';
-import classes from './Book.module.css';
-import Clouds from './clouds/Clouds';
-import arrow from '../../images/down-arrow-download-svgrepo-com.svg';
-import ortzeva from '../../images/ortzeva.png';
+import { motion } from "framer-motion";
+import book from "../../images/book.jpg";
+import classes from "./Book.module.css";
+import Clouds from "./clouds/Clouds";
+import arrow from "../../images/down-arrow-download-svgrepo-com.svg";
+import ortzeva from "../../images/ortzeva.png";
 
 const Book = () => {
   const bookVarients = {
@@ -38,8 +38,8 @@ const Book = () => {
     <motion.div
       id="book"
       className={classes.bookPage}
-      initial={'offscreen'}
-      whileInView={'onscreen'}
+      initial={"offscreen"}
+      whileInView={"onscreen"}
       viewport={{ once: true, amount: 0.01 }}
     >
       <motion.div className={classes.reccomendation} variants={reccVarients}>
@@ -59,6 +59,12 @@ const Book = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2 }}
+            onClick={() =>
+              window.scrollTo({
+                top: document.getElementById("buy").offsetTop,
+                behavior: "smooth",
+              })
+            }
           >
             !לרכישה
           </motion.div>
@@ -108,8 +114,8 @@ const Book = () => {
             variants={descVarients}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById('author').offsetTop,
-                behavior: 'smooth',
+                top: document.getElementById("author").offsetTop,
+                behavior: "smooth",
               })
             }
           >
@@ -135,7 +141,7 @@ const Book = () => {
         </motion.div>
       </div>
 
-      {/* <Clouds /> */}
+      <Clouds />
     </motion.div>
   );
 };

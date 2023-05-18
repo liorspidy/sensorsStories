@@ -7,6 +7,7 @@ import Characters from "../char/Characters";
 import Contact from "../contact/Contact";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import { motion } from "framer-motion";
+import Buy from "../buy/Buy";
 
 const Main = () => {
   const [showArrow, setShowArrow] = useState(false);
@@ -46,6 +47,7 @@ const Main = () => {
       <Book />
       <Author />
       <Characters />
+      <Buy />
       <Contact id="contact" />
     </div>
   );

@@ -1,0 +1,95 @@
+import React from "react";
+import classes from "./Buy.module.css";
+import { motion } from "framer-motion";
+import stimazki from "../../images/stimazki.png";
+import netbook from "../../images/netbook.png";
+import seferlacol from "../../images/seferlacol.png";
+import tzomet from "../../images/tzomet.png";
+import kids from "../../images/kids.png";
+
+const Buy = () => {
+  const buyBoxVariants = {
+    offscreen: { opacity: 0 },
+    onscreen: { opacity: 1, transition: { duration: 1 } },
+  };
+
+  const storeVariants = {
+    offscreen: { opacity: 0, y: 30 },
+    onscreen: { opacity: 1, y: 0, transition: { duration: 2 } },
+    clicked: { scale: 0.9, transition: { duration: 0.2 } },
+  };
+
+  const kidsVariants = {
+    offscreen: { opacity: 0, x: 100 },
+    onscreen: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", bounce: 0.4, duration: 2 },
+    },
+  };
+
+  return (
+    <motion.div
+      className={classes.buyBox}
+      id="buy"
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      transition={{ staggerChildren: 0.8 }}
+      viewport={{ once: true, amount: 0.1 }}
+    >
+      <motion.div className={classes.title} variants={buyBoxVariants}>
+        <h1>רכשו כעת</h1>
+      </motion.div>
+      <motion.div className={classes.stores} variants={buyBoxVariants}>
+        <motion.div
+          className={classes.storeImg}
+          variants={storeVariants}
+          whileTap="clicked"
+        >
+          <a href="https://www.steimatzky.co.il/011360850">
+            <img src={stimazki} alt="סטימצקי" />
+          </a>
+        </motion.div>
+        <motion.div
+          className={classes.storeImg}
+          variants={storeVariants}
+          whileTap="clicked"
+        >
+          <a href="https://www.netbook.co.il/Book.aspx?id=13856">
+            <img src={netbook} alt="netbook" />
+          </a>
+        </motion.div>
+        <motion.div
+          className={classes.storeImg}
+          variants={storeVariants}
+          whileTap="clicked"
+        >
+          <a href="http://www.sifriyot.co.il/ItemInfo.aspx?Type=1&Barcode=338-1098">
+            <img src={seferlacol} alt="ספר לכל" />
+          </a>
+        </motion.div>
+        <motion.div
+          className={classes.storeImg}
+          variants={storeVariants}
+          whileTap="clicked"
+        >
+          <a href="https://www.booknet.co.il/%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D/%D7%A1%D7%99%D7%A4%D7%95%D7%A8%D7%99-%D7%97%D7%99%D7%A9%D7%A0%D7%99%D7%9D-33800010986">
+            <img src={tzomet} alt="צומת ספרים" />
+          </a>
+        </motion.div>
+      </motion.div>
+      <motion.div className={classes.kids} variants={kidsVariants}>
+        <motion.img
+          whileHover={{
+            rotate: [0, -1, 1, -1, 1, 0],
+            transition: { duration: 0.4 },
+          }}
+          src={kids}
+          alt="ילדים"
+        />
+      </motion.div>
+    </motion.div>
+  );
+};
+
+export default Buy;

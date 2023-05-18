@@ -20,16 +20,12 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-      <div className={classes.footerCol}>
-        <h5>Lior Fridman 2023 ©</h5>
-        <h5>קטי בירמן שפת הרגש</h5>
-      </div>
-      <div className={classes.footerCol}>
-        <div className={classes.iconRow}>
+      <div className={classes.details}>
+        <div className={classes.detail}>
           <EmailIcon className={classes.icon} onClick={emailClickHandler} />
           <h5>ketybirman@gmail.com</h5>
         </div>
-        <div className={classes.iconRow}>
+        <div className={classes.detail}>
           <LocalPhoneIcon
             className={classes.icon}
             title="0547877837"
@@ -37,10 +33,8 @@ const Footer = () => {
           />
           <h5>054-7877837</h5>
         </div>
-      </div>
-      <div className={classes.footerCol}>
         <Link to="https://www.facebook.com/sfatharegesh">
-          <div className={classes.iconRow}>
+          <div className={classes.detail}>
             <FacebookIcon
               className={classes.icon}
               onClick={facebookClickHandler}
@@ -53,6 +47,9 @@ const Footer = () => {
             />
           </div>
         </Link>
+      </div>
+      <div className={classes.footerCol}>
+        <h5>Lior Fridman 2023 ©</h5>
       </div>
     </footer>
   );
