@@ -4,7 +4,7 @@ import { useState } from "react";
 import CharactersJson from "./Characters.json";
 import Character from "./Character";
 
-const Characters = () => {
+const Characters = ({ isMobile }) => {
   const [chooseSensor, setChooseSensor] = useState(null);
   const aboutBoxVarients = {
     offscreen: { x: 30, opacity: 0 },
@@ -19,38 +19,47 @@ const Characters = () => {
     setChooseSensor(null);
   };
 
+  const CharactersClass = isMobile
+    ? classes.CharactersMobile
+    : classes.Characters;
+  const titleClass = isMobile ? classes.titleMobile : classes.title;
+  const charsClass = isMobile ? classes.charsMobile : classes.chars;
+  const sensorsBoxClass = isMobile
+    ? classes.sensorsBoxMobile
+    : classes.sensorsBox;
+  const charDescClass = isMobile ? classes.charDescMobile : classes.charDesc;
   return (
     <motion.div
       id="meet"
-      className={classes.Characters}
+      className={CharactersClass}
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.2 }}
       viewport={{ once: true, amount: 0.1 }}
     >
-      <motion.div className={classes.title} variants={aboutBoxVarients}>
+      <motion.div className={titleClass} variants={aboutBoxVarients}>
         <h1>הכירו את החישנים</h1>
       </motion.div>
-      <motion.div className={classes.chars}>
+      <motion.div className={charsClass}>
         {CharactersJson.map((sensor, index) => {
-          let sensorBoxClass =
+          let sensorsBoxClassClass =
             chooseSensor === sensor
-              ? `${classes.sensorsBox}`
-              : `${classes.sensorsBox} ${classes.blured} `;
+              ? `${sensorsBoxClass}`
+              : `${sensorsBoxClass} ${classes.blured} `;
 
           let parClass =
             chooseSensor === sensor
-              ? `${classes.charDesc}`
-              : `${classes.charDesc} ${classes.hidden} `;
+              ? `${charDescClass}`
+              : `${charDescClass} ${classes.hidden} `;
 
           if (chooseSensor === null) {
-            sensorBoxClass = `${classes.sensorsBox}`;
-            parClass = `${classes.charDesc} ${classes.hidden}`;
+            sensorsBoxClassClass = `${sensorsBoxClass}`;
+            parClass = `${charDescClass} ${classes.hidden}`;
           }
           return (
             <Character
               key={index}
-              sensorBoxClass={sensorBoxClass}
+              sensorBoxClass={sensorsBoxClassClass}
               parClass={parClass}
               hoverSelectHandler={hoverSelectHandler.bind(this, sensor)}
               hoverExitHandler={hoverExitHandler}
@@ -58,6 +67,7 @@ const Characters = () => {
               p1={sensor.p1}
               p2={sensor.p2}
               img={sensor.img}
+              isMobile={isMobile}
             />
           );
         })}

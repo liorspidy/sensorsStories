@@ -1,15 +1,13 @@
-import { useEffect, useState } from 'react';
-import classes from './Buy.module.css';
-import { motion } from 'framer-motion';
-import stimazki from '../../images/stimazki.png';
-import netbook from '../../images/netbook.png';
-import seferlacol from '../../images/seferlacol.png';
-import tzomet from '../../images/tzomet.png';
-import kids from '../../images/kids.png';
-import ivrit from '../../images/ivrit.png';
+import classes from "./Buy.module.css";
+import { motion } from "framer-motion";
+import stimazki from "../../images/stimazki.png";
+import netbook from "../../images/netbook.png";
+import seferlacol from "../../images/seferlacol.png";
+import tzomet from "../../images/tzomet.png";
+import kids from "../../images/kids.png";
+import ivrit from "../../images/ivrit.png";
 
-const Buy = () => {
-  const [isMobile, setIsMobile] = useState(false);
+const Buy = ({ isMobile }) => {
   const buyBoxVariants = {
     offscreen: { opacity: 0 },
     onscreen: { opacity: 1, transition: { duration: 1 } },
@@ -26,41 +24,22 @@ const Buy = () => {
     onscreen: {
       opacity: 1,
       x: 0,
-      transition: { type: 'spring', bounce: 0.4, duration: 2 },
+      transition: { type: "spring", bounce: 0.4, duration: 2 },
     },
   };
 
-  function isMobileDevice() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    );
-  }
-
-  useEffect(() => {
-    setIsMobile(isMobileDevice());
-
-    const handleResize = () => {
-      setIsMobile(isMobileDevice());
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  // const buyBoxClass = isMobile ? classes.buyBoxMobile : classes.buyBox;
+  const buyBoxClass = isMobile ? classes.buyBoxMobile : classes.buyBox;
   const titleClass = isMobile ? classes.titleMobile : classes.title;
   const storesClass = isMobile ? classes.storesMobile : classes.stores;
   const storeImgClass = isMobile ? classes.storeImgMobile : classes.storeImg;
   const kidsClass = isMobile ? classes.kidsMobile : classes.kids;
+
   return (
     <motion.div
-      className={classes.buyBox}
+      className={buyBoxClass}
       id="buy"
-      initial={'offscreen'}
-      whileInView={'onscreen'}
+      initial={"offscreen"}
+      whileInView={"onscreen"}
       transition={{ staggerChildren: 0.8 }}
       viewport={{ once: true, amount: 0.1 }}
     >

@@ -44,8 +44,53 @@
   animation: scrollIcon 2s ease-in-out infinite;
 }
 
-@keyframes floatUpDown {
+.titleBoxMobile {
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vw;
+}
 
+.titleMobile img {
+  max-width: 60%;
+  object-fit: contain;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+.titleMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.scrollDownMobile {
+  width: 4rem;
+  height: 8rem;
+  border: 3px solid #b7b7b7;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin-top: 2rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.21);
+  z-index: 1;
+}
+
+.scrollDownCircleMobile {
+  background-color: #b7b7b7;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  margin: 4rem 0;
+  animation: scrollIcon 2s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
   0%,
   100% {
     transform: translate3d(0, 0, 0);
@@ -57,7 +102,6 @@
 }
 
 @keyframes scrollIcon {
-
   0%,
   100% {
     transform: translate3d(0, -150%, 0);
@@ -79,7 +123,7 @@
   }
 
   .titleBox {
-    min-height: 100vw
+    min-height: 100vw;
   }
 }
 

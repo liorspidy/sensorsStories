@@ -72,17 +72,19 @@
   position: relative;
   margin-top: 1rem;
   border-radius: 80px 80px 60px 60px;
-  background-image: linear-gradient(0deg,
-      hsl(240deg 44% 94%) 0%,
-      hsl(240deg 44% 95%) 21%,
-      hsl(240deg 44% 97%) 58%,
-      hsl(241deg 44% 98%) 77%,
-      hsl(241deg 44% 99%) 87%,
-      hsl(241deg 44% 99%) 93%,
-      hsl(241deg 44% 98%) 97%,
-      hsl(240deg 44% 97%) 99%,
-      hsl(240deg 44% 95%) 100%,
-      hsl(240deg 44% 94%) 100%);
+  background-image: linear-gradient(
+    0deg,
+    hsl(240deg 44% 94%) 0%,
+    hsl(240deg 44% 95%) 21%,
+    hsl(240deg 44% 97%) 58%,
+    hsl(241deg 44% 98%) 77%,
+    hsl(241deg 44% 99%) 87%,
+    hsl(241deg 44% 99%) 93%,
+    hsl(241deg 44% 98%) 97%,
+    hsl(240deg 44% 97%) 99%,
+    hsl(240deg 44% 95%) 100%,
+    hsl(240deg 44% 94%) 100%
+  );
 }
 
 .charDesc {
@@ -106,6 +108,125 @@
 .charDescInvite {
   font-family: "Rubik-Bold";
   padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------------------------------------------------------------- */
+
+.CharactersMobile {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.charsMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  margin: 0 3rem;
+  margin-bottom: 3rem;
+}
+
+.titleMobile {
+  font-family: "Rubik-Bold";
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  color: #f37b87;
+  filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+}
+
+.sensorsBoxMobile,
+.sensorsBoxMobile.blured {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: #bcbcbc91;
+  border-radius: 100px 100px 60px 60px;
+  border: 1px solid #ffffffa3;
+  transition: scale 0.3s, filter 0.3s;
+  flex-direction: row;
+  width: 50rem;
+  height: 30rem;
+  padding: 1rem;
+}
+
+.sensorsBoxMobile.blured {
+  scale: 0.95;
+  filter: blur(1px) brightness(0.9);
+}
+
+.sensorImgMobile img {
+  width: 18rem;
+  height: 26rem;
+  object-fit: contain;
+  padding: 1rem;
+  filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.1));
+  z-index: 2;
+}
+
+.sensorImgMobile::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #00000030;
+  filter: blur(7px);
+  z-index: 1;
+  left: 4rem;
+  bottom: 0.7rem;
+  width: 10rem;
+  height: 2rem;
+}
+
+.sensorImgMobile {
+  position: relative;
+  border-radius: 100px 100px 60px 60px;
+  background-image: linear-gradient(
+    0deg,
+    hsl(240deg 44% 94%) 0%,
+    hsl(240deg 44% 95%) 21%,
+    hsl(240deg 44% 97%) 58%,
+    hsl(241deg 44% 98%) 77%,
+    hsl(241deg 44% 99%) 87%,
+    hsl(241deg 44% 99%) 93%,
+    hsl(241deg 44% 98%) 97%,
+    hsl(240deg 44% 97%) 99%,
+    hsl(240deg 44% 95%) 100%,
+    hsl(240deg 44% 94%) 100%
+  );
+  margin: 1rem;
+}
+
+.charDescMobile {
+  direction: rtl;
+  color: #4d4d4d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.charDescQuoteMobile {
+  font-style: italic;
+  font-size: 2rem;
+  font-family: "Rubik-Italic";
+  padding: 0 2rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.charDescInviteMobile {
+  font-family: "Rubik-Bold";
+  padding: 0 2rem;
+  font-size: 2.2rem;
   margin-bottom: 2rem;
 }
 
@@ -162,11 +283,7 @@
   }
 }
 
-@media (max-width: 1084px) {
-  .Characters {
-    min-height: 100vw;
-  }
-
+/* @media (max-width: 1084px) {
   .chars {
     flex-direction: column;
     margin: 0 3rem;
@@ -206,10 +323,9 @@
     width: 6.5rem;
     height: 2rem;
   }
-}
+} */
 
 @media (max-width: 640px) {
-
   .chars {
     flex-direction: column;
     margin: 0 3rem;

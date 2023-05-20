@@ -13,6 +13,18 @@ const Character = (props) => {
     },
   };
 
+  const sensorImgClass = props.isMobile
+    ? classes.sensorImgMobile
+    : classes.sensorImg;
+  const charDescClass = props.isMobile
+    ? classes.charDescMobile
+    : classes.charDesc;
+  const charDescQuoteClass = props.isMobile
+    ? classes.charDescQuoteMobile
+    : classes.charDescQuote;
+  const charDescInviteClass = props.isMobile
+    ? classes.charDescInviteMobile
+    : classes.charDescInvite;
   return (
     <motion.div
       className={props.sensorBoxClass}
@@ -20,7 +32,7 @@ const Character = (props) => {
       onMouseLeave={props.hoverExitHandler}
       variants={charVarients}
     >
-      <div className={classes.sensorImg}>
+      <div className={sensorImgClass}>
         <motion.img
           src={props.img}
           alt={props.name}
@@ -30,12 +42,12 @@ const Character = (props) => {
           }}
         />
       </div>
-      <div className={props.parClass}>
+      <div className={charDescClass}>
         <p
-          className={classes.charDescQuote}
+          className={charDescQuoteClass}
           dangerouslySetInnerHTML={{ __html: formattedString }}
         />
-        <p className={classes.charDescInvite}>{props.p2}</p>
+        <p className={charDescInviteClass}>{props.p2}</p>
       </div>
     </motion.div>
   );

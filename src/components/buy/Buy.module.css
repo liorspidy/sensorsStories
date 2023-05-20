@@ -39,7 +39,6 @@
   -webkit-backdrop-filter: blur(7.3px);
 }
 
-
 .storeImg img {
   object-fit: contain;
   width: 17rem;
@@ -67,13 +66,24 @@
   margin-bottom: 1rem;
 }
 
+/* ---------------------------------------------------------------- */
+
+.buyBoxMobile {
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+}
+
 .titleMobile {
   font-family: "Rubik-Bold";
-  text-align: end;
+  text-align: center;
   width: 100%;
   font-size: 3rem;
   color: #f37b87;
-  padding-right: 6rem;
 }
 
 .titleMobile h1 {
@@ -88,7 +98,7 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  margin: 2rem;
+  margin: 1rem;
   padding: 5rem;
   position: relative;
   background: rgba(255, 255, 255, 0.2);
@@ -98,10 +108,9 @@
   -webkit-backdrop-filter: blur(7.3px);
 }
 
-
 .storeImgMobile img {
   object-fit: contain;
-  width: 28rem;
+  width: 25rem;
   filter: drop-shadow(0 2px 30px rgb(255, 255, 255));
   cursor: pointer;
   transition: scale 0.6s;
@@ -125,7 +134,6 @@
   width: 80%;
   margin-bottom: 1rem;
 }
-
 
 @media (max-width: 1424px) {
   .storeImg img {
@@ -165,7 +173,6 @@
 }
 
 @media screen and (max-width: 1140px) {
-
   .storeImg img {
     width: 18rem;
   }

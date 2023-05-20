@@ -1,4 +1,5 @@
-.header {
+.header,
+.headerMobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +13,7 @@
   top: 0; */
 }
 
-.header_logo {
+.headerLogo {
   height: 3.5rem;
   display: flex;
   object-fit: contain;
@@ -41,6 +42,31 @@
   color: #53524d;
   font-weight: bold;
   text-decoration: none;
+}
+
+.headerMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  padding-left: 1.5rem;
+  background-color: #ffef5c;
+  height: 10rem;
+  z-index: 10;
+  font-family: "Rubik-Bold";
+  /* position: sticky;
+  top: 0; */
+}
+
+.header_navMobile,
+.header_linkMobile {
+  display: none;
+}
+
+.headerLogoMobile {
+  height: 8rem;
+  display: flex;
+  object-fit: contain;
 }
 
 @media (max-width: 450px) {

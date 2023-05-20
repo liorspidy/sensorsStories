@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import MenuIcon from '@mui/icons-material/Menu';
-import classes from './BasicMenu.module.css';
+import React, { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import classes from "./BasicMenu.module.css";
 
 const BasicMenu = () => {
   const [menuClicked, setMenuClicked] = useState(false);
@@ -13,7 +13,7 @@ const BasicMenu = () => {
     <div className={classes.basicMenu}>
       <div className={classes.menuIcon}>
         <MenuIcon
-          sx={{ fontSize: '2.5rem', color: '#53524d' }}
+          sx={{ fontSize: "6rem", color: "#53524d" }}
           onClick={menuClickedHandler}
         />
       </div>
@@ -22,56 +22,61 @@ const BasicMenu = () => {
           <ul className={classes.menuList}>
             <li
               className={classes.menuListItem}
-              onClick={() =>
+              onClick={() => {
+                menuClickedHandler();
                 window.scrollTo({
-                  top: document.getElementById('book').offsetTop,
-                  behavior: 'smooth',
-                })
-              }
+                  top: document.getElementById("book").offsetTop,
+                  behavior: "smooth",
+                });
+              }}
             >
               הספר
             </li>
             <li
               className={classes.menuListItem}
-              onClick={() =>
+              onClick={() => {
+                menuClickedHandler();
                 window.scrollTo({
-                  top: document.getElementById('author').offsetTop,
-                  behavior: 'smooth',
-                })
-              }
+                  top: document.getElementById("author").offsetTop,
+                  behavior: "smooth",
+                });
+              }}
             >
               הסופרת
             </li>
             <li
               className={classes.menuListItem}
-              onClick={() =>
+              onClick={() => {
+                menuClickedHandler();
                 window.scrollTo({
-                  top: document.getElementById('meet').offsetTop,
-                  behavior: 'smooth',
-                })
-              }
+                  top: document.getElementById("meet").offsetTop,
+                  behavior: "smooth",
+                });
+              }}
             >
               החישנים
             </li>
             <li
               className={classes.menuListItem}
-              onClick={() =>
+              onClick={() => {
+                menuClickedHandler();
                 window.scrollTo({
-                  top: document.getElementById('buy').offsetTop,
-                  behavior: 'smooth',
-                })
-              }
+                  top: document.getElementById("buy").offsetTop,
+                  behavior: "smooth",
+                });
+              }}
             >
               לרכישה
             </li>
             <li
               className={classes.menuListItem}
-              onClick={() =>
+              onClick={() => {
+                menuClickedHandler();
                 window.scrollTo({
-                  top: document.getElementById('contact').offsetTop,
-                  behavior: 'smooth',
-                })
-              }
+                  top: document.getElementById("contact").offsetTop,
+                  behavior: "smooth",
+                });
+              }}
             >
               צרו קשר
             </li>

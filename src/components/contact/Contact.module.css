@@ -1,4 +1,4 @@
-.ContactComp {
+.contactComp {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -175,6 +175,148 @@
   color: rgb(74, 165, 53);
 }
 
+/* ---------------------------------------------------------------- */
+
+.contactCompMobile {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.contactBoxMobile {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+}
+
+.contactDetailsMobile {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0 2rem;
+}
+
+.titleMobile {
+  font-family: "Rubik-Bold";
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  color: #f37b87;
+}
+
+.titleMobile h1 {
+  margin: 0;
+  filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+}
+
+.formMobile {
+  width: 100%;
+  direction: rtl;
+  font-family: "Rubik-Bold";
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem 1rem;
+  transition: scale 0.5s;
+  z-index: 1;
+  gap: 1rem;
+  font-size: 3.5rem;
+}
+
+.formButtonMobile {
+  width: 95%;
+  display: flex;
+  justify-content: end;
+}
+
+.formButtonMobile button {
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  background-color: #4c9aac;
+  color: white;
+  font-size: 1.2rem;
+  direction: rtl;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Rubik-Bold";
+  transition: all 0.8;
+  border: none;
+}
+
+.formButtonMobile button:hover {
+  transition: all 0.8;
+  scale: 1.1;
+  background-color: #56afc3;
+}
+
+.contactDivMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contactDivMobile input {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 1rem;
+  font-family: "Rubik-Regular";
+  height: 6rem;
+  font-size: 3rem;
+}
+
+.contactDivMobile textarea {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Rubik-Regular";
+  height: 24rem;
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.contactPhotosMobile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.momandgirlMobile {
+  object-fit: contain;
+  width: 60%;
+}
+
+.heartsMobile {
+  object-fit: contain;
+  width: 20%;
+  margin-left: 20rem;
+}
+
 @media screen and (min-width: 1400px) {
   .form {
     min-height: 70vh;
@@ -200,7 +342,6 @@
 }
 
 @media (max-width: 1000px) {
-
   .form {
     font-size: 2.2rem;
   }
@@ -236,7 +377,6 @@
 }
 
 @media (max-width: 640px) {
-
   .title {
     width: 80%;
     padding: 0;

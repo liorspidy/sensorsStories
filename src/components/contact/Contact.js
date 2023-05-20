@@ -6,7 +6,7 @@ import momandgirl from "../../images/momandgirl.png";
 import emailjs from "emailjs-com";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
-const Contact = () => {
+const Contact = ({ isMobile }) => {
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
@@ -76,27 +76,52 @@ const Contact = () => {
     onscreen: { y: 0, opacity: 1, transition: { duration: 2 } },
   };
 
+  const ContactCompClass = isMobile
+    ? classes.contactCompMobile
+    : classes.contactComp;
+  const titleClass = isMobile ? classes.titleMobile : classes.title;
+  const contactBoxClass = isMobile
+    ? classes.contactBoxMobile
+    : classes.contactBox;
+  const contactPhotosClass = isMobile
+    ? classes.contactPhotosMobile
+    : classes.contactPhotos;
+  const heartsClass = isMobile ? classes.heartsMobile : classes.hearts;
+  const momandgirlClass = isMobile
+    ? classes.momandgirlMobile
+    : classes.momandgirl;
+  const contactDetailsClass = isMobile
+    ? classes.contactDetailsMobile
+    : classes.contactDetails;
+  const formClass = isMobile ? classes.formMobile : classes.form;
+  const contactDivClass = isMobile
+    ? classes.contactDivMobile
+    : classes.contactDiv;
+  const contactButtonIconClass = isMobile
+    ? classes.formButtonMobile
+    : classes.formButton;
+
   return (
     <motion.div
-      className={classes.ContactComp}
+      className={ContactCompClass}
       id="contact"
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.8 }}
       viewport={{ once: true, amount: 0.1 }}
     >
-      <motion.div className={classes.title} variants={aboutBoxVarients}>
+      <motion.div className={titleClass} variants={aboutBoxVarients}>
         <h1>שלחו הודעה</h1>
       </motion.div>
-      <div className={classes.contactBox}>
-        <div className={classes.contactPhotos}>
+      <div className={contactBoxClass}>
+        <div className={contactPhotosClass}>
           <motion.img
             variants={momVarients}
             whileHover={{
               rotate: [0, -1, 1, -1, 1, 0],
               transition: { duration: 0.4 },
             }}
-            className={classes.hearts}
+            className={heartsClass}
             src={hearts}
             alt="רגשות"
           />
@@ -106,18 +131,15 @@ const Contact = () => {
               rotate: [0, -1, 1, -1, 1, 0],
               transition: { duration: 0.4 },
             }}
-            className={classes.momandgirl}
+            className={momandgirlClass}
             src={momandgirl}
             alt="אמא ובת"
           />
         </div>
-        <motion.div
-          className={classes.contactDetails}
-          variants={aboutBoxVarients}
-        >
+        <motion.div className={contactDetailsClass} variants={aboutBoxVarients}>
           {!isMessageSent && (
-            <form onSubmit={handleSubmit} className={classes.form}>
-              <div className={classes.contactDiv}>
+            <form onSubmit={handleSubmit} className={formClass}>
+              <div className={contactDivClass}>
                 <label htmlFor="title">מה הנושא?</label>
                 <input
                   type="text"
@@ -127,7 +149,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              <div className={classes.contactDiv}>
+              <div className={contactDivClass}>
                 <label htmlFor="message">מה ההודעה?</label>
                 <textarea
                   id="message"
@@ -136,7 +158,7 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <div className={classes.contactDiv}>
+              <div className={contactDivClass}>
                 <label htmlFor="senderEmail">מה המייל שלך?</label>
                 <input
                   type="email"
@@ -146,7 +168,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              <div className={classes.formButton}>
+              <div className={contactButtonIconClass}>
                 <button type="submit">לשליחה</button>
               </div>
             </form>

@@ -1,96 +1,89 @@
-import React, { useEffect, useState } from 'react';
-import logo from '../../images/logoEmpty.png';
-import classes from './Header.module.css';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import BasicMenu from './menu/BasicMenu';
+import logo from "../../images/logoEmpty.png";
+import classes from "./Header.module.css";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import BasicMenu from "./menu/BasicMenu";
 
-function Header() {
-  const [isMobile, setIsMobile] = useState(false);
+function Header({ isMobile }) {
+  const headerClass = isMobile ? classes.headerMobile : classes.header;
+  const headerLogoClass = isMobile
+    ? classes.headerLogoMobile
+    : classes.headerLogo;
+  const logoClass = isMobile ? classes.logoMobile : classes.logo;
+  const headerNavClass = isMobile
+    ? classes.header_navMobile
+    : classes.header_nav;
+  const headerLinkClass = isMobile
+    ? classes.header_linkMobile
+    : classes.header_link;
 
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 830);
-    }
-
-    // Initial check
-    handleResize();
-
-    // Add event listener for window resize
-    window.addEventListener('resize', handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
   return (
-    <nav className={classes.header} id="main">
+    <nav className={headerClass} id="main">
       <Link to="/">
-        <div className={classes.header_logo}>
-          <img className={classes.logo} src={logo} alt="Logo" />
+        <div className={headerLogoClass}>
+          <img className={logoClass} src={logo} alt="Logo" />
         </div>
       </Link>
       {isMobile && <BasicMenu />}
       {!isMobile && (
-        <div className={classes.header_nav}>
+        <div className={headerNavClass}>
           <motion.a
-            className={classes.header_link}
+            className={headerLinkClass}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById('book').offsetTop,
-                behavior: 'smooth',
+                top: document.getElementById("book").offsetTop,
+                behavior: "smooth",
               })
             }
           >
             הספר
           </motion.a>
           <motion.a
-            className={classes.header_link}
+            className={headerLinkClass}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById('author').offsetTop,
-                behavior: 'smooth',
+                top: document.getElementById("author").offsetTop,
+                behavior: "smooth",
               })
             }
           >
             הסופרת
           </motion.a>
           <motion.a
-            className={classes.header_link}
+            className={headerLinkClass}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById('meet').offsetTop,
-                behavior: 'smooth',
+                top: document.getElementById("meet").offsetTop,
+                behavior: "smooth",
               })
             }
           >
             החישנים
           </motion.a>
           <motion.a
-            className={classes.header_link}
+            className={headerLinkClass}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById('buy').offsetTop,
-                behavior: 'smooth',
+                top: document.getElementById("buy").offsetTop,
+                behavior: "smooth",
               })
             }
           >
             לרכישה
           </motion.a>
           <motion.a
-            className={classes.header_link}
+            className={headerLinkClass}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById('contact').offsetTop,
-                behavior: 'smooth',
+                top: document.getElementById("contact").offsetTop,
+                behavior: "smooth",
               })
             }
           >
             צרו קשר
           </motion.a>
           <motion.a
-            className={classes.header_link}
+            className={headerLinkClass}
             // onClick={() =>
             //   window.scrollTo({
             //     top: document.getElementById("classes").offsetTop,
@@ -101,7 +94,7 @@ function Header() {
             סדנאות
           </motion.a>
           <motion.a
-            className={classes.header_link}
+            className={headerLinkClass}
             // onClick={() =>
             //   window.scrollTo({
             //     top: document.getElementById("media").offsetTop,
