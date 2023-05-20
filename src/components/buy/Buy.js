@@ -1,13 +1,15 @@
-import React from "react";
-import classes from "./Buy.module.css";
-import { motion } from "framer-motion";
-import stimazki from "../../images/stimazki.png";
-import netbook from "../../images/netbook.png";
-import seferlacol from "../../images/seferlacol.png";
-import tzomet from "../../images/tzomet.png";
-import kids from "../../images/kids.png";
+import { useEffect, useState } from 'react';
+import classes from './Buy.module.css';
+import { motion } from 'framer-motion';
+import stimazki from '../../images/stimazki.png';
+import netbook from '../../images/netbook.png';
+import seferlacol from '../../images/seferlacol.png';
+import tzomet from '../../images/tzomet.png';
+import kids from '../../images/kids.png';
+import ivrit from '../../images/ivrit.png';
 
 const Buy = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const buyBoxVariants = {
     offscreen: { opacity: 0 },
     onscreen: { opacity: 1, transition: { duration: 1 } },
@@ -24,25 +26,50 @@ const Buy = () => {
     onscreen: {
       opacity: 1,
       x: 0,
-      transition: { type: "spring", bounce: 0.4, duration: 2 },
+      transition: { type: 'spring', bounce: 0.4, duration: 2 },
     },
   };
 
+  function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  }
+
+  useEffect(() => {
+    setIsMobile(isMobileDevice());
+
+    const handleResize = () => {
+      setIsMobile(isMobileDevice());
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // const buyBoxClass = isMobile ? classes.buyBoxMobile : classes.buyBox;
+  const titleClass = isMobile ? classes.titleMobile : classes.title;
+  const storesClass = isMobile ? classes.storesMobile : classes.stores;
+  const storeImgClass = isMobile ? classes.storeImgMobile : classes.storeImg;
+  const kidsClass = isMobile ? classes.kidsMobile : classes.kids;
   return (
     <motion.div
       className={classes.buyBox}
       id="buy"
-      initial={"offscreen"}
-      whileInView={"onscreen"}
+      initial={'offscreen'}
+      whileInView={'onscreen'}
       transition={{ staggerChildren: 0.8 }}
       viewport={{ once: true, amount: 0.1 }}
     >
-      <motion.div className={classes.title} variants={buyBoxVariants}>
+      <motion.div className={titleClass} variants={buyBoxVariants}>
         <h1>רכשו כעת</h1>
       </motion.div>
-      <motion.div className={classes.stores} variants={buyBoxVariants}>
+      <motion.div className={storesClass} variants={buyBoxVariants}>
         <motion.div
-          className={classes.storeImg}
+          className={storeImgClass}
           variants={storeVariants}
           whileTap="clicked"
         >
@@ -51,7 +78,7 @@ const Buy = () => {
           </a>
         </motion.div>
         <motion.div
-          className={classes.storeImg}
+          className={storeImgClass}
           variants={storeVariants}
           whileTap="clicked"
         >
@@ -60,7 +87,7 @@ const Buy = () => {
           </a>
         </motion.div>
         <motion.div
-          className={classes.storeImg}
+          className={storeImgClass}
           variants={storeVariants}
           whileTap="clicked"
         >
@@ -69,7 +96,7 @@ const Buy = () => {
           </a>
         </motion.div>
         <motion.div
-          className={classes.storeImg}
+          className={storeImgClass}
           variants={storeVariants}
           whileTap="clicked"
         >
@@ -77,8 +104,17 @@ const Buy = () => {
             <img src={tzomet} alt="צומת ספרים" />
           </a>
         </motion.div>
+        <motion.div
+          className={storeImgClass}
+          variants={storeVariants}
+          whileTap="clicked"
+        >
+          <a href="https://www.e-vrit.co.il/Product/27434/%D7%A1%D7%99%D7%A4%D7%95%D7%A8%D7%99_%D7%97%D7%99%D7%A9%D7%A0%D7%99%D7%9D">
+            <img src={ivrit} alt="עברית" />
+          </a>
+        </motion.div>
       </motion.div>
-      <motion.div className={classes.kids} variants={kidsVariants}>
+      <motion.div className={kidsClass} variants={kidsVariants}>
         <motion.img
           whileHover={{
             rotate: [0, -1, 1, -1, 1, 0],

@@ -45,6 +45,7 @@
 }
 
 @keyframes floatUpDown {
+
   0%,
   100% {
     transform: translate3d(0, 0, 0);
@@ -56,6 +57,7 @@
 }
 
 @keyframes scrollIcon {
+
   0%,
   100% {
     transform: translate3d(0, -150%, 0);
@@ -74,6 +76,10 @@
   .title img {
     max-width: 40rem;
     object-fit: contain;
+  }
+
+  .titleBox {
+    min-height: 100vw
   }
 }
 

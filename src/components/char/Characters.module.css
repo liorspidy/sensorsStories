@@ -72,19 +72,17 @@
   position: relative;
   margin-top: 1rem;
   border-radius: 80px 80px 60px 60px;
-  background-image: linear-gradient(
-    0deg,
-    hsl(240deg 44% 94%) 0%,
-    hsl(240deg 44% 95%) 21%,
-    hsl(240deg 44% 97%) 58%,
-    hsl(241deg 44% 98%) 77%,
-    hsl(241deg 44% 99%) 87%,
-    hsl(241deg 44% 99%) 93%,
-    hsl(241deg 44% 98%) 97%,
-    hsl(240deg 44% 97%) 99%,
-    hsl(240deg 44% 95%) 100%,
-    hsl(240deg 44% 94%) 100%
-  );
+  background-image: linear-gradient(0deg,
+      hsl(240deg 44% 94%) 0%,
+      hsl(240deg 44% 95%) 21%,
+      hsl(240deg 44% 97%) 58%,
+      hsl(241deg 44% 98%) 77%,
+      hsl(241deg 44% 99%) 87%,
+      hsl(241deg 44% 99%) 93%,
+      hsl(241deg 44% 98%) 97%,
+      hsl(240deg 44% 97%) 99%,
+      hsl(240deg 44% 95%) 100%,
+      hsl(240deg 44% 94%) 100%);
 }
 
 .charDesc {
@@ -166,7 +164,7 @@
 
 @media (max-width: 1084px) {
   .Characters {
-    height: 100%;
+    min-height: 100vw;
   }
 
   .chars {
@@ -178,14 +176,14 @@
   .sensorsBox,
   .sensorsBox.blured {
     flex-direction: row;
-    width: 38rem;
-    height: 18rem;
-    max-width: 40rem;
+    width: 45rem;
+    height: 15rem;
+    max-width: 45rem;
   }
 
   .sensorImg img {
-    width: 12rem;
-    height: 16rem;
+    width: 10rem;
+    height: 13rem;
   }
 
   .sensorImg {
@@ -211,9 +209,6 @@
 }
 
 @media (max-width: 640px) {
-  .Characters {
-    height: 100%;
-  }
 
   .chars {
     flex-direction: column;

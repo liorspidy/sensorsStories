@@ -11,7 +11,7 @@ const BasicMenu = () => {
 
   return (
     <div className={classes.basicMenu}>
-      <div>
+      <div className={classes.menuIcon}>
         <MenuIcon
           sx={{ fontSize: '2.5rem', color: '#53524d' }}
           onClick={menuClickedHandler}
@@ -53,7 +53,28 @@ const BasicMenu = () => {
             >
               החישנים
             </li>
-            <li className={classes.menuListItem}>צרו קשר</li>
+            <li
+              className={classes.menuListItem}
+              onClick={() =>
+                window.scrollTo({
+                  top: document.getElementById('buy').offsetTop,
+                  behavior: 'smooth',
+                })
+              }
+            >
+              לרכישה
+            </li>
+            <li
+              className={classes.menuListItem}
+              onClick={() =>
+                window.scrollTo({
+                  top: document.getElementById('contact').offsetTop,
+                  behavior: 'smooth',
+                })
+              }
+            >
+              צרו קשר
+            </li>
             <li className={classes.menuListItem}>סדנאות</li>
             <li className={classes.menuListItem}>מדיה</li>
           </ul>

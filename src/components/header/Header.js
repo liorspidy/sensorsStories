@@ -1,27 +1,27 @@
-import React, { useEffect, useState } from "react";
-import logo from "../../images/logoEmpty.png";
-import classes from "./Header.module.css";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import BasicMenu from "./menu/BasicMenu";
+import React, { useEffect, useState } from 'react';
+import logo from '../../images/logoEmpty.png';
+import classes from './Header.module.css';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import BasicMenu from './menu/BasicMenu';
 
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth < 800);
+      setIsMobile(window.innerWidth < 830);
     }
 
     // Initial check
     handleResize();
 
     // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
   return (
@@ -38,8 +38,8 @@ function Header() {
             className={classes.header_link}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById("book").offsetTop,
-                behavior: "smooth",
+                top: document.getElementById('book').offsetTop,
+                behavior: 'smooth',
               })
             }
           >
@@ -49,8 +49,8 @@ function Header() {
             className={classes.header_link}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById("author").offsetTop,
-                behavior: "smooth",
+                top: document.getElementById('author').offsetTop,
+                behavior: 'smooth',
               })
             }
           >
@@ -60,8 +60,8 @@ function Header() {
             className={classes.header_link}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById("meet").offsetTop,
-                behavior: "smooth",
+                top: document.getElementById('meet').offsetTop,
+                behavior: 'smooth',
               })
             }
           >
@@ -71,8 +71,19 @@ function Header() {
             className={classes.header_link}
             onClick={() =>
               window.scrollTo({
-                top: document.getElementById("contact").offsetTop,
-                behavior: "smooth",
+                top: document.getElementById('buy').offsetTop,
+                behavior: 'smooth',
+              })
+            }
+          >
+            לרכישה
+          </motion.a>
+          <motion.a
+            className={classes.header_link}
+            onClick={() =>
+              window.scrollTo({
+                top: document.getElementById('contact').offsetTop,
+                behavior: 'smooth',
               })
             }
           >

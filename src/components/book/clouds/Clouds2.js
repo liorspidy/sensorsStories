@@ -1,13 +1,13 @@
-import { motion } from "framer-motion";
-import classes from "./Clouds.module.css";
+import { motion } from 'framer-motion';
+import classes from './Clouds.module.css';
 
 const Clouds2 = () => {
   return (
     <div className={classes.clouds}>
-      <motion.div
+      <motion.span
         className={classes.cloud1}
-        initial={{ x: "80vw" }}
-        animate={{ x: "0vw" }}
+        initial={{ x: '80vw' }}
+        animate={{ x: '0vw' }}
         transition={{ duration: 110 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -17,11 +17,11 @@ const Clouds2 = () => {
             transform="matrix(.77976 0 0 .78395-299.99-418.63)"
           />
         </svg>
-      </motion.div>
-      <motion.div
+      </motion.span>
+      <motion.span
         className={classes.cloud2}
-        initial={{ x: "75vw" }}
-        animate={{ x: "20vw" }}
+        initial={{ x: '75vw' }}
+        animate={{ x: '20vw' }}
         transition={{ duration: 110 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -31,11 +31,11 @@ const Clouds2 = () => {
             transform="matrix(.77976 0 0 .78395-299.99-418.63)"
           />
         </svg>
-      </motion.div>
-      <motion.div
+      </motion.span>
+      <motion.span
         className={classes.cloud3}
-        initial={{ x: "0" }}
-        animate={{ x: "70vw" }}
+        initial={{ x: '0' }}
+        animate={{ x: '70vw' }}
         transition={{ duration: 130 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -45,11 +45,11 @@ const Clouds2 = () => {
             transform="matrix(.77976 0 0 .78395-299.99-418.63)"
           />
         </svg>
-      </motion.div>
-      <motion.div
+      </motion.span>
+      <motion.span
         className={classes.cloud4}
-        initial={{ x: "60vw" }}
-        animate={{ x: "10vw" }}
+        initial={{ x: '60vw' }}
+        animate={{ x: '10vw' }}
         transition={{ duration: 80 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -59,12 +59,12 @@ const Clouds2 = () => {
             transform="matrix(.77976 0 0 .78395-299.99-418.63)"
           />
         </svg>
-      </motion.div>
+      </motion.span>
 
-      <motion.div
+      <motion.span
         className={classes.cloud5}
         initial={{ x: 0 }}
-        animate={{ x: "40vw" }}
+        animate={{ x: '40vw' }}
         transition={{ duration: 90 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -74,12 +74,12 @@ const Clouds2 = () => {
             transform="matrix(.77976 0 0 .78395-299.99-418.63)"
           />
         </svg>
-      </motion.div>
+      </motion.span>
 
-      <motion.div
+      <motion.span
         className={classes.cloud6}
-        initial={{ x: "75vw" }}
-        animate={{ x: "15vw" }}
+        initial={{ x: '75vw' }}
+        animate={{ x: '15vw' }}
         transition={{ duration: 90 }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -89,7 +89,7 @@ const Clouds2 = () => {
             transform="matrix(.77976 0 0 .78395-299.99-418.63)"
           />
         </svg>
-      </motion.div>
+      </motion.span>
     </div>
   );
 };

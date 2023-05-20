@@ -12,12 +12,25 @@
     direction: rtl;
     padding: 0;
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 0;
     border: none;
     border-radius: 8px;
     background-color: rgba(240, 248, 255, 0.783);
     overflow: hidden;
+}
+
+.menuIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.menuIcon:hover {
+    background-color: #c7c7c75e;
 }
 
 @keyframes grow {
@@ -40,7 +53,12 @@
     align-items: center;
     justify-content: center;
     animation: grow 0.2s linear;
-    transition: all 1s;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.menuListItem:hover {
+    background-color: #c7c7c78c;
 }
 
 .menuListItem:first-child {

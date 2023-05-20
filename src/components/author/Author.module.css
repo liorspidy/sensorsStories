@@ -146,6 +146,7 @@
   .par {
     font-size: 1.2rem;
   }
+
   .parboxImg img {
     width: 320px;
     height: 415px;
@@ -170,6 +171,7 @@
     height: 1.5rem;
   }
 }
+
 /* 
 @media (max-width: 1360px) {
   .par {
@@ -217,9 +219,6 @@
 }
 
 @media (max-width: 1180px) {
-  .author {
-    /* min-height: unset; */
-  }
 
   .par {
     font-size: 1rem;
@@ -261,6 +260,11 @@
 }
 
 @media (max-width: 980px) {
+
+  .author {
+    min-height: 100vw;
+  }
+
   .parboxImg img {
     width: 240px;
     height: 310px;
@@ -497,6 +501,7 @@
     left: 3rem;
     border-radius: 10px;
   }
+
   .photos {
     width: 80%;
   }
