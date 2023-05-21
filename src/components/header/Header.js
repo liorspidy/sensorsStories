@@ -5,20 +5,20 @@ import { motion } from "framer-motion";
 import BasicMenu from "./menu/BasicMenu";
 import { useNavigate } from "react-router-dom";
 
-function scrollToElement(elementId) {
-  return () => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-}
-
 function Header({ isMobile }) {
   const navigate = useNavigate();
+
+  function scrollToElement(elementId) {
+    return () => {
+      const element = document.getElementById(elementId);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    };
+  }
 
   const headerClass = isMobile ? classes.headerMobile : classes.header;
   const headerLogoClass = isMobile
