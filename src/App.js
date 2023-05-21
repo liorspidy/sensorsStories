@@ -34,7 +34,7 @@ function App() {
       <Header isMobile={isMobile} />
       <Routes>
         <Route index element={<Main isMobile={isMobile} />} />
-        <Route path="about-me" element={<About />} />
+        <Route path="about-me" element={<About isMobile={isMobile} />} />
       </Routes>
       <Footer isMobile={isMobile} />
     </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./About.module.css";
 import ketty from "../../images/withbook.jpeg";
 import ketty2 from "../../images/withbookglasses.jpeg";
@@ -8,16 +7,22 @@ import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "./AwesomeSliderStyles.css";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const About = ({ isMobile }) => {
   const AutoplaySlider = withAutoplay(AwesomeSlider);
+  const [currentImg, setCurrentImg] = useState(ketty);
+
+  const photoSliderClass = isMobile
+    ? classes.photoSliderMobile
+    : classes.photoSlider;
 
   const Slider = (
     <AutoplaySlider
       play={true}
       cancelOnInteraction={false}
       interval={3000}
-      className={classes.photoSlider}
+      className={photoSliderClass}
       animation="foldOutAnimation"
     >
       <div data-src={ketty} />
@@ -35,11 +40,32 @@ const About = ({ isMobile }) => {
     onscreen: { y: 0, opacity: 1, transition: { duration: 2 } },
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (isMobile) {
+        setCurrentImg((prev) => {
+          return prev === ketty ? ketty2 : ketty;
+        });
+      }
+    }, 6000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [isMobile]);
+
+  const aboutClass = isMobile ? classes.aboutMobile : classes.about;
   const titleClass = isMobile ? classes.titleMobile : classes.title;
   const aboutBoxClass = isMobile ? classes.aboutBoxMobile : classes.aboutBox;
+  const aboutPhotosClass = isMobile
+    ? classes.aboutPhotosMobile
+    : classes.aboutPhotos;
+  const aboutDescClass = isMobile ? classes.aboutDescMobile : classes.aboutDesc;
+  const aboutParClass = isMobile ? classes.aboutParMobile : classes.aboutPar;
+
   return (
     <motion.div
-      className={classes.about}
+      className={aboutClass}
       initial={"offscreen"}
       whileInView={"onscreen"}
       transition={{ staggerChildren: 0.2 }}
@@ -49,9 +75,9 @@ const About = ({ isMobile }) => {
         <h1>הסיפור של קטי</h1>
       </motion.div>
       <motion.div className={aboutBoxClass} variants={aboutBoxClassVarients}>
-        <div className={classes.aboutPhotos}>{Slider}</div>
-        <div className={classes.aboutDesc}>
-          <p className={classes.aboutPar}>
+        {!isMobile && <div className={aboutPhotosClass}>{Slider}</div>}
+        <div className={aboutDescClass}>
+          <p className={aboutParClass}>
             אני ובעלי עדי נשואים 41 שנה, מגדלים 3 בנות מדהימות ואנחנו סבא וסבתא
             ל 4 נכדים. הסיפור שלי מתחיל בכיתה א', במפגש הראשון עם חווית הלמידה.
             מהר מאוד הבנתי שקשה לי ושאני לא מצליחה להביא תוצאות כפי שנדרש. חווית
@@ -62,7 +88,7 @@ const About = ({ isMobile }) => {
             את הכרכים הראשונים של האנציקלופדיה העברית וכל כך רציתי לקרוא הכל
             ולדעת הכל.
           </p>
-          <p className={classes.aboutPar}>
+          <p className={aboutParClass}>
             זה היה הרגע שבו אני מחליטה למרות הקשיים למצוא דרך וזה לא היה פשוט.
             באותם זמנים לא היתה מודעות, לא היו אבחונים ולא כלים לעזור לי. השנים
             עברו, סיימתי צבא, התחתנתי, גרנו בקומה רביעית ללא מעלית דבר שאפשר לי
@@ -78,7 +104,7 @@ const About = ({ isMobile }) => {
             הייתה מלווה בבכי בהתנגדות מהקימה בבוקר מהמיטה, לשטיפת הפנים, לבחירת
             הבגדים, להתלבשות ,לסרוק, לבחירת השתייה ועוד...הכל היה לא פשוט.
           </p>
-          <p className={classes.aboutPar}>
+          <p className={aboutParClass}>
             הקושי של מעיין שלח אותי לחקירה, תוך כדי חקירה ובדיקה אני מגיעה לנושא
             החושים, סביב נושא החושים אני מתחילה לכתוב תכנים, ערכות לגנים,מעבירה
             את התכנים גם בקרן קרב, בקרן רש"י (שמובילה מיזמים חברתיים) עובדת עם
@@ -105,6 +131,16 @@ const About = ({ isMobile }) => {
           </p>
         </div>
       </motion.div>
+      {isMobile && (
+        <motion.div
+          key={currentImg}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className={classes.aboutImg}
+        >
+          <motion.img src={currentImg} alt="ketty"></motion.img>
+        </motion.div>
+      )}
     </motion.div>
   );
 };
