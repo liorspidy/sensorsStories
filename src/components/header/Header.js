@@ -3,8 +3,23 @@ import classes from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import BasicMenu from "./menu/BasicMenu";
+import { useNavigate } from "react-router-dom";
+
+function scrollToElement(elementId) {
+  return () => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+}
 
 function Header({ isMobile }) {
+  const navigate = useNavigate();
+
   const headerClass = isMobile ? classes.headerMobile : classes.header;
   const headerLogoClass = isMobile
     ? classes.headerLogoMobile
@@ -29,81 +44,51 @@ function Header({ isMobile }) {
         <div className={headerNavClass}>
           <motion.a
             className={headerLinkClass}
-            onClick={() =>
-              window.scrollTo({
-                top: document.getElementById("book").offsetTop,
-                behavior: "smooth",
-              })
-            }
+            onClick={() => {
+              navigate("/");
+              setTimeout(scrollToElement("book"), 100);
+            }}
           >
             הספר
           </motion.a>
           <motion.a
             className={headerLinkClass}
-            onClick={() =>
-              window.scrollTo({
-                top: document.getElementById("author").offsetTop,
-                behavior: "smooth",
-              })
-            }
+            onClick={() => {
+              navigate("/");
+              setTimeout(scrollToElement("author"), 100);
+            }}
           >
             הסופרת
           </motion.a>
           <motion.a
             className={headerLinkClass}
-            onClick={() =>
-              window.scrollTo({
-                top: document.getElementById("meet").offsetTop,
-                behavior: "smooth",
-              })
-            }
+            onClick={() => {
+              navigate("/");
+              setTimeout(scrollToElement("meet"), 100);
+            }}
           >
             החישנים
           </motion.a>
           <motion.a
             className={headerLinkClass}
-            onClick={() =>
-              window.scrollTo({
-                top: document.getElementById("buy").offsetTop,
-                behavior: "smooth",
-              })
-            }
+            onClick={() => {
+              navigate("/");
+              setTimeout(scrollToElement("buy"), 100);
+            }}
           >
             לרכישה
           </motion.a>
           <motion.a
             className={headerLinkClass}
-            onClick={() =>
-              window.scrollTo({
-                top: document.getElementById("contact").offsetTop,
-                behavior: "smooth",
-              })
-            }
+            onClick={() => {
+              navigate("/");
+              setTimeout(scrollToElement("contact"), 100);
+            }}
           >
             צרו קשר
           </motion.a>
-          <motion.a
-            className={headerLinkClass}
-            // onClick={() =>
-            //   window.scrollTo({
-            //     top: document.getElementById("classes").offsetTop,
-            //     behavior: "smooth",
-            //   })
-            // }
-          >
-            סדנאות
-          </motion.a>
-          <motion.a
-            className={headerLinkClass}
-            // onClick={() =>
-            //   window.scrollTo({
-            //     top: document.getElementById("media").offsetTop,
-            //     behavior: "smooth",
-            //   })
-            // }
-          >
-            מדיה
-          </motion.a>
+          <motion.a className={headerLinkClass}>סדנאות</motion.a>
+          <motion.a className={headerLinkClass}>מדיה</motion.a>
         </div>
       )}
     </nav>

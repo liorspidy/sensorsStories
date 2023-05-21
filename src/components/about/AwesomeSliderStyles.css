@@ -1,6 +1,6 @@
 .awssld {
-  height: 45rem;
-  width: 45rem;
+  height: 80vh;
+  width: 80vh;
   --slider-height-percentage: 100%;
   --slider-transition-duration: 669ms;
   --organic-arrow-thickness: 0px;
