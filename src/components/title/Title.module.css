@@ -44,6 +44,8 @@
   animation: scrollIcon 2s ease-in-out infinite;
 }
 
+/* ---------------------------------------------------------------- */
+
 .titleBoxMobile {
   object-fit: contain;
   display: flex;
@@ -53,7 +55,7 @@
 }
 
 .titleMobile img {
-  max-width: 60%;
+  max-width: 75%;
   object-fit: contain;
   animation: floatUpDown 3s ease-in-out infinite;
 }

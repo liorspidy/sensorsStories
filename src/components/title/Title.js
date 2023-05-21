@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 const Title = ({ isMobile }) => {
   const titleBoxClass = isMobile ? classes.titleBoxMobile : classes.titleBox;
+  const titleClass = isMobile ? classes.titleMobile : classes.title;
   const scrollDownClass = isMobile
     ? classes.scrollDownMobile
     : classes.scrollDown;
@@ -15,23 +16,25 @@ const Title = ({ isMobile }) => {
   return (
     <motion.div className={titleBoxClass}>
       <motion.div
-        className={classes.title}
+        className={titleClass}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 2 }}
       >
         <img src={title} alt="title" />
-        <motion.div
-          className={scrollDownClass}
-          onClick={() =>
-            window.scrollTo({
-              top: document.getElementById("book").offsetTop,
-              behavior: "smooth",
-            })
-          }
-        >
-          <div className={scrollDownCircleClass}></div>
-        </motion.div>
+        {!isMobile && (
+          <motion.div
+            className={scrollDownClass}
+            onClick={() =>
+              window.scrollTo({
+                top: document.getElementById("book").offsetTop,
+                behavior: "smooth",
+              })
+            }
+          >
+            <div className={scrollDownCircleClass}></div>
+          </motion.div>
+        )}
       </motion.div>
       <Clouds2 />
     </motion.div>
