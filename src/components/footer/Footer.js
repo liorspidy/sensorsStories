@@ -5,7 +5,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ isMobile }) => {
   const emailClickHandler = () => {
     window.location.href = "mailto:ketybirman@gmail.com";
   };
@@ -18,37 +18,43 @@ const Footer = () => {
     window.open("https://www.facebook.com/ketybirman");
   };
 
+  const footerMobile = isMobile ? classes.footerMobile : classes.footer;
+  const detailsMobile = isMobile ? classes.detailsMobile : classes.details;
+  const detailMobile = isMobile ? classes.detailMobile : classes.detail;
+  const iconMobile = isMobile ? classes.iconMobile : classes.icon;
+  const footerCol = isMobile ? classes.footerColMobile : classes.footerCol;
+
   return (
-    <footer className={classes.footer}>
-      <div className={classes.details}>
-        <div className={classes.detail}>
-          <EmailIcon className={classes.icon} onClick={emailClickHandler} />
+    <footer className={footerMobile}>
+      <div className={detailsMobile}>
+        <div className={detailMobile}>
+          <EmailIcon className={iconMobile} onClick={emailClickHandler} />
           <h5>ketybirman@gmail.com</h5>
         </div>
         <div className={classes.detail}>
           <LocalPhoneIcon
-            className={classes.icon}
+            className={iconMobile}
             title="0547877837"
             onClick={phoneClickHandler}
           />
           <h5>054-7877837</h5>
         </div>
         <Link to="https://www.facebook.com/sfatharegesh">
-          <div className={classes.detail}>
+          <div className={detailMobile}>
             <FacebookIcon
-              className={classes.icon}
+              className={iconMobile}
               onClick={facebookClickHandler}
               style={{ fontSize: "2.4rem" }}
             />
             <InstagramIcon
-              className={classes.icon}
+              className={iconMobile}
               onClick={facebookClickHandler}
               style={{ fontSize: "2.4rem" }}
             />
           </div>
         </Link>
       </div>
-      <div className={classes.footerCol}>
+      <div className={footerCol}>
         <h5>Lior Fridman 2023 ©</h5>
       </div>
     </footer>

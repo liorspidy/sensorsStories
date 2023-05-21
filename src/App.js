@@ -36,7 +36,7 @@ function App() {
         <Route index element={<Main isMobile={isMobile} />} />
         <Route path="about-me" element={<About />} />
       </Routes>
-      <Footer />
+      <Footer isMobile={isMobile} />
     </div>
   );
 }

@@ -39,3 +39,50 @@
   color: black;
   cursor: pointer;
 }
+
+/* ---------------------------------------------------------------- */
+
+.footerMobile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #ffef5c;
+  height: 7rem;
+  gap: 1rem;
+  /* font-size: 2rem; */
+}
+
+.detailsMobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  scale: 1.7;
+}
+
+.footerMobile h5 {
+  margin: 0.2rem;
+}
+
+.footerColMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  scale: 1.5;
+}
+
+.detailMobile {
+  display: flex;
+  justify-content: start;
+  gap: 0.5rem;
+}
+
+.iconMobile {
+  color: black;
+  cursor: pointer;
+}

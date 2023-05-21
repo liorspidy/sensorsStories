@@ -25,6 +25,15 @@ const Book = ({ isMobile }) => {
     },
   };
 
+  const mobileBuyNowVarients = {
+    offscreen: { opacity: 0 },
+    onscreen: {
+      opacity: 1,
+      transition: { duration: 2 },
+    },
+    clicked: { scale: 0.9, transition: { duration: 0.2 } },
+  };
+
   const ortzevaVarients = {
     offscreen: { opacity: 0 },
     onscreen: {
@@ -108,9 +117,8 @@ const Book = ({ isMobile }) => {
             <img src={book} alt="bookImage" />
             <motion.div
               className={classes.buyNowMobile}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2 }}
+              variants={mobileBuyNowVarients}
+              whileTap="clicked"
               onClick={() =>
                 window.scrollTo({
                   top: document.getElementById("buy").offsetTop,
