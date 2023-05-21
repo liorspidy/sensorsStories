@@ -190,6 +190,7 @@
   top: -18rem;
   right: -18rem;
   z-index: 2;
+  cursor: pointer;
 }
 
 .bottomRec {
@@ -257,14 +258,14 @@
 .reccomendation2Mobile p,
 .reccomendation3Mobile p {
   margin-bottom: 0;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .reccomendationMobile h5,
 .reccomendation2Mobile h5,
 .reccomendation3Mobile h5 {
   font-family: "Rubik-Bold";
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .reccomendationMobile:hover,
@@ -330,14 +331,14 @@
 }
 
 .bookDesc1Mobile {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-family: "Rubik-LightItalic";
 }
 
 .bookDesc2Mobile {
   font-weight: bold;
   font-family: "Rubik-Bold";
-  font-size: 2.6rem;
+  font-size: 2.4rem;
 }
 
 .bookDescMobile {
@@ -349,6 +350,7 @@
   scale: 0.8;
   margin: 0;
   z-index: 2;
+  cursor: pointer;
 }
 
 .bottomRecMobile {

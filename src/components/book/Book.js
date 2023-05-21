@@ -141,6 +141,12 @@ const Book = ({ isMobile }) => {
               transition: { duration: 0.4 },
             }}
             variants={ortzevaVarients}
+            onClick={() =>
+              window.scrollTo({
+                top: document.getElementById("buy").offsetTop,
+                behavior: "smooth",
+              })
+            }
           />
 
           <motion.div

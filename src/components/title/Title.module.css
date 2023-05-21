@@ -22,8 +22,8 @@
 }
 
 .scrollDown {
-  width: 2rem;
-  height: 4rem;
+  width: 3rem;
+  height: 6rem;
   border: 3px solid #b7b7b7;
   border-radius: 40px;
   display: flex;
@@ -37,10 +37,10 @@
 
 .scrollDownCircle {
   background-color: #b7b7b7;
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.9rem;
+  height: 0.9rem;
   border-radius: 50%;
-  margin: 2rem 0;
+  margin: 3.5rem 0;
   animation: scrollIcon 2s ease-in-out infinite;
 }
 
@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90vw;
+  min-height: 80vw;
 }
 
 .titleMobile img {
@@ -106,7 +106,7 @@
 @keyframes scrollIcon {
   0%,
   100% {
-    transform: translate3d(0, -150%, 0);
+    transform: translate3d(0, -300%, 0);
   }
 
   50% {

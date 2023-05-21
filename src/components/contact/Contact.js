@@ -179,7 +179,7 @@ const Contact = ({ isMobile }) => {
               <div className={classes.checkmarkBox}>
                 <CheckCircleOutlineIcon className={classes.checkmark} />
               </div>
-              <h5>המייל נשלח בהצלחה</h5>
+              <h5>המייל נשלח בהצלחה נחזור אליך בהקדם</h5>
             </div>
           )}
         </motion.div>
