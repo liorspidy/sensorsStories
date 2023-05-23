@@ -8,6 +8,7 @@ import Contact from "../contact/Contact";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import { motion } from "framer-motion";
 import Buy from "../buy/Buy";
+import Clouds from "../book/clouds/Clouds";
 
 const Main = (props) => {
   const [showArrow, setShowArrow] = useState(false);
@@ -36,20 +37,22 @@ const Main = (props) => {
   };
 
   return (
-    <div className={classes.main}>
-      {!props.isMobile && showArrow && (
-        <motion.div className={classes.arrowUp} onClick={scrollToTop}>
-          <ArrowCircleUpIcon className={classes.arrowUpIcon} />
-          <h4>חזרה למעלה</h4>
-        </motion.div>
-      )}
-      <Title isMobile={props.isMobile} />
-      <Book isMobile={props.isMobile} />
-      <Author isMobile={props.isMobile} />
-      <Characters isMobile={props.isMobile} />
-      <Buy isMobile={props.isMobile} />
-      <Contact id="contact" isMobile={props.isMobile} />
-    </div>
+    <Clouds>
+      <div className={classes.main}>
+        {!props.isMobile && showArrow && (
+          <motion.div className={classes.arrowUp} onClick={scrollToTop}>
+            <ArrowCircleUpIcon className={classes.arrowUpIcon} />
+            <h4>חזרה למעלה</h4>
+          </motion.div>
+        )}
+        <Title isMobile={props.isMobile} />
+        <Book isMobile={props.isMobile} />
+        <Author isMobile={props.isMobile} />
+        <Characters isMobile={props.isMobile} />
+        <Buy isMobile={props.isMobile} />
+        <Contact id="contact" isMobile={props.isMobile} />
+      </div>
+    </Clouds>
   );
 };
 

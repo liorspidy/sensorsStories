@@ -1,5 +1,4 @@
 import title from "../../images/title.png";
-import Clouds2 from "../book/clouds/Clouds2";
 import classes from "./Title.module.css";
 import { motion } from "framer-motion";
 
@@ -14,7 +13,7 @@ const Title = ({ isMobile }) => {
     : classes.scrollDownCircle;
 
   return (
-    <motion.div className={titleBoxClass}>
+    <div className={titleBoxClass}>
       <motion.div
         className={titleClass}
         initial={{ y: -100, opacity: 0 }}
@@ -36,8 +35,7 @@ const Title = ({ isMobile }) => {
           </motion.div>
         )}
       </motion.div>
-      <Clouds2 />
-    </motion.div>
+    </div>
   );
 };
 

@@ -73,6 +73,7 @@ const Book = ({ isMobile }) => {
   const bottomRecClass = isMobile ? classes.bottomRecMobile : classes.bottomRec;
 
   return (
+    // <Clouds>
     <motion.div
       id="book"
       className={bookPageClasses}
@@ -211,9 +212,8 @@ const Book = ({ isMobile }) => {
           <h5>נאוה וינגרטן – "מה למה"</h5>
         </motion.div>
       </div>
-
-      {/* <Clouds /> */}
     </motion.div>
+    // </Clouds>
   );
 };
 
