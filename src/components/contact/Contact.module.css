@@ -238,22 +238,22 @@
   padding: 2rem 1rem;
   transition: scale 0.5s;
   z-index: 1;
-  gap: 1rem;
+  gap: 2rem;
   font-size: 3.5rem;
 }
 
 .formButtonMobile {
   width: 95%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 .formButtonMobile button {
-  padding: 0.6rem 0.8rem;
-  border-radius: 10px;
+  padding: 2rem 3rem;
+  border-radius: 20px;
   background-color: #4c9aac;
   color: white;
-  font-size: 1.2rem;
+  font-size: 3rem;
   direction: rtl;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
