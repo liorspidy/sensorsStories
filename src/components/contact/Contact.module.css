@@ -1,5 +1,5 @@
 .contactComp {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,7 +178,7 @@
 /* ---------------------------------------------------------------- */
 
 .contactCompMobile {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -319,7 +319,7 @@
 
 @media screen and (min-width: 1400px) {
   .form {
-    min-height: 70vh;
+    min-height: 60dvh;
     font-size: 1.5rem;
     justify-content: space-evenly;
   }

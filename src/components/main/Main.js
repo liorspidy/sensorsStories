@@ -7,7 +7,7 @@ import Characters from "../char/Characters";
 import Contact from "../contact/Contact";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import { motion } from "framer-motion";
-import Buy from "../buy/Buy";
+// import Buy from "../buy/Buy";
 import Clouds from "../book/clouds/Clouds";
 
 const Main = (props) => {
@@ -15,7 +15,7 @@ const Main = (props) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const contactElement = document.getElementById("contact");
+      const contactElement = document.getElementById("book");
       if (contactElement) {
         const contactRect = contactElement.getBoundingClientRect();
         setShowArrow(contactRect.top < window.innerHeight);
@@ -49,7 +49,7 @@ const Main = (props) => {
         <Book isMobile={props.isMobile} />
         <Author isMobile={props.isMobile} />
         <Characters isMobile={props.isMobile} />
-        <Buy isMobile={props.isMobile} />
+        {/* <Buy isMobile={props.isMobile} /> */}
         <Contact id="contact" isMobile={props.isMobile} />
       </div>
     </Clouds>

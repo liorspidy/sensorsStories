@@ -63,17 +63,17 @@ const Contact = ({ isMobile }) => {
 
   const aboutBoxVarients = {
     offscreen: { x: 30, opacity: 0 },
-    onscreen: { x: 0, opacity: 1, transition: { duration: 2 } },
+    onscreen: { x: 0, opacity: 1, transition: { duration: 0.8 } },
   };
 
   const momVarients = {
     offscreen: { x: -30, opacity: 0 },
-    onscreen: { x: 0, opacity: 1, transition: { duration: 2 } },
+    onscreen: { x: 0, opacity: 1, transition: { duration: 0.8 } },
   };
 
   const heartsVarients = {
     offscreen: { y: 50, opacity: 0 },
-    onscreen: { y: 0, opacity: 1, transition: { duration: 2 } },
+    onscreen: { y: 0, opacity: 1, transition: { duration: 0.8 } },
   };
 
   const ContactCompClass = isMobile
@@ -111,7 +111,7 @@ const Contact = ({ isMobile }) => {
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div className={titleClass} variants={aboutBoxVarients}>
-        <h1>שלחו הודעה</h1>
+        <h1>צרו קשר </h1>
       </motion.div>
       <div className={contactBoxClass}>
         <div className={contactPhotosClass}>

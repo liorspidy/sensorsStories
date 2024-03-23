@@ -6,7 +6,7 @@ const Clouds = ({ children }) => {
     <Parallax style={{ width: 0, height: 0 }}>
       <Layer
         className={classes.cloud1}
-        style={{ right: '440px', top: '180px' }}
+        style={{ right: '440px', top: '120px' }}
         settings={{ speed: -0.1, type: ['translateY'] }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -19,7 +19,7 @@ const Clouds = ({ children }) => {
       </Layer>
       <Layer
         className={classes.cloud2}
-        style={{ right: '720px', top: '150px' }}
+        style={{ right: '720px', top: '100px' }}
         settings={{ speed: -0.4, type: ['translateY'] }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -32,7 +32,7 @@ const Clouds = ({ children }) => {
       </Layer>
       <Layer
         className={classes.cloud3}
-        style={{ right: '1550px', top: '200px' }}
+        style={{ right: '295px', top: '190px' }}
         settings={{ speed: -0.2, type: ['translateY'] }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -45,7 +45,7 @@ const Clouds = ({ children }) => {
       </Layer>
       <Layer
         className={classes.cloud4}
-        style={{ right: '1310px', top: '180px' }}
+        style={{ right: '1130px', top: '300px' }}
         settings={{ speed: -0.2, type: ['translateY'] }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -58,7 +58,7 @@ const Clouds = ({ children }) => {
       </Layer>
       <Layer
         className={classes.cloud5}
-        style={{ right: '120px', top: '350px' }}
+        style={{ right: '90px', top: '450px' }}
         settings={{ speed: -0.2, type: ['translateY'] }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -71,7 +71,7 @@ const Clouds = ({ children }) => {
       </Layer>
       <Layer
         className={classes.cloud6}
-        style={{ right: '450px', top: '450px' }}
+        style={{ right: '330px', top: '500px' }}
         settings={{ speed: -0.4, type: ['translateY'] }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -84,7 +84,7 @@ const Clouds = ({ children }) => {
       </Layer>
       <Layer
         className={classes.cloud2}
-        style={{ right: '1220px', top: '550px' }}
+        style={{ right: '875px', top: '440px' }}
         settings={{ speed: -0.4, type: ['translateY'] }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -97,7 +97,7 @@ const Clouds = ({ children }) => {
       </Layer>
       <Layer
         className={classes.cloud1}
-        style={{ right: '1540px', top: '580px' }}
+        style={{ right: '1120px', top: '580px' }}
         settings={{ speed: -0.1, type: ['translateY'] }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">

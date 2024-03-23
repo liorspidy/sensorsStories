@@ -5,6 +5,7 @@ import Main from "./components/main/Main";
 import About from "./components/about/About";
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Media from "./components/media/Media";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -35,6 +36,8 @@ function App() {
       <Routes>
         <Route index element={<Main isMobile={isMobile} />} />
         <Route path="about-me" element={<About isMobile={isMobile} />} />
+        <Route path="courses" element={<Media isMobile={isMobile}></Media>} />
+        <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
       <Footer isMobile={isMobile} />
     </div>

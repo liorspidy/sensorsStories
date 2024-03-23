@@ -46,19 +46,18 @@ function Header({ isMobile }) {
             className={headerLinkClass}
             onClick={() => {
               navigate("/");
-              setTimeout(scrollToElement("book"), 100);
+              setTimeout(scrollToElement("contact"), 100);
             }}
           >
-            הספר
+            צרו קשר
           </motion.a>
           <motion.a
             className={headerLinkClass}
             onClick={() => {
-              navigate("/");
-              setTimeout(scrollToElement("author"), 100);
+              navigate("/courses");
             }}
           >
-            הסופרת
+            קורסים והרצאות
           </motion.a>
           <motion.a
             className={headerLinkClass}
@@ -73,22 +72,20 @@ function Header({ isMobile }) {
             className={headerLinkClass}
             onClick={() => {
               navigate("/");
-              setTimeout(scrollToElement("buy"), 100);
+              setTimeout(scrollToElement("author"), 100);
             }}
           >
-            לרכישה
+            אודות
           </motion.a>
           <motion.a
             className={headerLinkClass}
             onClick={() => {
               navigate("/");
-              setTimeout(scrollToElement("contact"), 100);
+              setTimeout(scrollToElement("book"), 100);
             }}
           >
-            צרו קשר
+            הספר
           </motion.a>
-          <motion.a className={headerLinkClass}>סדנאות</motion.a>
-          <motion.a className={headerLinkClass}>מדיה</motion.a>
         </div>
       )}
     </nav>

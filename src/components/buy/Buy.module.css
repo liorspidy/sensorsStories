@@ -1,5 +1,5 @@
 .buyBox {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -69,7 +69,7 @@
 /* ---------------------------------------------------------------- */
 
 .buyBoxMobile {
-  min-height: 90vh;
+  min-height: 90dvh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

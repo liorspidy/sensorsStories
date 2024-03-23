@@ -1,6 +1,8 @@
 import classes from "./About.module.css";
 import ketty from "../../images/withbook.jpeg";
 import ketty2 from "../../images/withbookglasses.jpeg";
+import ketty3 from "../../images/books.jpeg";
+import ketty4 from "../../images/ketty.jpeg";
 import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 import AwesomeSlider from "react-awesome-slider";
@@ -21,12 +23,14 @@ const About = ({ isMobile }) => {
     <AutoplaySlider
       play={true}
       cancelOnInteraction={false}
-      interval={3000}
+      interval={2000}
       className={photoSliderClass}
       animation="foldOutAnimation"
     >
       <div data-src={ketty} />
       <div data-src={ketty2} />
+      <div data-src={ketty3} />
+      <div data-src={ketty4} />
     </AutoplaySlider>
   );
 

@@ -55,7 +55,7 @@ const Footer = ({ isMobile }) => {
         </Link>
       </div>
       <div className={footerCol}>
-        <h5>Lior Fridman 2023 ©</h5>
+        <h5>כל הזכויות לספר ולאיורים שמורות לקטי בירמן בלבד ©</h5>
       </div>
     </footer>
   );

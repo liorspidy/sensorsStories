@@ -39,19 +39,19 @@ const BasicMenu = () => {
               className={classes.menuListItem}
               onClick={() => {
                 navigate("/");
-                setTimeout(scrollToElement("book"), 100);
+                setTimeout(scrollToElement("author"), 100);
               }}
             >
-              הספר
+              אודות
             </li>
             <li
               className={classes.menuListItem}
               onClick={() => {
                 navigate("/");
-                setTimeout(scrollToElement("author"), 100);
+                setTimeout(scrollToElement("book"), 100);
               }}
             >
-              הסופרת
+              הספר
             </li>
             <li
               className={classes.menuListItem}
@@ -66,10 +66,10 @@ const BasicMenu = () => {
               className={classes.menuListItem}
               onClick={() => {
                 navigate("/");
-                setTimeout(scrollToElement("buy"), 100);
+                setTimeout(scrollToElement("courses"), 100);
               }}
             >
-              לרכישה
+              קורסים והרצאות
             </li>
             <li
               className={classes.menuListItem}
@@ -80,8 +80,6 @@ const BasicMenu = () => {
             >
               צרו קשר
             </li>
-            <li className={classes.menuListItem}>סדנאות</li>
-            <li className={classes.menuListItem}>מדיה</li>
           </ul>
         </div>
       )}

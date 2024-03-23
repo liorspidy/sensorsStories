@@ -1,0 +1,35 @@
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  width: 40dvw;
+}
+
+.carousel .arrowIcon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel .content {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel .content::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel .content .carouselChild {
+  height: 100%;
+  /* margin: 0 1rem; */
+  scroll-snap-align: center;
+}

@@ -12,6 +12,18 @@ const Title = ({ isMobile }) => {
     ? classes.scrollDownCircleMobile
     : classes.scrollDownCircle;
 
+  const scrollToElement = () => {
+    const element = document.getElementById("book");
+    if (element) {
+      return window.scrollTo({
+        top: element.offsetTop,
+        behavior: "smooth",
+      });
+    } else {
+      return;
+    }
+  };
+
   return (
     <div className={titleBoxClass}>
       <motion.div
@@ -22,15 +34,7 @@ const Title = ({ isMobile }) => {
       >
         <img src={title} alt="title" />
         {!isMobile && (
-          <motion.div
-            className={scrollDownClass}
-            onClick={() =>
-              window.scrollTo({
-                top: document.getElementById("book").offsetTop,
-                behavior: "smooth",
-              })
-            }
-          >
+          <motion.div className={scrollDownClass} onClick={scrollToElement}>
             <div className={scrollDownCircleClass}></div>
           </motion.div>
         )}

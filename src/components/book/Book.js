@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import book from "../../images/book.jpg";
 import classes from "./Book.module.css";
-import Clouds from "./clouds/Clouds";
 import arrow from "../../images/down-arrow-download-svgrepo-com.svg";
 import ortzeva from "../../images/ortzeva.png";
 
@@ -12,7 +11,7 @@ const Book = ({ isMobile }) => {
       y: 20,
       x: 30,
       rotate: -7,
-      transition: { duration: 1 },
+      transition: { duration: 0.8 },
     },
   };
 
@@ -21,7 +20,7 @@ const Book = ({ isMobile }) => {
     onscreen: {
       x: 0,
       opacity: 1,
-      transition: { duration: 2 },
+      transition: { duration: 0.8 },
     },
   };
 
@@ -38,18 +37,18 @@ const Book = ({ isMobile }) => {
     offscreen: { opacity: 0 },
     onscreen: {
       opacity: 1,
-      transition: { delay: 1.5, duration: 1 },
+      transition: { delay: 1.5, duration: 0.8 },
     },
   };
 
   const descVarients = {
     offscreen: { y: 50, opacity: 0 },
-    onscreen: { y: 0, opacity: 1, transition: { delay: 1, duration: 1 } },
+    onscreen: { y: 0, opacity: 1, transition: { delay: 1, duration: 0.8 } },
   };
 
   const reccVarients = {
     offscreen: { x: 50, opacity: 0 },
-    onscreen: { x: 0, opacity: 1, transition: { delay: 2, duration: 2 } },
+    onscreen: { x: 0, opacity: 1, transition: { delay: 2, duration: 0.8 } },
   };
   const bookPageClasses = isMobile ? classes.bookPageMobile : classes.bookPage;
   const reccomendationClass = isMobile
@@ -72,8 +71,17 @@ const Book = ({ isMobile }) => {
   const arrowClass = isMobile ? classes.arrowMobile : classes.arrow;
   const bottomRecClass = isMobile ? classes.bottomRecMobile : classes.bottomRec;
 
+  const scrollTo = (elId) => {
+    const element = document.getElementById(elId);
+    if(element){
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    // <Clouds>
     <motion.div
       id="book"
       className={bookPageClasses}
@@ -99,12 +107,7 @@ const Book = ({ isMobile }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2 }}
-              onClick={() =>
-                window.scrollTo({
-                  top: document.getElementById("buy").offsetTop,
-                  behavior: "smooth",
-                })
-              }
+              onClick={scrollTo.bind(this, "contact")}
             >
               !לרכישה
             </motion.div>
@@ -120,12 +123,7 @@ const Book = ({ isMobile }) => {
               className={classes.buyNowMobile}
               variants={mobileBuyNowVarients}
               whileTap="clicked"
-              onClick={() =>
-                window.scrollTo({
-                  top: document.getElementById("buy").offsetTop,
-                  behavior: "smooth",
-                })
-              }
+              onClick={scrollTo.bind(this, "contact")}
             >
               !לרכישה
             </motion.div>
@@ -142,12 +140,7 @@ const Book = ({ isMobile }) => {
               transition: { duration: 0.4 },
             }}
             variants={ortzevaVarients}
-            onClick={() =>
-              window.scrollTo({
-                top: document.getElementById("buy").offsetTop,
-                behavior: "smooth",
-              })
-            }
+            onClick={scrollTo.bind(this, "contact")}
           />
 
           <motion.div
@@ -183,12 +176,8 @@ const Book = ({ isMobile }) => {
             <motion.div
               className={arrowClass}
               variants={descVarients}
-              onClick={() =>
-                window.scrollTo({
-                  top: document.getElementById("author").offsetTop,
-                  behavior: "smooth",
-                })
-              }
+              onClick={scrollTo.bind(this, "author")}
+
             >
               <img src={arrow} alt="arrow" />
             </motion.div>
@@ -213,7 +202,6 @@ const Book = ({ isMobile }) => {
         </motion.div>
       </div>
     </motion.div>
-    // </Clouds>
   );
 };
 

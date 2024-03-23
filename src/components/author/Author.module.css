@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 95%;
   margin: 0 auto;
 }
@@ -33,8 +33,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 90%;
-  padding-right: 2rem;
+  padding-inline: 4rem;
   position: relative;
   margin: 2rem;
 }
@@ -42,38 +41,32 @@
 .parboxImg {
   width: 30%;
   position: relative;
+  flex: 1;
+  align-self: flex-end;
 }
 
 .parboxImg img {
   vertical-align: middle;
-  width: 350px;
-  height: 445px;
+  width: 315px;
+  height: 400px;
   border-radius: 50%;
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.2)) brightness(1.1);
   rotate: -5deg;
   object-fit: cover;
   position: relative;
-  right: -7rem;
   transition: all 0.8s;
   border: 3px solid rgba(106, 106, 106, 0.572);
 }
 
-/* .parboxImg img:hover {
-  transition: all 0.8s;
-  scale: 1.05;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2)) brightness(1.1);
-} */
-
 .par {
-  font-size: 1.3rem;
   padding: 3rem 2rem;
-  padding-left: 8rem;
+  padding-left: 6rem;
   direction: rtl;
   background-color: aliceblue;
-  border-radius: 50px;
+  border-radius: 20px;
   color: #4d4d4d;
-  width: 80%;
   margin: 0 auto;
+  font-size: 1.35rem;
 }
 
 .tellmemore {
@@ -81,13 +74,12 @@
   border-radius: 15px;
   background-color: #4c9aac;
   color: white;
-  font-size: 1rem;
+  font-size: 0.75rem;
   position: absolute;
   direction: rtl;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  bottom: -1rem;
-  left: 9rem;
+  bottom: 0;
   font-family: "Rubik-Bold";
   transition: all 0.8;
   min-width: 7.6rem;
@@ -104,29 +96,25 @@
   background-color: #56afc3;
 }
 
-.madadon img {
-  object-fit: contain;
-  width: 28rem;
-  cursor: pointer;
-}
-
 .ortzeva2 img {
   object-fit: contain;
-  width: 8rem;
+  width: 5rem;
   cursor: pointer;
 }
 
 .ortzeva2 {
+  flex: 1;
   position: relative;
+  align-self: flex-end;
 }
 
 .ortzeva2::after {
+  content: "";
   left: 0rem;
   bottom: -0.4rem;
-  content: "";
   display: block;
-  width: 8rem;
-  height: 2rem;
+  width: 5rem;
+  height: 1.35rem;
   border-radius: 50%;
   position: absolute;
   background-color: #0000003a;
@@ -134,14 +122,15 @@
   z-index: 1;
 }
 
-.photos {
+.bottom {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  gap: 3rem;
+  justify-content: flex-end;
+  align-items: flex-start;
   width: 100%;
-  margin: 0;
+  padding-inline: 6rem;
+  padding-inline-start: 10rem
 }
-
 /* ---------------------------------------------------------------- */
 
 .authorMobile {
@@ -149,7 +138,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 95%;
   margin: 0 auto;
 }
@@ -224,7 +213,7 @@
   border-radius: 30px;
   background-color: #4c9aac;
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
   position: absolute;
   direction: rtl;
   cursor: pointer;
@@ -285,365 +274,57 @@
   margin: 2rem;
 }
 
-@media (max-width: 1424px) {
-  .par {
-    font-size: 1.2rem;
-  }
-
-  .parboxImg img {
-    width: 320px;
-    height: 415px;
-  }
-
-  .madadon img {
-    object-fit: contain;
-    width: 22rem;
-    cursor: pointer;
-  }
-
-  .ortzeva2 img {
-    object-fit: contain;
-    width: 5em;
-    cursor: pointer;
-  }
-
-  .ortzeva2::after {
-    left: 0rem;
-    bottom: -0.4rem;
-    width: 5.5rem;
-    height: 1.5rem;
-  }
+.bottomMobile{
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
 }
 
-/* 
-@media (max-width: 1360px) {
+@media (max-width: 1280px) {
   .par {
-    font-size: 1.2rem;
+    padding: 2rem 1.5rem;
+    padding-left: 4rem;
+    font-size: 1.1rem;
   }
+  
   .parboxImg img {
-    width: 310px;
-    height: 405px;
+    vertical-align: middle;
+    width: 250px;
+    height: 320px;
+    border-radius: 50%;
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.2)) brightness(1.1);
+    rotate: -5deg;
+    object-fit: cover;
+    position: relative;
+    transition: all 0.8s;
+    border: 3px solid rgba(106, 106, 106, 0.572);
   }
-
-  .madadon img {
-    object-fit: contain;
-    width: 26rem;
-    cursor: pointer;
-  }
-
-  .ortzeva2 img {
-    object-fit: contain;
-    width: 7em;
-    cursor: pointer;
-  }
-} */
-
-@media (max-width: 1240px) {
-  .parboxImg img {
-    width: 290px;
-    height: 370px;
-  }
-
+  
   .tellmemore {
-    font-size: 1rem;
+    font-size: 0.6rem;
+    min-width: 7rem;
   }
-
-  .madadon img {
-    object-fit: contain;
-    width: 24rem;
-    cursor: pointer;
-  }
-
-  .ortzeva2 img {
-    object-fit: contain;
-    width: 6rem;
-    cursor: pointer;
-  }
-}
-
-@media (max-width: 1180px) {
-  .par {
-    font-size: 1rem;
-    padding-left: 10rem;
-  }
-
-  .parbox {
-    margin: 0;
-  }
-
-  .madadon img {
-    object-fit: contain;
-    width: 17rem;
-  }
-
-  .ortzeva2 img {
-    object-fit: contain;
-    width: 5rem;
-    cursor: pointer;
-  }
-
-  .ortzeva2::after {
-    bottom: -0.2rem;
-    width: 6rem;
-    height: 1.3rem;
-  }
-
-  .photos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 85%;
-    margin: 0;
-  }
-
-  .tellmemore {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 980px) {
-  .author {
-    min-height: 100vw;
-  }
-
-  .parboxImg img {
-    width: 240px;
-    height: 310px;
-    right: -3rem;
-  }
-
-  .parboxImg {
-    width: 20%;
-  }
-
-  .par {
-    font-size: 0.8rem;
-    padding-left: 10rem;
-  }
-
-  .parbox {
-    margin: 0;
-    margin: 1rem;
-  }
-
-  .madadon img {
-    object-fit: contain;
-    width: 15rem;
-  }
-
+  
   .ortzeva2 img {
     object-fit: contain;
     width: 4rem;
     cursor: pointer;
   }
-
+  
   .ortzeva2::after {
-    bottom: -0.2rem;
-    width: 4.5rem;
-    height: 1.3rem;
+    width: 4rem;
   }
-
-  .photos {
+  
+  .bottom {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 0;
-  }
-
-  .tellmemore {
-    font-size: 0.8rem;
-    min-width: 7rem;
-    left: 5rem;
-  }
-}
-
-@media (max-width: 786px) {
-  .parboxImg img {
-    width: 210px;
-    height: 280px;
-    right: -3rem;
-  }
-
-  .parboxImg {
-    width: 20%;
-  }
-
-  .par {
-    font-size: 0.7rem;
-    padding: 2rem;
-    padding-left: 10rem;
-  }
-
-  .parbox {
-    margin: 0;
-    margin: 1rem;
-  }
-
-  .madadon img {
-    object-fit: contain;
-    width: 13rem;
-  }
-
-  .ortzeva2 img {
-    object-fit: contain;
-    width: 3rem;
-    cursor: pointer;
-  }
-
-  .ortzeva2::after {
-    bottom: -0.2rem;
-    width: 3.5rem;
-    height: 1.3rem;
-  }
-
-  .photos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 0;
-  }
-
-  .tellmemore {
-    font-size: 0.8rem;
-    min-width: 7rem;
-    left: 5rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .title {
-    width: 80%;
-    padding: 0;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .parboxImg img {
-    width: 170px;
-    height: 230px;
-    right: -3rem;
-  }
-
-  .parboxImg {
-    width: 20%;
-  }
-
-  .par {
-    font-size: 0.6rem;
-    padding: 2rem;
-    padding-left: 8rem;
-  }
-
-  .parbox {
-    margin: 0;
-    margin: 1rem;
-  }
-
-  .madadon img {
-    object-fit: contain;
-    width: 12rem;
-  }
-
-  .ortzeva2 img {
-    object-fit: contain;
-    width: 3rem;
-    cursor: pointer;
-  }
-
-  .ortzeva2::after {
-    bottom: -0.2rem;
-    width: 3.5rem;
-    height: 1rem;
-  }
-
-  .photos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    margin: 0;
-  }
-
-  .tellmemore {
-    font-size: 0.6rem;
-    min-width: 5.8rem;
-    left: 3rem;
-  }
-}
-
-@media (max-width: 420px) {
-  .title {
-    width: 80%;
-    padding: 0;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .author {
-    gap: 1rem;
-  }
-
-  .parboxImg img {
-    width: 155px;
-    height: 210px;
-  }
-
-  .parboxImg {
-    width: 75%;
-  }
-
-  .par {
-    font-size: 0.8rem;
-    padding: 2rem;
+    gap: 3rem;
+    justify-content: flex-end;
+    align-items: flex-start;
     width: 100%;
-    border-radius: 20px;
-  }
-
-  .parbox {
-    margin: 1rem;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    gap: 2rem;
-  }
-
-  .madadon img {
-    object-fit: contain;
-    width: 10rem;
-  }
-
-  .ortzeva2 img {
-    object-fit: contain;
-    width: 3rem;
-    cursor: pointer;
-  }
-
-  .ortzeva2::after {
-    bottom: 0rem;
-    width: 2.2rem;
-    height: 0.5rem;
-    filter: blur(3px);
-  }
-
-  .photos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 0;
-  }
-
-  .tellmemore {
-    font-size: 0.48rem;
-    min-width: 5rem;
-    left: 3rem;
-    border-radius: 10px;
-  }
-
-  .photos {
-    width: 80%;
+    padding-inline: 6rem;
+    padding-inline-start: 10rem
   }
 }

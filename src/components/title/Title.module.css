@@ -3,11 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100dvh - 5rem);
 }
 
 .title img {
-  max-width: 60%;
+  max-width: 50%;
   object-fit: contain;
   animation: floatUpDown 3s ease-in-out infinite;
 }
@@ -22,8 +22,8 @@
 }
 
 .scrollDown {
-  width: 3rem;
-  height: 6rem;
+  width: 2rem;
+  height: 4rem;
   border: 3px solid #b7b7b7;
   border-radius: 40px;
   display: flex;
@@ -40,7 +40,7 @@
   width: 0.9rem;
   height: 0.9rem;
   border-radius: 50%;
-  margin: 3.5rem 0;
+  margin: 2.4rem 0;
   animation: scrollIcon 2s ease-in-out infinite;
 }
 
@@ -106,7 +106,7 @@
 @keyframes scrollIcon {
   0%,
   100% {
-    transform: translate3d(0, -300%, 0);
+    transform: translate3d(0, -250%, 0);
   }
 
   50% {
@@ -124,9 +124,9 @@
     object-fit: contain;
   }
 
-  .titleBox {
+  /* .titleBox {
     min-height: 100vw;
-  }
+  } */
 }
 
 @media screen and (max-width: 680px) {
@@ -142,7 +142,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    height: 50dvh;
   }
 }
 
