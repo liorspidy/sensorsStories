@@ -8,12 +8,12 @@ import Community from "../community/Community";
 const Author = ({ isMobile }) => {
   const aboutBoxVarients = {
     offscreen: { x: 30, opacity: 0 },
-    onscreen: { x: 0, opacity: 1, transition: { duration: 2 } },
+    onscreen: { x: 0, opacity: 1, transition: { duration: 0.8 } },
   };
 
   const parboxVarients = {
     offscreen: { y: 50, opacity: 0 },
-    onscreen: { y: 0, opacity: 1, transition: { delay: 1, duration: 1 } },
+    onscreen: { y: 0, opacity: 1, transition: { delay: 1, duration: 0.5 } },
   };
 
   const ortzeva2Varients = {
@@ -21,7 +21,7 @@ const Author = ({ isMobile }) => {
     onscreen: {
       y: 0,
       opacity: 1,
-      transition: { type: "spring", bounce: 0.3, delay: 2, duration: 1 },
+      transition: { type: "spring", bounce: 0.3, delay: 2, duration: 0.8 },
     },
   };
 

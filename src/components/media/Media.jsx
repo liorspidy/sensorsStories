@@ -2,12 +2,26 @@ import { useRef } from "react";
 import classes from "./Media.module.css";
 import IframeResizer from "iframe-resizer-react";
 import Carousel from "../../tools/carousel/Carousel";
+import {motion} from "framer-motion";
 
 const Media = ({ isMobile }) => {
   const iframeRef = useRef(null);
-
+  const titleClass = isMobile ? classes.titleMobile : classes.title;
+  const aboutBoxVarients = {
+    offscreen: { x: 30, opacity: 0 },
+    onscreen: { x: 0, opacity: 1, transition: { duration: 0.8 } },
+  };
   return (
-    <div className={classes.media}>
+    <motion.div className={classes.media}
+      id="media"
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      transition={{ staggerChildren: 0.8 }}
+      viewport={{ once: true, amount: 0.1 }}
+    >
+      <motion.div className={titleClass} variants={aboutBoxVarients}>
+        <h1>ראיונות בתקשורת</h1>
+      </motion.div>
       <Carousel>
         <IframeResizer
           forwardRef={iframeRef}
@@ -65,7 +79,7 @@ const Media = ({ isMobile }) => {
           }}
         />
       </Carousel>
-    </div>
+    </motion.div>
   );
 };
 

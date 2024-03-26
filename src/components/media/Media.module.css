@@ -1,3 +1,30 @@
+.title {
+    font-family: "Rubik-Bold";
+    text-align: end;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #f37b87;
+    padding-right: 6rem;
+  }
+  
+  .title h1 {
+    margin: 0;
+    filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+  }
+
+  .titleMobile {
+    font-family: "Rubik-Bold";
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    color: #f37b87;
+  }
+  
+  .titleMobile h1 {
+    margin: 0;
+    filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+  }
+
 .media {
   height: calc(100dvh - 12rem);
   width: 100%;
@@ -8,3 +35,13 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 640px) {
+    .title {
+      width: 80%;
+      padding: 0;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  }
+  
