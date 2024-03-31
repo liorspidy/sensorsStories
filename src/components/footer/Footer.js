@@ -39,20 +39,28 @@ const Footer = ({ isMobile }) => {
           />
           <h5>054-7877837</h5>
         </div>
-        <Link to="https://www.facebook.com/sfatharegesh">
-          <div className={detailMobile}>
+        <div className={classes.links}>
+          <Link
+            to="https://www.facebook.com/sfatharegesh"
+            className={detailMobile}
+          >
             <FacebookIcon
               className={iconMobile}
               onClick={facebookClickHandler}
               style={{ fontSize: "2.4rem" }}
             />
+          </Link>
+          <Link
+            to="https://www.instagram.com/ketybirman/"
+            className={detailMobile}
+          >
             <InstagramIcon
               className={iconMobile}
               onClick={facebookClickHandler}
               style={{ fontSize: "2.4rem" }}
             />
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
       <div className={footerCol}>
         <h5>כל הזכויות לספר ולאיורים שמורות לקטי בירמן בלבד ©</h5>

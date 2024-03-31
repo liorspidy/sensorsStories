@@ -82,7 +82,12 @@
   gap: 0.5rem;
 }
 
-.iconMobile {
+.links {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.links .iconMobile {
   color: black;
   cursor: pointer;
 }

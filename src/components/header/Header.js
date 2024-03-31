@@ -1,9 +1,7 @@
 import logo from "../../images/logoEmpty.png";
 import classes from "./Header.module.css";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import BasicMenu from "./menu/BasicMenu";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import BasicMobileMenu from "./menu/BasicMobileMenu";
 
 function Header({ isMobile }) {
   const navigate = useNavigate();
@@ -34,59 +32,62 @@ function Header({ isMobile }) {
 
   return (
     <nav className={headerClass} id="main">
-      <Link to="/">
-        <div className={headerLogoClass}>
-          <img className={logoClass} src={logo} alt="Logo" />
-        </div>
-      </Link>
-      {isMobile && <BasicMenu />}
+      <a className={headerLogoClass} href="/">
+        <img className={logoClass} src={logo} alt="Logo" />
+      </a>
+      {isMobile && <BasicMobileMenu />}
       {!isMobile && (
-        <div className={headerNavClass}>
-          <motion.a
+        <nav className={headerNavClass}>
+          <Link
             className={headerLinkClass}
-            onClick={() => {
-              navigate("/");
-              setTimeout(scrollToElement("contact"), 100);
-            }}
-          >
-            צרו קשר
-          </motion.a>
-          <motion.a
-            className={headerLinkClass}
-            onClick={() => {
-              navigate("/courses");
-            }}
-          >
-            קורסים והרצאות
-          </motion.a>
-          <motion.a
-            className={headerLinkClass}
-            onClick={() => {
-              navigate("/");
-              setTimeout(scrollToElement("meet"), 100);
-            }}
-          >
-            החישנים
-          </motion.a>
-          <motion.a
-            className={headerLinkClass}
-            onClick={() => {
-              navigate("/");
-              setTimeout(scrollToElement("author"), 100);
-            }}
-          >
-            אודות
-          </motion.a>
-          <motion.a
-            className={headerLinkClass}
+            to="/"
             onClick={() => {
               navigate("/");
               setTimeout(scrollToElement("book"), 100);
             }}
           >
             הספר
-          </motion.a>
-        </div>
+          </Link>
+          <Link
+            className={headerLinkClass}
+            to="/"
+            onClick={() => {
+              navigate("/");
+              setTimeout(scrollToElement("author"), 100);
+            }}
+          >
+            אודות
+          </Link>
+          <Link
+            className={headerLinkClass}
+            to="/"
+            onClick={() => {
+              navigate("/");
+              setTimeout(scrollToElement("meet"), 100);
+            }}
+          >
+            החישנים
+          </Link>
+          <Link
+            className={headerLinkClass}
+            to="/"
+            onClick={() => {
+              navigate("/");
+              setTimeout(scrollToElement("contact"), 100);
+            }}
+          >
+            צרו קשר
+          </Link>
+          <Link
+            className={headerLinkClass}
+            to="/courses"
+            onClick={() => {
+              navigate("/courses");
+            }}
+          >
+            קורסים והרצאות
+          </Link>
+        </nav>
       )}
     </nav>
   );

@@ -23,6 +23,7 @@
   z-index: 10;
   background-color: transparent;
   animation: arrowmove 1s linear infinite;
+  border: none;
 }
 
 .arrowUpIcon {

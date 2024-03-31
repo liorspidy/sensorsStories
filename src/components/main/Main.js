@@ -31,19 +31,20 @@ const Main = (props) => {
 
   const scrollToTop = () => {
     window.scrollTo({
-      top: document.getElementById("main").offsetTop,
+      top: 0,
       behavior: "smooth",
     });
   };
+  
 
   return (
-    <Clouds>
-      <div className={classes.main}>
+    <Clouds >
+      <div className={classes.main} id="main" >
         {!props.isMobile && showArrow && (
-          <motion.div className={classes.arrowUp} onClick={scrollToTop}>
+          <motion.button className={classes.arrowUp} onClick={scrollToTop}>
             <ArrowCircleUpIcon className={classes.arrowUpIcon} />
             <h4>חזרה למעלה</h4>
-          </motion.div>
+          </motion.button>
         )}
         <Title isMobile={props.isMobile} />
         <Book isMobile={props.isMobile} />

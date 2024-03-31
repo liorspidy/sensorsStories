@@ -1,4 +1,4 @@
-.title {
+.titleContainer {
   font-family: "Rubik-Bold";
   text-align: end;
   width: 100%;
@@ -7,7 +7,7 @@
   margin-bottom: 2rem;
 }
 
-.title h2 {
+.titleContainer .title {
   margin: 0;
   text-align: start;
   filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
@@ -100,7 +100,7 @@
   height: 2rem;
   width: 100%;
   margin: 0 auto;
-  padding-right: 1rem;
+  padding-inline: 2dvw;
   font-size: 1.2rem;
   font-family: "Rubik-Regular";
 }
@@ -111,7 +111,7 @@
   height: 12rem;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  padding-inline: 2rem;
   font-size: 1.2rem;
   font-family: "Rubik-Regular";
 }
@@ -121,7 +121,7 @@
 }
 /* -------------------------------------------- */
 
-.titleMobile {
+.titleContainerMobile {
   font-family: "Rubik-Bold";
   text-align: center;
   width: 100%;
@@ -129,7 +129,7 @@
   color: #f37b87;
 }
 
-.titleMobile h2 {
+.titleContainerMobile .title {
   filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
 }
 
@@ -213,7 +213,7 @@
   border: 1px solid #ccc;
   width: 100%;
   margin: 0 auto;
-  padding-right: 1rem;
+  padding-inline: 2rem;
   font-family: "Rubik-Regular";
   height: 6rem;
   font-size: 3rem;
@@ -226,7 +226,7 @@
   margin: 0 auto;
   font-family: "Rubik-Regular";
   height: 24rem;
-  padding: 1rem;
+  padding-inline: 2rem;
   font-size: 3rem;
 }
 
@@ -237,13 +237,13 @@
     height: 100%;
     padding: 1.5%;
     margin: 0 auto;
-    padding-right: 1rem;
+    padding-inline: 2rem;
     font-size: 1.25rem;
   }
 
   .inputContainer textarea {
     min-height: 12rem;
-    padding: 1rem;
+    padding-inline: 2rem;
     font-size: 1.5rem;
   }
 }
@@ -262,7 +262,7 @@
 }
 
 @media (max-width: 640px) {
-  .title {
+  .titleContainer {
     width: 80%;
     padding: 0;
     font-size: 1.2rem;

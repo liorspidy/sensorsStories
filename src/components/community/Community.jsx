@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Community = ({ isMobile }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const titleClass = isMobile ? classes.titleMobile : classes.title;
+  const titleClass = isMobile ? classes.titleContainerMobile : classes.titleContainer;
   const communityClass = isMobile ? classes.communityMobile : classes.community;
   const formClass = isMobile ? classes.formMobile : classes.form;
   const inputContainerClass = isMobile
@@ -26,7 +26,7 @@ const Community = ({ isMobile }) => {
   return (
     <div className={communityClass}>
       <motion.div className={titleClass} variants={aboutBoxVarients}>
-        <h2>הצטרפו לקהילה</h2>
+        <h3 className={classes.title}>הצטרפו לקהילה</h3>
       </motion.div>
       <form className={formClass} onSubmit={sumbitHandler}>
         {!isSubmitted && (

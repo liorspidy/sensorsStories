@@ -72,11 +72,11 @@ const About = ({ isMobile }) => {
       className={aboutClass}
       initial={"offscreen"}
       whileInView={"onscreen"}
-      transition={{ staggerChildren: 0.2 }}
+      transition={{ staggerChildren: 0.4 }}
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div className={titleClass} variants={aboutBoxVarients}>
-        <h1>הסיפור של קטי</h1>
+        <h2>הסיפור של קטי</h2>
       </motion.div>
       <motion.div className={aboutBoxClass} variants={aboutBoxClassVarients}>
         {!isMobile && <div className={aboutPhotosClass}>{Slider}</div>}

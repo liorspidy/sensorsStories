@@ -32,7 +32,7 @@ const Title = ({ isMobile }) => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 2 }}
       >
-        <img src={title} alt="title" />
+        <img src={title} alt="סיפורי חיישנים" aria-label="כותרת סיפורי חיישנים" />
         {!isMobile && (
           <motion.div className={scrollDownClass} onClick={scrollToElement}>
             <div className={scrollDownCircleClass}></div>

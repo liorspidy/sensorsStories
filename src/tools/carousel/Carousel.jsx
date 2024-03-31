@@ -1,9 +1,9 @@
-import { Visibility } from "@mui/icons-material";
 import classes from "./Carousel.module.css";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import { Children, useEffect, useRef, useState } from "react";
 import Loading from "../loading/Loading";
+import { motion } from "framer-motion";
 
 const Carousel = ({ children }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -52,7 +52,7 @@ const Carousel = ({ children }) => {
         key={index}
         className={classes.carouselChild}
         onLoad={childLoadedHandler}
-        style={{display: isLoading ? "none" : "block"}}
+        style={{ display: isLoading ? "none" : "block" }}
       >
         {child}
       </div>
@@ -61,26 +61,34 @@ const Carousel = ({ children }) => {
 
   return (
     <div className={classes.carousel}>
-      <div className={classes.arrowIcon} onClick={handlePrev}>
+      <motion.button
+        className={classes.arrowIcon}
+        onClick={handlePrev}
+        whileTap={{ scale: 0.9, transition: { duration: 0.2 } }}
+      >
         <ArrowBackIosNewRoundedIcon
           sx={{
             fontSize: 50,
             cursor: "pointer",
           }}
         />
-      </div>
+      </motion.button>
       <div className={classes.content} ref={contentRef}>
         {childrenMapped}
       </div>
       {isLoading && <Loading />}
-      <div className={classes.arrowIcon} onClick={handleNext}>
+      <motion.button
+        className={classes.arrowIcon}
+        onClick={handleNext}
+        whileTap={{ scale: 0.9, transition: { duration: 0.2 } }}
+      >
         <ArrowForwardIosRoundedIcon
           sx={{
             fontSize: 50,
             cursor: "pointer",
           }}
         />
-      </div>
+      </motion.button>
     </div>
   );
 };

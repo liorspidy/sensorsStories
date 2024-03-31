@@ -20,7 +20,7 @@ const Media = ({ isMobile }) => {
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div className={titleClass} variants={aboutBoxVarients}>
-        <h1>ראיונות בתקשורת</h1>
+        <h2>ראיונות בתקשורת</h2>
       </motion.div>
       <Carousel>
         <IframeResizer

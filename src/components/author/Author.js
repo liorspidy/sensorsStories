@@ -27,7 +27,9 @@ const Author = ({ isMobile }) => {
 
   const authorClass = isMobile ? classes.authorMobile : classes.author;
   const aboutBoxClass = isMobile ? classes.aboutBoxMobile : classes.aboutBox;
-  const titleClass = isMobile ? classes.titleMobile : classes.title;
+  const titleClass = isMobile
+    ? classes.titleContainerMobile
+    : classes.titleContainer;
   const parboxClass = isMobile ? classes.parboxMobile : classes.parbox;
   const parboxImgClass = isMobile ? classes.parboxImgMobile : classes.parboxImg;
   const tellmemoreClass = isMobile
@@ -47,7 +49,7 @@ const Author = ({ isMobile }) => {
     >
       <div className={aboutBoxClass}>
         <motion.div className={titleClass} variants={aboutBoxVarients}>
-          <h1>אודות קטי</h1>
+          <h2 className={classes.title}>אודות קטי</h2>
         </motion.div>
         <motion.div className={parboxClass} variants={parboxVarients}>
           <p className={parClass}>
@@ -67,32 +69,30 @@ const Author = ({ isMobile }) => {
           </p>
         </motion.div>
         <motion.div className={bottomClass} variants={parboxVarients}>
-        <motion.div
-              variants={ortzeva2Varients}
-              whileHover={{
-                rotate: [0, -1, 1, -1, 1, 0],
-                transition: { duration: 0.4 },
-              }}
-              className={ortzeva2Class}
-            >
-              <img
-                src={ortzeva2}
-                alt="אור וצבע"
-                onClick={() =>
-                  window.scrollTo({
-                    top: document.getElementById("meet").offsetTop,
-                    behavior: "smooth",
-                  })
-                }
-              />
-            </motion.div>
+          <motion.div
+            variants={ortzeva2Varients}
+            whileHover={{
+              rotate: [0, -1, 1, -1, 1, 0],
+              transition: { duration: 0.4 },
+            }}
+            className={ortzeva2Class}
+          >
+            <img
+              src={ortzeva2}
+              alt="אור וצבע"
+              onClick={() =>
+                window.scrollTo({
+                  top: document.getElementById("meet").offsetTop,
+                  behavior: "smooth",
+                })
+              }
+            />
+          </motion.div>
           <div className={parboxImgClass}>
             <img src={ketty} alt="קטי בירמן" />
-            <Link to={"/about-me"}>
-              <div className={tellmemoreClass}>
-                <h2>ספרו לי עוד..</h2>
-              </div>
-            </Link>
+            <div className={tellmemoreClass}>
+              <Link to={"/about-me"}>ספרו לי עוד</Link>
+            </div>
           </div>
           <Community isMobile={isMobile} />
         </motion.div>

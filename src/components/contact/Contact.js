@@ -107,11 +107,11 @@ const Contact = ({ isMobile }) => {
       id="contact"
       initial={"offscreen"}
       whileInView={"onscreen"}
-      transition={{ staggerChildren: 0.8 }}
+      transition={{ staggerChildren: 0.4 }}
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div className={titleClass} variants={aboutBoxVarients}>
-        <h1>צרו קשר </h1>
+        <h2>צרו קשר </h2>
       </motion.div>
       <div className={contactBoxClass}>
         <div className={contactPhotosClass}>

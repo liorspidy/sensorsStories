@@ -1,5 +1,5 @@
 .Characters {
-  min-height: 100dvh;
+  min-height: calc(100dvh - 5rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,13 @@
   font-size: 1.5rem;
   color: #f37b87;
   padding-right: 6rem;
+  margin-block-end: 2rem;
+}
+
+.title h2{
+  margin: 0;
   filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+
 }
 
 .sensorsBox,

@@ -40,11 +40,11 @@ const Buy = ({ isMobile }) => {
       id="buy"
       initial={"offscreen"}
       whileInView={"onscreen"}
-      transition={{ staggerChildren: 0.8 }}
+      transition={{ staggerChildren: 0.4 }}
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div className={titleClass} variants={buyBoxVariants}>
-        <h1>רכשו כעת</h1>
+        <h2>רכשו כעת</h2>
       </motion.div>
       <motion.div className={storesClass} variants={buyBoxVariants}>
         <motion.div

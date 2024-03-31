@@ -96,21 +96,22 @@ const Book = ({ isMobile }) => {
           הסיפורים וההקשבה לקיחת אחריות ובניית תקשורת נכונה ואיכותית. ממליצה
           באהבה לקרוא אותו"
         </p>
-        <h5>ליאורה רנרט</h5>
+        <p className={classes.reccomendor}>ליאורה רנרט</p>
       </motion.div>
       <div className={bookmainClass}>
         {!isMobile && (
           <motion.div className={classes.book} variants={bookVarients}>
-            <img src={book} alt="bookImage" />
-            <motion.div
+            <img src={book} alt="ספר סיפורי חיישנים"/>
+            <motion.button
               className={classes.buyNow}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2 }}
               onClick={scrollTo.bind(this, "contact")}
+              aria-label="לרכישה"
             >
-              !לרכישה
-            </motion.div>
+              לרכישה
+            </motion.button>
           </motion.div>
         )}
         {isMobile && (
@@ -118,22 +119,23 @@ const Book = ({ isMobile }) => {
             className={classes.bookMobile}
             variants={mobileBookVarients}
           >
-            <img src={book} alt="bookImage" />
-            <motion.div
+            <img src={book} alt="ספר סיפורי חיישנים"/>
+            <motion.button
               className={classes.buyNowMobile}
               variants={mobileBuyNowVarients}
               whileTap="clicked"
               onClick={scrollTo.bind(this, "contact")}
+              aria-label="לרכישה"
             >
-              !לרכישה
-            </motion.div>
+              לרכישה
+            </motion.button>
           </motion.div>
         )}
         <div className={descBoxClass}>
           <motion.img
             className={ortzevaClass}
             src={ortzeva}
-            alt="ortzeva"
+            alt="אור וצבע"
             transition={{ duration: 1 }}
             whileHover={{
               rotate: [0, -1, 1, -1, 1, 0],
@@ -173,14 +175,13 @@ const Book = ({ isMobile }) => {
           </motion.div>
 
           {!isMobile && (
-            <motion.div
+            <motion.button
               className={arrowClass}
               variants={descVarients}
               onClick={scrollTo.bind(this, "author")}
-
             >
               <img src={arrow} alt="arrow" />
-            </motion.div>
+            </motion.button>
           )}
         </div>
       </div>
@@ -190,7 +191,7 @@ const Book = ({ isMobile }) => {
             "ספר זה פותח צוהר ליצירת שיח חשוב מאוד עם ילדים על רגשות ורצונות
             פנימיים, שאולי אף הם בעצמם לא מודעים אליהם."
           </p>
-          <h5>ספרי צמרת</h5>
+          <p className={classes.reccomendor}>ספרי צמרת</p>
         </motion.div>
         <motion.div className={reccomendation3Class} variants={reccVarients}>
           <p>
@@ -198,7 +199,7 @@ const Book = ({ isMobile }) => {
             רק שלהם. זהו ספר שמביא לתקשורת מיטיבה, להקשבה לגוף ולקיחת אחריות של
             הצדדים השונים.."
           </p>
-          <h5>נאוה וינגרטן – "מה למה"</h5>
+          <p className={classes.reccomendor}>נאוה וינגרטן – "מה למה"</p>
         </motion.div>
       </div>
     </motion.div>

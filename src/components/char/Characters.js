@@ -34,11 +34,11 @@ const Characters = ({ isMobile }) => {
       className={CharactersClass}
       initial={"offscreen"}
       whileInView={"onscreen"}
-      transition={{ staggerChildren: 0.2 }}
+      transition={{ staggerChildren: 0.4 }}
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div className={titleClass} variants={aboutBoxVarients}>
-        <h1>הכירו את החישנים</h1>
+        <h2>הכירו את החישנים</h2>
       </motion.div>
       <motion.div className={charsClass}>
         {CharactersJson.map((sensor, index) => {
