@@ -46,9 +46,11 @@
   padding: 2rem 1rem;
   transition: scale 0.5s;
   z-index: 1;
+  max-width: 700px;
+
 }
 
-.unsubmitted{
+.unsubmitted {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -116,7 +118,7 @@
   font-family: "Rubik-Regular";
 }
 
-.submitted{
+.submitted {
   text-align: center;
 }
 /* -------------------------------------------- */

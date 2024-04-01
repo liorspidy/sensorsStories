@@ -3,7 +3,6 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import { Link } from "react-router-dom";
 
 const Footer = ({ isMobile }) => {
   const emailClickHandler = () => {
@@ -12,10 +11,6 @@ const Footer = ({ isMobile }) => {
 
   const phoneClickHandler = () => {
     window.location.href = "tel:0547877837";
-  };
-
-  const facebookClickHandler = () => {
-    window.open("https://www.facebook.com/ketybirman");
   };
 
   const footerMobile = isMobile ? classes.footerMobile : classes.footer;
@@ -40,26 +35,26 @@ const Footer = ({ isMobile }) => {
           <h5>054-7877837</h5>
         </div>
         <div className={classes.links}>
-          <Link
-            to="https://www.facebook.com/sfatharegesh"
-            className={detailMobile}
+          <a
+            href="https://www.facebook.com/sfatharegesh"
+            target="_blank"
+            className={detailMobile} rel="noreferrer"
           >
             <FacebookIcon
               className={iconMobile}
-              onClick={facebookClickHandler}
               style={{ fontSize: "2.4rem" }}
             />
-          </Link>
-          <Link
-            to="https://www.instagram.com/ketybirman/"
-            className={detailMobile}
+          </a>
+          <a
+            href="https://www.instagram.com/ketybirman/"
+            target="_blank"
+            className={detailMobile} rel="noreferrer"
           >
             <InstagramIcon
               className={iconMobile}
-              onClick={facebookClickHandler}
               style={{ fontSize: "2.4rem" }}
             />
-          </Link>
+          </a>
         </div>
       </div>
       <div className={footerCol}>
