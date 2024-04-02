@@ -1,3 +1,16 @@
+
+.media {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../images/background.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+
 .title {
     font-family: "Rubik-Bold";
     text-align: end;
@@ -25,16 +38,6 @@
     filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
   }
 
-.media {
-  height: calc(100dvh - 12rem);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-image: url("../../images/background.png");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 @media (max-width: 640px) {
     .title {

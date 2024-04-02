@@ -48,7 +48,11 @@ const Author = ({ isMobile }) => {
       viewport={{ once: true, amount: 0.1 }}
     >
       <div className={aboutBoxClass}>
-        <motion.div className={titleClass} variants={aboutBoxVarients}>
+        <motion.div
+          id="title"
+          className={titleClass}
+          variants={aboutBoxVarients}
+        >
           <h2 className={classes.title}>אודות קטי</h2>
         </motion.div>
         <motion.div className={parboxClass} variants={parboxVarients}>
@@ -91,7 +95,7 @@ const Author = ({ isMobile }) => {
           <div className={parboxImgClass}>
             <img src={ketty} alt="קטי בירמן" />
             <div className={tellmemoreClass}>
-              <Link to={"/about-me"}>ספרו לי עוד</Link>
+              <a href="/about-me">ספרו לי עוד</a>
             </div>
           </div>
           <Community isMobile={isMobile} />

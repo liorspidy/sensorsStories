@@ -89,7 +89,7 @@
   bottom: -1rem;
   left: 9rem;
   font-family: "Rubik-Bold";
-  transition: all 0.8;
+  transition: all 0.8s;
   min-width: 7.6rem;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .tellmemore:hover {
-  transition: all 0.8;
+  transition: all 0.8s;
   scale: 1.1;
   background-color: #56afc3;
 }
@@ -232,7 +232,7 @@
   bottom: -1rem;
   left: 9rem;
   font-family: "Rubik-Bold";
-  transition: all 0.8;
+  transition: all 0.8s;
 }
 
 .tellmemoreMobile a {
@@ -241,7 +241,7 @@
 }
 
 .tellmemoreMobile:hover {
-  transition: all 0.8;
+  transition: all 0.8s;
   scale: 1.1;
   background-color: #56afc3;
 }

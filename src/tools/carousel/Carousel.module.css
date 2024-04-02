@@ -10,8 +10,8 @@
 @media (max-width: 1024px) {
   .carousel {
     gap: 1rem;
-    margin: 8dvw auto;
-    width: 85%;
+    margin: 6dvw auto;
+    width: 90%;
   }
 }
 
@@ -21,9 +21,10 @@
   align-items: center;
   justify-content: center;
   background-color: white;
-  height: 100%;
+  padding-block: 0.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   border: none;
+  border-radius: 15px;
 }
 
 .carousel .content {
