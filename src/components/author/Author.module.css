@@ -54,7 +54,7 @@
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.2)) brightness(1.1);
   object-fit: cover;
   position: relative;
-  transition: all 0.8s;
+  transition: all 0.3s;
   border: 3px solid rgba(106, 106, 106, 0.572);
 }
 
@@ -193,7 +193,7 @@
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.2)) brightness(1.1);
   object-fit: cover;
   right: -7rem;
-  transition: all 0.8s;
+  transition: all 0.3s;
   border: 3px solid rgba(106, 106, 106, 0.572);
 }
 
@@ -220,7 +220,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   bottom: -1rem;
   font-family: "Rubik-Bold";
-  transition: all 0.8s;
+  transition: all 0.3s;
 }
 
 .tellmemoreMobile a {
@@ -229,7 +229,7 @@
 }
 
 .tellmemoreMobile:hover {
-  transition: all 0.8s;
+  transition: all 0.3s;
   scale: 1.1;
   background-color: #56afc3;
 }
@@ -301,7 +301,7 @@
     filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.2)) brightness(1.1);
     object-fit: cover;
     position: relative;
-    transition: all 0.8s;
+    transition: all 0.3s;
     border: 3px solid rgba(106, 106, 106, 0.572);
   }
 

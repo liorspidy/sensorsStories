@@ -1,4 +1,5 @@
 import title from "../../images/title.png";
+import Clouds from "../book/clouds/Clouds";
 import classes from "./Title.module.css";
 import { motion } from "framer-motion";
 
@@ -32,13 +33,19 @@ const Title = ({ isMobile }) => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 2 }}
       >
-        <img src={title} alt="סיפורי חיישנים" aria-label="כותרת סיפורי חיישנים" />
+        <img
+          src={title}
+          alt="סיפורי חיישנים"
+          aria-label="כותרת סיפורי חיישנים"
+        />
         {!isMobile && (
           <motion.div className={scrollDownClass} onClick={scrollToElement}>
             <div className={scrollDownCircleClass}></div>
           </motion.div>
         )}
       </motion.div>
+
+      <Clouds></Clouds>
     </div>
   );
 };

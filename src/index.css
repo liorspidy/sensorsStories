@@ -11,6 +11,7 @@ body {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   overscroll-behavior: none;
+  background-color: #ffef5c;
 }
 
 code {

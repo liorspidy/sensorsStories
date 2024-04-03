@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import logo from "../../images/logoEmpty.png";
 import classes from "./Header.module.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -5,6 +6,18 @@ import BasicMobileMenu from "./menu/BasicMobileMenu";
 
 function Header({ isMobile }) {
   const navigate = useNavigate();
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
 
   function scrollToElement(elementId) {
     return () => {
@@ -31,7 +44,7 @@ function Header({ isMobile }) {
     : classes.header_link;
 
   return (
-    <nav className={headerClass} id="main">
+    <nav className={`${headerClass} ${visible ? "" : classes.hidden}`} id="main">
       <a className={headerLogoClass} href="/">
         <img className={logoClass} src={logo} alt="Logo" />
       </a>

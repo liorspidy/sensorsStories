@@ -30,7 +30,7 @@ const Book = ({ isMobile }) => {
       opacity: 1,
       transition: { duration: 2 },
     },
-    clicked: { scale: 0.9, transition: { duration: 0.2 } },
+    clicked: { scale: 0.9, transition: { duration: 0.8 } },
   };
 
   const ortzevaVarients = {
@@ -48,7 +48,7 @@ const Book = ({ isMobile }) => {
 
   const reccVarients = {
     offscreen: { x: 50, opacity: 0 },
-    onscreen: { x: 0, opacity: 1, transition: { delay: 2, duration: 0.8 } },
+    onscreen: { x: 0, opacity: 1, transition: { delay: 1, duration: 0.8 } },
   };
   const bookPageClasses = isMobile ? classes.bookPageMobile : classes.bookPage;
   const reccomendationClass = isMobile

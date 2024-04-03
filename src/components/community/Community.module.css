@@ -69,13 +69,13 @@
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   font-family: "Rubik-Bold";
-  transition: all 0.8s;
+  transition: all 0.3s;
   border: none;
   align-self: flex-end;
 }
 
 .form .unsubmitted button:hover {
-  transition: all 0.8s;
+  transition: all 0.3s;
   scale: 1.1;
   background-color: #56afc3;
 }
@@ -190,12 +190,12 @@
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   font-family: "Rubik-Bold";
-  transition: all 0.8s;
+  transition: all 0.3s;
   border: none;
 }
 
 .formButtonMobile button:hover {
-  transition: all 0.8s;
+  transition: all 0.3s;
   scale: 1.1;
   background-color: #56afc3;
 }

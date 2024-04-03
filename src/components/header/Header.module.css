@@ -7,10 +7,34 @@
   padding-left: 1.5rem;
   background-color: #ffef5c;
   /* height: 10rem; */
-  position: sticky;
+  position: fixed;
   z-index: 10;
   font-family: "Rubik-Bold";
   top: 0;
+  animation: 0.3s slideDown ease-out forwards;
+  width: 100%;
+}
+
+.header.hidden,.headerMobile.hidden {
+  animation: 0.3s slideUp ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
 }
 
 .header.sticky,

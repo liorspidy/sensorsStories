@@ -54,12 +54,12 @@
   object-fit: cover;
   position: relative;
   right: -5rem;
-  transition: all 0.8s;
+  transition: all 0.3s;
   border: 3px solid rgba(106, 106, 106, 0.572);
 }
 
 /* .parboxImg img:hover {
-  transition: all 0.8s;
+  transition: all 0.3s;
   scale: 1.05;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2)) brightness(1.1);
 } */
@@ -89,7 +89,7 @@
   bottom: -1rem;
   left: 9rem;
   font-family: "Rubik-Bold";
-  transition: all 0.8s;
+  transition: all 0.3s;
   min-width: 7.6rem;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .tellmemore:hover {
-  transition: all 0.8s;
+  transition: all 0.3s;
   scale: 1.1;
   background-color: #56afc3;
 }
@@ -204,7 +204,7 @@
   rotate: -5deg;
   object-fit: cover;
   right: -7rem;
-  transition: all 0.8s;
+  transition: all 0.3s;
   border: 3px solid rgba(106, 106, 106, 0.572);
 }
 
@@ -232,7 +232,7 @@
   bottom: -1rem;
   left: 9rem;
   font-family: "Rubik-Bold";
-  transition: all 0.8s;
+  transition: all 0.3s;
 }
 
 .tellmemoreMobile a {
@@ -241,7 +241,7 @@
 }
 
 .tellmemoreMobile:hover {
-  transition: all 0.8s;
+  transition: all 0.3s;
   scale: 1.1;
   background-color: #56afc3;
 }

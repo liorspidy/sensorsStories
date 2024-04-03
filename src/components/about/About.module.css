@@ -43,7 +43,7 @@
   object-fit: cover;
   position: relative;
   right: -7rem;
-  transition: all 0.8s;
+  transition: all 0.3s;
 }
 
 .aboutDesc {
@@ -116,7 +116,7 @@
   object-fit: cover;
   position: relative;
   right: -7rem;
-  transition: all 0.8s;
+  transition: all 0.3s;
 }
 
 .aboutDescMobile {

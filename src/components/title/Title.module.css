@@ -3,11 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100dvh - 5rem);
+  min-height: 100dvh;
+  position: relative;
 }
 
 .title img {
-  max-width: 50%;
+  max-width: 850px;
   object-fit: contain;
   animation: floatUpDown 3s ease-in-out infinite;
 }
@@ -19,6 +20,7 @@
   flex-direction: column;
   position: relative;
   z-index: 1;
+  margin-block-start: 5dvw;
 }
 
 .scrollDown {
@@ -51,7 +53,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vw;
+  min-height: 80dvw;
+  position: relative;
+  margin-top: 12dvw;
 }
 
 .titleMobile img {
