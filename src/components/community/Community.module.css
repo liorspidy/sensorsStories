@@ -232,6 +232,13 @@
   font-size: 3rem;
 }
 
+.errorMessage{
+  font-size: 0.85rem;
+  color: red;
+  text-align: center;
+  width: 100%;
+}
+
 @media screen and (min-width: 1400px) {
   .inputContainer input {
     border-radius: 10px;
