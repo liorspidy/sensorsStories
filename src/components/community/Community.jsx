@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import Loading from "../../tools/loading/Loading";
 import classes from "./Community.module.css";
 import { motion } from "framer-motion";
 import axios from "axios";
+import madadon from "../../images/madadon1.png";
 
 const Community = ({ isMobile }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -9,6 +11,7 @@ const Community = ({ isMobile }) => {
   const [subscriberEmail, setSubscriberEmail] = useState("");
   const [subscriberPhone, setSubscriberPhone] = useState("");
   const [subscriberError, setSubscriberError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const titleClass = isMobile
     ? classes.titleContainerMobile
@@ -28,37 +31,38 @@ const Community = ({ isMobile }) => {
 
   const sumbitHandler = async (e) => {
     e.preventDefault();
-  
+
     // Validation and formatting checks
     let name = subscriberName.trim(); // Trim leading and trailing spaces
     if (name.length < 2) {
       setSubscriberError("שם מלא חייב להכיל לפחות שני תווים");
       return;
     }
-  
-    let phone = subscriberPhone.replace(/\D/g, ''); 
+
+    let phone = subscriberPhone.replace(/\D/g, "");
     if (!/^\d{9,10}$/.test(phone)) {
       setSubscriberError("מספר טלפון לא תקין");
       return;
     }
-    
-    phone = phone.replace(/^0?(\d{2})(\d{3})(\d{4})$/, '0$1-$2$3');
-    
+
+    phone = phone.replace(/^0?(\d{2})(\d{3})(\d{4})$/, "0$1-$2$3");
+
     if (!/^\d{3}-\d{7}$/.test(phone)) {
       setSubscriberError("מספר טלפון לא תקין");
       return;
     }
-    
+
     try {
+      setIsLoading(true);
       const mylistId = process.env.REACT_APP_MAIN_LIST_ID;
       const subscriber = {
         name: name,
         email: subscriberEmail,
         phone: phone,
       };
-  
+
       await axios.post(
-        `http://localhost:5000/ravmesser/addSubscriber/${mylistId}`,
+        `https://sensorsstoriesbackend.glitch.me/ravmesser/addSubscriber/${mylistId}`,
         subscriber
       );
       setIsSubmitted(true);
@@ -71,44 +75,48 @@ const Community = ({ isMobile }) => {
       setSubscriberError(
         "קרתה שגיאה בשליחת הטופס, אנא נסו בשנית בעוד כמה רגעים"
       );
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  useEffect( () => {
-
+  useEffect(() => {
     const getLists = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/ravmesser/getLists");
-        console.log(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    }
-
-    const getSubscribers = async () => {
-      try {
-        const mylistId = process.env.REACT_APP_MAIN_LIST_ID;
         const res = await axios.get(
-          `http://localhost:5000/ravmesser/getSubscribers/${mylistId}`
+          "https://sensorsstoriesbackend.glitch.me/ravmesser/getLists"
         );
         console.log(res.data);
       } catch (err) {
         console.log(err);
       }
-    }
+    };
+
+    const getSubscribers = async () => {
+      try {
+        const mylistId = process.env.REACT_APP_MAIN_LIST_ID;
+        const res = await axios.get(
+          `https://sensorsstoriesbackend.glitch.me/ravmesser/getSubscribers/${mylistId}`
+        );
+        console.log(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
     // getLists();
     // getSubscribers();
-  },[])
-  
+  }, []);
+
   return (
     <div className={communityClass}>
       <motion.div className={titleClass} variants={aboutBoxVariants}>
         <h3 className={classes.title}>הצטרפו לקהילה</h3>
       </motion.div>
       <form className={formClass} onSubmit={sumbitHandler}>
-        {!isSubmitted && (
+        {!isSubmitted && !isLoading && (
           <div className={classes.unsubmitted}>
+            <p className={classes.joinText}>הרשמו וקבלו כלים נוספים בסמס ובמייל</p>
             <div className={inputContainerClass}>
               <label htmlFor="name">
                 שם מלא
@@ -151,10 +159,31 @@ const Community = ({ isMobile }) => {
           </div>
         )}
 
-        {isSubmitted && (
+        {isLoading && <Loading />}
+
+        {isSubmitted && !isLoading && (
           <div className={classes.submitted}>
-            <p>הבקשה נשלחה!</p>
-            <p>נהיה בקשר :)</p>
+            <p>ההרשמה בוצעה בהצלחה!</p>
+            <p>כלים נוספים בדרך..</p>
+            <motion.div
+              whileHover={{
+                rotate: [0, -1, 1, -1, 1, 0],
+                transition: { duration: 0.4 },
+              }}
+              className={classes.imageContainer}
+            >
+              <img
+                className={classes.image}
+                src={madadon}
+                alt="madadon"
+                onClick={() =>
+                  window.scrollTo({
+                    top: document.getElementById("meet").offsetTop,
+                    behavior: "smooth",
+                  })
+                }
+              />
+            </motion.div>
           </div>
         )}
       </form>

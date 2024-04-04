@@ -43,7 +43,7 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 2rem 1rem;
+  padding: 2rem;
   transition: scale 0.5s;
   z-index: 1;
   max-width: 700px;
@@ -57,6 +57,12 @@
   align-items: flex-start;
   flex-direction: column;
   gap: 1rem;
+}
+
+.unsubmitted .joinText{
+  font-size: 1.2rem;
+  margin: 0;
+  font-family: "Rubik-Regular";
 }
 
 .form .unsubmitted button {
@@ -80,8 +86,38 @@
   background-color: #56afc3;
 }
 
+.submitted{
+  color: rgb(53 154 53);
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitted p{
+  margin-block: 0.5rem;
+}
+
+.submitted p:last-of-type{
+  margin-block-end: 2rem;
+}
+
+.submitted .imageContainer{
+  display: flex;
+  margin: 0 2rem;
+  width: 15rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.submitted .image{
+  object-fit: contain;
+  width: 100%;
+}
+
 .formButton {
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: end;
 }
@@ -92,7 +128,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 0.5rem;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
