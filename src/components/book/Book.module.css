@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  min-height: calc(100dvh - 5rem);
+  min-height: 100dvh;
   width: 95%;
   padding: 1rem;
   margin: 0 auto;
@@ -118,7 +118,7 @@
 }
 
 .book img {
-  max-width: 24rem;
+  max-width: 22rem;
   filter: drop-shadow(0px 2px 75px rgba(0, 0, 0, 0.3));
   transition: all 1s;
   cursor: pointer;
@@ -138,7 +138,7 @@
 }
 
 .bookDescBox {
-  max-width: 60rem;
+  max-width: 65rem;
   min-width: 35rem;
   padding: 1.5rem 3rem 1.5rem 4rem;
   direction: rtl;
@@ -152,8 +152,9 @@
 }
 
 .bookDesc1 {
-  font-size: 1.7rem;
+  font-size: 1.35rem;
   font-family: "Rubik-LightItalic";
+  margin-block: 3rem;
 }
 
 .bookDesc2 {
@@ -416,32 +417,18 @@
   }
 
   .bookDesc1 {
-    font-size: 1.6rem;
+    font-size: 1.35rem;
     font-family: "Rubik-LightItalic";
   }
 
   .bookDesc2 {
     font-weight: bold;
     font-family: "Rubik-Bold";
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
-@media (max-width: 1424px) {
-  .bookDesc1 {
-    font-size: 1.4rem;
-  }
-
-  .bookDesc2 {
-    font-size: 1rem;
-  }
-
-  .book img {
-    max-width: 22rem;
-  }
-}
-
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 1280px) {
   .ortzeva {
     scale: 0.3;
     margin: 0;
