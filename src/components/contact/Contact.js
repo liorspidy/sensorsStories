@@ -5,6 +5,7 @@ import hearts from "../../images/hearts1.png";
 import momandgirl from "../../images/momandgirl.png";
 import emailjs from "emailjs-com";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import Loading from "../../tools/loading/Loading";
 
 const Contact = ({ isMobile }) => {
   const [title, setTitle] = useState("");
@@ -12,6 +13,8 @@ const Contact = ({ isMobile }) => {
   const [senderName, setSenderName] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
   const [isMessageSent, setIsMessageSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -31,6 +34,20 @@ const Contact = ({ isMobile }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Validation checks
+    if (!title || !message || !senderName || !senderEmail) {
+      setError("יש למלא את כל השדות");
+      return;
+    }
+    if (!senderEmail.includes("@")) {
+      setError("כתובת המייל אינה חוקית");
+      return;
+    }
+
+    // If all validations pass, proceed with form submission
+    setIsLoading(true);
+    setError("");
 
     let formData = new FormData();
     formData.append("title", title);
@@ -54,12 +71,15 @@ const Contact = ({ isMobile }) => {
         form,
         process.env.REACT_APP_PUBLIC_KEY
       )
-      .then(
-        setIsMessageSent(true),
-        (result) => console.log(result.text),
-        (error) => console.log(error.text)
-      )
-      .catch((error) => console.log(error.text));
+      .then(() => {
+        setIsMessageSent(true);
+      })
+      .catch((error) => {
+        console.log(error.text);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
 
     setTitle("");
     setMessage("");
@@ -142,7 +162,7 @@ const Contact = ({ isMobile }) => {
           />
         </div>
         <motion.div className={contactDetailsClass} variants={aboutBoxVarients}>
-          {!isMessageSent && (
+          {!isMessageSent && !isLoading && (
             <form onSubmit={handleSubmit} className={formClass}>
               <div className={contactDivClass}>
                 <label htmlFor="title">הנושא</label>
@@ -183,12 +203,16 @@ const Contact = ({ isMobile }) => {
                   required
                 />
               </div>
+              {error.length > 0 && (
+                <p className={classes.errorMessage}>{error}</p>
+              )}
               <div className={contactButtonIconClass}>
                 <button type="submit">לשליחה</button>
               </div>
             </form>
           )}
-          {isMessageSent && (
+          {isLoading && <Loading />}
+          {isMessageSent && !isLoading && (
             <div className={classes.sent}>
               <p>תודה רבה על פנייתך!</p>
               <div className={classes.checkmarkBox}>
