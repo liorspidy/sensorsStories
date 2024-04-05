@@ -6,7 +6,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useNavigate } from "react-router-dom";
 import classes from "./BasicMenu.module.css";
 
-export default function BasicMobileMenu() {
+export default function BasicMobileMenu({setVisible}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const navigate = useNavigate();
@@ -31,6 +31,7 @@ export default function BasicMobileMenu() {
       }
     }, 100);
     handleClose();
+    setVisible(false);
   };
 
   return (

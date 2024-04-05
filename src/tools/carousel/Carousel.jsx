@@ -23,7 +23,10 @@ const Carousel = ({ children }) => {
 
   const handleNext = () => {
     const nextPosition = scrollPosition + contentRef.current.clientWidth;
-    if (nextPosition >= contentRef.current.scrollWidth) {
+    if (
+      nextPosition >= contentRef.current.scrollWidth ||
+      contentRef.current.scrollWidth - nextPosition <= 2
+    ) {
       setScrollPosition(0);
     } else {
       setScrollPosition(nextPosition);
@@ -32,9 +35,16 @@ const Carousel = ({ children }) => {
 
   const handlePrev = () => {
     const nextPosition = scrollPosition - contentRef.current.clientWidth;
+    console.log(
+      scrollPosition,
+      contentRef.current.clientWidth,
+      scrollPosition - contentRef.current.clientWidth
+    );
     if (nextPosition < 0) {
+      console.log("here");
       setScrollPosition(contentRef.current.scrollWidth);
     } else {
+      console.log("there")
       setScrollPosition(nextPosition);
     }
   };

@@ -7,15 +7,19 @@
   width: 40dvw;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .carousel {
     gap: 1rem;
     margin: 6dvw auto;
-    width: 90%;
+    width: 60dvw;
   }
+}
 
-  .carousel .arrowIcon{
-    height: 100%;
+@media (max-width: 1024px) {
+  .carousel {
+    gap: 1rem;
+    margin: 10dvw auto;
+    width: 90%;
   }
 }
 

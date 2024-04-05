@@ -12,9 +12,10 @@ function Header({ isMobile }) {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       setPrevScrollPos(currentScrollPos);
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
@@ -28,6 +29,7 @@ function Header({ isMobile }) {
           behavior: "smooth",
         });
       }
+      setVisible(false);
     };
   }
 
@@ -48,7 +50,7 @@ function Header({ isMobile }) {
       <a className={headerLogoClass} href="/">
         <img className={logoClass} src={logo} alt="Logo" />
       </a>
-      {isMobile && <BasicMobileMenu />}
+      {isMobile && <BasicMobileMenu setVisible={setVisible} />}
       {!isMobile && (
         <nav className={headerNavClass}>
           <Link

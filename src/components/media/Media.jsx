@@ -11,8 +11,11 @@ const Media = ({ isMobile }) => {
     offscreen: { x: 30, opacity: 0 },
     onscreen: { x: 0, opacity: 1, transition: { duration: 0.8 } },
   };
+
+  const mediaClass = isMobile ? classes.mediaMobile : classes.media;
+
   return (
-    <motion.div className={classes.media}
+    <motion.div className={mediaClass}
       id="media"
       initial={"offscreen"}
       whileInView={"onscreen"}
