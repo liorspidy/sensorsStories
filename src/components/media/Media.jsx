@@ -31,7 +31,7 @@ const Media = ({ isMobile }) => {
           heightCalculationMethod="lowestElement"
           inPageLinks
           log
-          src="https://drive.google.com/file/d/1eT5Ba5EDPXFSd_s6QN7kqOMori6lMnzg/preview"
+          src="https://www.youtube.com/embed/3OhJ62f36kI?si=JUVWLUZafcHxkePA"
           style={{
             height: "100%",
             aspectRatio: "16 / 9",
@@ -45,35 +45,7 @@ const Media = ({ isMobile }) => {
           heightCalculationMethod="lowestElement"
           inPageLinks
           log
-          src="https://drive.google.com/file/d/1x3a_zU1INJqKk6MNd48VrYa_ebDANF7C/preview"
-          style={{
-            height: "100%",
-            aspectRatio: "16 / 9",
-            overflow: "hidden",
-            border: "none",
-          }}
-        />
-
-        <IframeResizer
-          forwardRef={iframeRef}
-          heightCalculationMethod="lowestElement"
-          inPageLinks
-          log
-          src="https://drive.google.com/file/d/1Z_SqGpDGkFKm--6u3ed0Hsfv2kTg7Tlq/preview"
-          style={{
-            height: "100%",
-            aspectRatio: "16 / 9",
-            overflow: "hidden",
-            border: "none",
-          }}
-        />
-
-        <IframeResizer
-          forwardRef={iframeRef}
-          heightCalculationMethod="lowestElement"
-          inPageLinks
-          log
-          src="https://drive.google.com/file/d/1uCOc3NJg6i8xfzs5VLOVMz4ANqQM0AXN/preview"
+          src="https://www.youtube.com/embed/kKTOGu8azZI?si=gaTOTKR6AC6MiIl_"
           style={{
             height: "100%",
             aspectRatio: "16 / 9",
