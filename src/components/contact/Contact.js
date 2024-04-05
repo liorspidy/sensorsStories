@@ -9,6 +9,7 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 const Contact = ({ isMobile }) => {
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
+  const [senderName, setSenderName] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
   const [isMessageSent, setIsMessageSent] = useState(false);
 
@@ -18,6 +19,10 @@ const Contact = ({ isMobile }) => {
 
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
+  };
+
+  const handleSenderNameChange = (event) => {
+    setSenderName(event.target.value);
   };
 
   const handleSenderEmailChange = (event) => {
@@ -30,6 +35,7 @@ const Contact = ({ isMobile }) => {
     let formData = new FormData();
     formData.append("title", title);
     formData.append("message", message);
+    formData.append("senderName", senderName);
     formData.append("senderEmail", senderEmail);
 
     const form = document.createElement("form");
@@ -40,8 +46,6 @@ const Contact = ({ isMobile }) => {
       field.setAttribute("value", value);
       form.appendChild(field);
     });
-
-    console.log(process.env.REACT_APP_SERVICE_ID);
 
     emailjs
       .sendForm(
@@ -54,7 +58,8 @@ const Contact = ({ isMobile }) => {
         setIsMessageSent(true),
         (result) => console.log(result.text),
         (error) => console.log(error.text)
-      );
+      )
+      .catch((error) => console.log(error.text));
 
     setTitle("");
     setMessage("");
@@ -140,7 +145,7 @@ const Contact = ({ isMobile }) => {
           {!isMessageSent && (
             <form onSubmit={handleSubmit} className={formClass}>
               <div className={contactDivClass}>
-                <label htmlFor="title">מה הנושא?</label>
+                <label htmlFor="title">הנושא</label>
                 <input
                   type="text"
                   id="title"
@@ -150,7 +155,7 @@ const Contact = ({ isMobile }) => {
                 />
               </div>
               <div className={contactDivClass}>
-                <label htmlFor="message">מה ההודעה?</label>
+                <label htmlFor="message">ההודעה</label>
                 <textarea
                   id="message"
                   value={message}
@@ -159,7 +164,17 @@ const Contact = ({ isMobile }) => {
                 ></textarea>
               </div>
               <div className={contactDivClass}>
-                <label htmlFor="senderEmail">מה המייל שלך?</label>
+                <label htmlFor="senderName">שמך המלא</label>
+                <input
+                  type="text"
+                  id="senderName"
+                  value={senderName}
+                  onChange={handleSenderNameChange}
+                  required
+                ></input>
+              </div>
+              <div className={contactDivClass}>
+                <label htmlFor="senderEmail">המייל שלך</label>
                 <input
                   type="email"
                   id="senderEmail"
