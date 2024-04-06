@@ -7,6 +7,7 @@ import Characters from "../char/Characters";
 import Contact from "../contact/Contact";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import { motion } from "framer-motion";
+import Community from "../community/Community";
 // import Buy from "../buy/Buy";
 
 const Main = (props) => {
@@ -46,6 +47,7 @@ const Main = (props) => {
       <Title isMobile={props.isMobile} />
       <Book isMobile={props.isMobile} />
       <Author isMobile={props.isMobile} />
+      <Community isMobile={props.isMobile}/>
       <Characters isMobile={props.isMobile} />
       {/* <Buy isMobile={props.isMobile} /> */}
       <Contact id="contact" isMobile={props.isMobile} />

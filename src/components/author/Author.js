@@ -1,9 +1,8 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import classes from "./Author.module.css";
 import ketty from "../../images/ketty.jpeg";
-import ortzeva2 from "../../images/ortzeva2.png";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import Community from "../community/Community";
+import kids from "../../images/kids.png";
 
 const Author = ({ isMobile }) => {
   const aboutBoxVarients = {
@@ -13,16 +12,7 @@ const Author = ({ isMobile }) => {
 
   const parboxVarients = {
     offscreen: { y: 50, opacity: 0 },
-    onscreen: { y: 0, opacity: 1, transition: { delay: 1, duration: 0.5 } },
-  };
-
-  const ortzeva2Varients = {
-    offscreen: { y: 50, opacity: 0 },
-    onscreen: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", bounce: 0.3, delay: 2, duration: 0.8 },
-    },
+    onscreen: { y: 0, opacity: 1, transition: { delay: 0.75, duration: 0.5 } },
   };
 
   const authorClass = isMobile ? classes.authorMobile : classes.author;
@@ -36,8 +26,15 @@ const Author = ({ isMobile }) => {
     ? classes.tellmemoreMobile
     : classes.tellmemore;
   const parClass = isMobile ? classes.parMobile : classes.par;
-  const bottomClass = isMobile ? classes.bottomMobile : classes.bottom;
-  const ortzeva2Class = isMobile ? classes.ortzeva2Mobile : classes.ortzeva2;
+
+  const imageVarients = {
+    offscreen: { y: 50, opacity: 0 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.3, delay: 1.5, duration: 0.8 },
+    },
+  };
 
   return (
     <motion.div
@@ -55,51 +52,53 @@ const Author = ({ isMobile }) => {
         >
           <h2 className={classes.title}>אודות קטי</h2>
         </motion.div>
-        <motion.div className={parboxClass} variants={parboxVarients}>
-          <p className={parClass}>
-            קטי ילידת 1961, נשואה לעדי, אם למעין, רעות ונתנאלה וסבתא לשיר,
-            אריאל, אביב ואיתן, היא מאמנת לתקשורת חושית בעזרת הכלי שהיא פיתחה
-            שנקרא "שפת הרגש". <br />
-            <br />
-            בצעירותה חוותה קשיים בלימודים ובתקשורת שהיום היו מסווגים כלקויות
-            למידה. פילסה לעצמה דרך, התחתנה ועבדה כשמנהלת גני ילדים. עם הולדת בתה
-            מעין, צפו ועלו אותם הקשיים שהשאירה מאחור ושלחו אותה לדרך של חקירה
-            ולמידה שממשיכה עד היום בנושא התקשורת החושית. <br />
-            <br />
-            הכלים שקטי נחשפה אליהם, נתנו לה תשובות שחיפשה במסעה והיא משתפת אותם
-            עם קבוצות, יחידים, משפחות, ילדים ומבוגרים כבר 25 שנים. הספר "סיפורי
-            חישנים", נותן גישה פשוטה ופותח שער באופן ממצה אל גוף ידע ענק שנצבר
-            במחברתה לאורך מסע חייה האישיים והמקצועיים.
-          </p>
-        </motion.div>
-        <motion.div className={bottomClass} variants={parboxVarients}>
-          <motion.div
-            variants={ortzeva2Varients}
-            whileHover={{
-              rotate: [0, -1, 1, -1, 1, 0],
-              transition: { duration: 0.4 },
-            }}
-            className={ortzeva2Class}
-          >
-            <img
-              src={ortzeva2}
-              alt="אור וצבע"
-              onClick={() =>
-                window.scrollTo({
-                  top: document.getElementById("meet").offsetTop,
-                  behavior: "smooth",
-                })
-              }
-            />
-          </motion.div>
-          <div className={parboxImgClass}>
+        <div className={classes.content}>
+          <motion.div variants={imageVarients} className={parboxImgClass}>
             <img src={ketty} alt="קטי בירמן" />
-            <div className={tellmemoreClass}>
-              <a href="/about-me">ספרו לי עוד</a>
+          </motion.div>
+          <motion.div className={parboxClass} variants={parboxVarients}>
+            <div className={classes.text}>
+              <p className={parClass}>
+                קטי ילידת 1961, נשואה לעדי, אם למעין, רעות ונתנאלה וסבתא לשיר,
+                אריאל, אביב ואיתן, היא מאמנת לתקשורת חושית בעזרת הכלי שהיא פיתחה
+                שנקרא "שפת הרגש". <br />
+                <br />
+                בצעירותה חוותה קשיים בלימודים ובתקשורת שהיום היו מסווגים כלקויות
+                למידה. פילסה לעצמה דרך, התחתנה ועבדה כשמנהלת גני ילדים. עם הולדת
+                בתה מעין, צפו ועלו אותם הקשיים שהשאירה מאחור ושלחו אותה לדרך של
+                חקירה ולמידה שממשיכה עד היום בנושא התקשורת החושית. <br />
+                <br />
+                הכלים שקטי נחשפה אליהם, נתנו לה תשובות שחיפשה במסעה והיא משתפת
+                אותם עם קבוצות, יחידים, משפחות, ילדים ומבוגרים כבר 25 שנים. הספר
+                "סיפורי חישנים", נותן גישה פשוטה ופותח שער באופן ממצה אל גוף ידע
+                ענק שנצבר במחברתה לאורך מסע חייה האישיים והמקצועיים.
+              </p>
+              <div className={tellmemoreClass}>
+                <a href="/about-me">ספרו לי עוד</a>
+              </div>
             </div>
-          </div>
-          <Community isMobile={isMobile} />
-        </motion.div>
+            <motion.div
+              variants={imageVarients}
+              whileHover={{
+                rotate: [0, -1, 1, -1, 1, 0],
+                transition: { duration: 0.4 },
+              }}
+              className={classes.imageConatiner}
+            >
+              <img
+                className={classes.image}
+                src={kids}
+                alt="image"
+                onClick={() =>
+                  window.scrollTo({
+                    top: document.getElementById("community").offsetTop,
+                    behavior: "smooth",
+                  })
+                }
+              />
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </motion.div>
   );

@@ -5,6 +5,7 @@
   justify-content: center;
   min-height: 100dvh;
   position: relative;
+  margin-top: -5rem;
 }
 
 .title img {

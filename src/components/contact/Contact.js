@@ -12,6 +12,7 @@ const Contact = ({ isMobile }) => {
   const [message, setMessage] = useState("");
   const [senderName, setSenderName] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
+  const [allowGettingEmail, setAllowGettingEmail] = useState(false);
   const [isMessageSent, setIsMessageSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -30,6 +31,10 @@ const Contact = ({ isMobile }) => {
 
   const handleSenderEmailChange = (event) => {
     setSenderEmail(event.target.value);
+  };
+
+  const handleallowGettingEmailChange = (event) => {
+    setAllowGettingEmail(event.target.checked);
   };
 
   const handleSubmit = (event) => {
@@ -203,6 +208,17 @@ const Contact = ({ isMobile }) => {
                   required
                 />
               </div>
+              <label class="container">
+                <input
+                  type="checkbox"
+                  id="allowGettingEmail"
+                  value={allowGettingEmail}
+                  onChange={handleallowGettingEmailChange}
+                />
+                <span class="checkmark"></span>
+                <span>אני מאשר/ת קבלת עדכונים ומבצעים מהאתר</span>
+              </label>
+
               {error.length > 0 && (
                 <p className={classes.errorMessage}>{error}</p>
               )}

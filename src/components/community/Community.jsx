@@ -4,6 +4,9 @@ import classes from "./Community.module.css";
 import { motion } from "framer-motion";
 import axios from "axios";
 import madadon from "../../images/madadon1.png";
+import { Link } from "react-router-dom";
+import ortzeva2 from "../../images/ortzeva2.png";
+import talkbaloon from "../../images/talkbaloon.png";
 
 const Community = ({ isMobile }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -108,86 +111,170 @@ const Community = ({ isMobile }) => {
     // getSubscribers();
   }, []);
 
+  const parboxVarients = {
+    offscreen: { y: 50, opacity: 0 },
+    onscreen: { y: 0, opacity: 1, transition: { delay: 1, duration: 0.5 } },
+  };
+
+  const ortzeva2Varients = {
+    offscreen: { y: 50, opacity: 0 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.3, delay: 1, duration: 0.5 },
+    },
+  };
+
+  const bottomClass = isMobile ? classes.bottomMobile : classes.bottom;
+  const ortzeva2Class = isMobile ? classes.ortzeva2Mobile : classes.ortzeva2;
+
   return (
-    <div className={communityClass}>
+    <motion.div
+      id="community"
+      className={communityClass}
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <motion.div className={titleClass} variants={aboutBoxVariants}>
-        <h3 className={classes.title}>הצטרפו לקהילה</h3>
+        <h2 className={classes.title}>הצטרפו לקהילה</h2>
       </motion.div>
-      <form className={formClass} onSubmit={sumbitHandler}>
-        {!isSubmitted && !isLoading && (
-          <div className={classes.unsubmitted}>
-            <p className={classes.joinText}>הרשמו וקבלו כלים נוספים בסמס ובמייל</p>
-            <div className={inputContainerClass}>
-              <label htmlFor="name">
-                שם מלא
-                <input
-                  id="name"
-                  type="text"
-                  value={subscriberName}
-                  onChange={(e) => setSubscriberName(e.target.value)}
-                />
-              </label>
-            </div>
-            <div className={inputContainerClass}>
-              <label htmlFor="email">
-                אימייל
-                <input
-                  id="email"
-                  type="email"
-                  value={subscriberEmail}
-                  onChange={(e) => setSubscriberEmail(e.target.value)}
-                />
-              </label>
-            </div>
-            <div className={inputContainerClass}>
-              <label htmlFor="phone">
-                טלפון
-                <input
-                  id="phone"
-                  type="tel"
-                  value={subscriberPhone}
-                  onChange={(e) => setSubscriberPhone(e.target.value)}
-                />
-              </label>
-            </div>
-            {subscriberError.length > 0 && (
-              <p className={classes.errorMessage}>{subscriberError}</p>
+
+      <div className={classes.contentBox}>
+        <motion.div className={classes.joinText} variants={aboutBoxVariants}>
+          <h3 className={classes.boldText}>ההרשמה לקהילה פתוחה לכולם!</h3>
+          <p>
+            <br />
+            רוצים לקבל עדכונים שוטפים על סדנאות, הרצאות, ספרים חדשים ועוד?
+            הצטרפו לקהילה של קטי בירמן ותהיו הראשונים לדעת!
+            <br />
+            <br />
+            בקהילה תוכלו למצוא:
+            <br />
+            <ul className={classes.list}>
+              <li className={classes.listItem}>
+                טיפים ועצות לתקשורת טובה יותר עם ילדים ומבוגרים
+              </li>
+              <li className={classes.listItem}>
+                הבנה מעמיקה של עולם החושים והשפעתו על התנהגות
+              </li>
+              <li className={classes.listItem}>
+                כלים פרקטיים ליישום בבית ובכיתה
+              </li>
+              <li className={classes.listItem}>
+                הזמדנות להשתתף בסדנאות והרצאות מיוחדות
+              </li>
+              <li className={classes.listItem}>קהילה תומכת ומכילה</li>
+            </ul>
+            <br />
+            <span className={classes.boldText} style={{ color: "#4c9aac" }}>
+              {" "}
+              הרשמו עוד היום ותתחילו את המסע שלכם לתקשורת טובה יותר!
+            </span>
+          </p>
+        </motion.div>
+
+        <div className={classes.content}>
+          <motion.form
+            className={formClass}
+            onSubmit={sumbitHandler}
+            variants={aboutBoxVariants}
+          >
+            {!isSubmitted && !isLoading && (
+              <div className={classes.unsubmitted}>
+                <div className={inputContainerClass}>
+                  <label htmlFor="name">
+                    שם מלא
+                    <input
+                      id="name"
+                      type="text"
+                      value={subscriberName}
+                      onChange={(e) => setSubscriberName(e.target.value)}
+                    />
+                  </label>
+                </div>
+                <div className={inputContainerClass}>
+                  <label htmlFor="email">
+                    אימייל
+                    <input
+                      id="email"
+                      type="email"
+                      value={subscriberEmail}
+                      onChange={(e) => setSubscriberEmail(e.target.value)}
+                    />
+                  </label>
+                </div>
+                <div className={inputContainerClass}>
+                  <label htmlFor="phone">
+                    טלפון
+                    <input
+                      id="phone"
+                      type="tel"
+                      value={subscriberPhone}
+                      onChange={(e) => setSubscriberPhone(e.target.value)}
+                    />
+                  </label>
+                </div>
+                {subscriberError.length > 0 && (
+                  <p className={classes.errorMessage}>{subscriberError}</p>
+                )}
+                <div className={formButtonClass}>
+                  <button type="submit">הצטרף</button>
+                </div>
+              </div>
             )}
-            <div className={formButtonClass}>
-              <button type="submit">הצטרף</button>
-            </div>
-          </div>
-        )}
 
-        {isLoading && <Loading />}
+            {isLoading && <Loading />}
 
-        {isSubmitted && !isLoading && (
-          <div className={classes.submitted}>
-            <p>ההרשמה בוצעה בהצלחה!</p>
-            <p>כלים נוספים בדרך..</p>
-            <motion.div
-              whileHover={{
-                rotate: [0, -1, 1, -1, 1, 0],
-                transition: { duration: 0.4 },
-              }}
-              className={classes.imageContainer}
-            >
-              <img
-                className={classes.image}
-                src={madadon}
-                alt="madadon"
-                onClick={() =>
-                  window.scrollTo({
-                    top: document.getElementById("meet").offsetTop,
-                    behavior: "smooth",
-                  })
-                }
-              />
-            </motion.div>
-          </div>
-        )}
-      </form>
-    </div>
+            {isSubmitted && !isLoading && (
+              <div className={classes.submitted}>
+                <p>ההרשמה בוצעה בהצלחה!</p>
+                <p>כלים נוספים בדרך..</p>
+                <motion.div
+                  whileHover={{
+                    rotate: [0, -1, 1, -1, 1, 0],
+                    transition: { duration: 0.4 },
+                  }}
+                  className={classes.imageContainer}
+                >
+                  <img
+                    className={classes.image}
+                    src={madadon}
+                    alt="madadon"
+                    onClick={() =>
+                      window.scrollTo({
+                        top: document.getElementById("meet").offsetTop,
+                        behavior: "smooth",
+                      })
+                    }
+                  />
+                </motion.div>
+              </div>
+            )}
+          </motion.form>
+        </div>
+
+        <motion.div
+          variants={ortzeva2Varients}
+          whileHover={{
+            rotate: [0, -1, 1, -1, 1, 0],
+            transition: { duration: 0.4 },
+          }}
+          className={ortzeva2Class}
+        >
+          <img
+            src={ortzeva2}
+            alt="אור וצבע"
+            onClick={() =>
+              window.scrollTo({
+                top: document.getElementById("meet").offsetTop,
+                behavior: "smooth",
+              })
+            }
+          />
+        </motion.div>
+      </div>
+    </motion.div>
   );
 };
 
