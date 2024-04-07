@@ -73,9 +73,9 @@ const Author = ({ isMobile }) => {
                 "סיפורי חישנים", נותן גישה פשוטה ופותח שער באופן ממצה אל גוף ידע
                 ענק שנצבר במחברתה לאורך מסע חייה האישיים והמקצועיים.
               </p>
-              <div className={tellmemoreClass}>
-                <a href="/about-me">ספרו לי עוד</a>
-              </div>
+              <a className={tellmemoreClass} href="/about-me">
+                ספרו לי עוד
+              </a>
             </div>
             <motion.div
               variants={imageVarients}

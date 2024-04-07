@@ -95,7 +95,7 @@
   width: fit-content;
 }
 
-.tellmemore a {
+.tellmemore {
   color: white;
   text-decoration: none;
 }
@@ -215,7 +215,7 @@
   margin-top: 3rem;
 }
 
-.tellmemoreMobile a {
+.tellmemoreMobile{
   color: white;
   text-decoration: none;
 }
