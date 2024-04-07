@@ -20,7 +20,6 @@
   width: 100%;
   font-size: 2rem;
   color: #f37b87;
-  margin-bottom: 2rem;
 }
 
 .titleContainer .title {
@@ -428,6 +427,35 @@
   text-align: center;
 }
 
+.madadonMobile{
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.madadonMobile img{
+  object-fit: contain;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.madadonMobile::after {
+  width: 100%;
+  content: "";
+  bottom: 0rem;
+  display: block;
+  height: 1.35rem;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #0000003a;
+  filter: blur(5px);
+  z-index: 1;
+}
+
+
 @media (min-width: 769px) and (max-width: 1280px) {
   .form {
     font-size: 1.25rem;
@@ -459,6 +487,19 @@
 
   .title {
     font-size: 2rem;
+  }
+
+  .content{
+    gap: 3rem;
+  }
+
+  .madadon img{
+    width: 12rem;
+  }
+
+  .madadon::after {
+    width: 12rem;
+    height: 0.7rem;
   }
 
 }
