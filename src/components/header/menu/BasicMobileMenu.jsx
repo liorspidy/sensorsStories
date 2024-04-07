@@ -6,7 +6,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useNavigate } from "react-router-dom";
 import classes from "./BasicMenu.module.css";
 
-export default function BasicMobileMenu({setVisible}) {
+export default function BasicMobileMenu({ setVisible }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const navigate = useNavigate();
@@ -100,7 +100,10 @@ export default function BasicMobileMenu({setVisible}) {
           </Link>
         </MenuItem>
         <MenuItem
-          onClick={() => navigate("/courses")}
+          onClick={() => {
+            navigate("/courses");
+            handleClose();
+          }}
           className={classes.menuItem}
         >
           <Link className={classes.menuLink} to="/courses">
