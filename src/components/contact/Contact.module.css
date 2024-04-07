@@ -347,7 +347,8 @@
 
 .checkboxContainerMobile input {
   margin-left: 1rem;
-  width: 150px;
+  width: 15dvw;
+  max-width: 50px;
   height: 150px;
   cursor: pointer;
   margin-top: -42px;
