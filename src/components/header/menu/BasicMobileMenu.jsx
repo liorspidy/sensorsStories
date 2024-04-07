@@ -76,6 +76,14 @@ export default function BasicMobileMenu({setVisible}) {
           </Link>
         </MenuItem>
         <MenuItem
+          onClick={() => handleMenuItemClick("/", "community")}
+          className={classes.menuItem}
+        >
+          <Link className={classes.menuLink} to="/">
+            הקהילה
+          </Link>
+        </MenuItem>
+        <MenuItem
           onClick={() => handleMenuItemClick("/", "meet")}
           className={classes.menuItem}
         >

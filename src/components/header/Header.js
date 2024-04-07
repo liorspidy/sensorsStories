@@ -78,6 +78,16 @@ function Header({ isMobile }) {
             to="/"
             onClick={() => {
               navigate("/");
+              setTimeout(scrollToElement("community"), 100);
+            }}
+          >
+            הקהילה
+          </Link>
+          <Link
+            className={headerLinkClass}
+            to="/"
+            onClick={() => {
+              navigate("/");
               setTimeout(scrollToElement("meet"), 100);
             }}
           >

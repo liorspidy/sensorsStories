@@ -107,7 +107,7 @@
   height: 2rem;
   width: 100%;
   margin: 0 auto;
-  padding-right: 1rem;
+  padding-inline: 1rem;
   font-size: 1.2rem;
   font-family: "Rubik-Regular";
 }
@@ -115,7 +115,7 @@
 .contactDiv textarea {
   border-radius: 10px;
   border: 1px solid #ccc;
-  height: 8rem;
+  height: 5rem;
   width: 100%;
   margin: 0 auto;
   padding: 1rem;
@@ -123,8 +123,29 @@
   font-family: "Rubik-Regular";
 }
 
-.contactDiv .checkbox{
-  font-size: 2rem;
+.checkboxContainer {
+  font-size: 0.9rem;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.checkboxContainer input {
+  margin-left: 1rem;
+  width: 38px;
+  height: 22px;
+  cursor: pointer;
+  margin-top: 1px;
+}
+
+.contactDiv:has(input:required) label::after,
+.contactDiv:has(textarea:required) label::after {
+  content: "*";
+  color: red;
+  font-size: 1.2rem;
+  margin-inline: 0.25rem;
 }
 
 .contactPhotos {
@@ -179,6 +200,13 @@
 .checkmark {
   font-size: 2.5rem;
   color: rgb(74, 165, 53);
+}
+
+.errorMessage {
+  font-size: 1rem;
+  color: red;
+  text-align: center;
+  width: 100%;
 }
 
 /* ---------------------------------------------------------------- */
@@ -290,7 +318,7 @@
   border: 1px solid #ccc;
   width: 100%;
   margin: 0 auto;
-  padding-right: 1rem;
+  padding-inline: 1rem;
   font-family: "Rubik-Regular";
   height: 6rem;
   font-size: 3rem;
@@ -302,9 +330,35 @@
   width: 100%;
   margin: 0 auto;
   font-family: "Rubik-Regular";
-  height: 20rem;
+  height: 15rem;
   padding: 1rem;
   font-size: 3rem;
+}
+
+.checkboxContainerMobile {
+  font-size: 2.25rem;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.checkboxContainerMobile input {
+  margin-left: 1rem;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  margin-top: -42px;
+}
+
+.contactDivMobile:has(input:required) label::after,
+.contactDivMobile:has(textarea:required) label::after {
+  content: "*";
+  color: red;
+  font-size: 2.5rem;
+  margin-inline: 0.5rem;
 }
 
 .contactPhotosMobile {
@@ -324,27 +378,15 @@
   margin-left: 20rem;
 }
 
-@media screen and (min-width: 1400px) {
-  .form {
-    min-height: 60dvh;
-    font-size: 1.5rem;
-    justify-content: space-evenly;
-  }
-
-  .contactDiv input {
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    height: 100%;
-    padding: 1.5%;
-    margin: 0 auto;
-    padding-right: 1rem;
+@media (min-width: 1001px) and (max-width: 1280px) {
+  .title {
     font-size: 1.5rem;
   }
 
-  .contactDiv textarea {
-    min-height: 12rem;
-    padding: 1rem;
-    font-size: 1.5rem;
+  .checkboxContainer input {
+    width: 35px;
+    height: 35px;
+    margin-top: -6px;
   }
 }
 
@@ -359,7 +401,7 @@
   }
 
   .contactDiv textarea {
-    height: 20rem;
+    height: 15rem;
     padding: 1rem;
     font-size: 1.4rem;
   }
