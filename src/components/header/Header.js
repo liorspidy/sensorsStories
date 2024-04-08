@@ -3,6 +3,7 @@ import logo from "../../images/logoEmpty.png";
 import classes from "./Header.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import BasicMobileMenu from "./menu/BasicMobileMenu";
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Header({ isMobile }) {
   const navigate = useNavigate();

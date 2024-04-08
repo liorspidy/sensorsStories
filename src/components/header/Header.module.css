@@ -86,8 +86,6 @@
   height: 10rem;
   z-index: 10;
   font-family: "Rubik-Bold";
-  /* position: sticky;
-  top: 0; */
 }
 
 .header_navMobile,
@@ -97,6 +95,7 @@
 
 .headerLogoMobile {
   height: 8rem;
+  width: 12rem;
   display: flex;
   object-fit: contain;
 }
