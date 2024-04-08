@@ -11,7 +11,7 @@
   padding: 2rem;
   margin-top: 5rem;
   max-width: 1500px;
-  direction: rtl;
+  direction: ltr;
 }
 
 .title {
@@ -20,7 +20,7 @@
     width: 100%;
     font-size: 1.5rem;
     color: #f37b87;
-    padding-right: 6rem;
+    padding-inline-start: 6rem;
   }
   
   .title h2 {

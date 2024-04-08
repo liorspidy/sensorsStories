@@ -2,7 +2,7 @@ import { useRef } from "react";
 import classes from "./Media.module.css";
 import IframeResizer from "iframe-resizer-react";
 import Carousel from "../../tools/carousel/Carousel";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 const Media = ({ isMobile }) => {
   const iframeRef = useRef(null);
@@ -15,7 +15,8 @@ const Media = ({ isMobile }) => {
   const mediaClass = isMobile ? classes.mediaMobile : classes.media;
 
   return (
-    <motion.div className={mediaClass}
+    <motion.div
+      className={mediaClass}
       id="media"
       initial={"offscreen"}
       whileInView={"onscreen"}
@@ -39,7 +40,6 @@ const Media = ({ isMobile }) => {
             border: "none",
           }}
         />
-
         <IframeResizer
           forwardRef={iframeRef}
           heightCalculationMethod="lowestElement"

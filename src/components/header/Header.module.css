@@ -45,14 +45,15 @@
 
 .headerLogo {
   height: 3.5rem;
+  width: 12rem;
   display: flex;
   object-fit: contain;
 }
 
 .header_nav {
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
+  direction: rtl;
 }
 
 .header_link {

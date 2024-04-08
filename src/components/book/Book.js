@@ -73,7 +73,7 @@ const Book = ({ isMobile }) => {
 
   const scrollTo = (elId) => {
     const element = document.getElementById(elId);
-    if(element){
+    if (element) {
       window.scrollTo({
         top: element.offsetTop,
         behavior: "smooth",
@@ -101,7 +101,11 @@ const Book = ({ isMobile }) => {
       <div className={bookmainClass}>
         {!isMobile && (
           <motion.div className={classes.book} variants={bookVarients}>
-            <img src={book} alt="ספר סיפורי חיישנים"/>
+            <img
+              src={book}
+              alt="ספר סיפורי חיישנים"
+              onClick={scrollTo.bind(this, "contact")}
+            />
             <motion.button
               className={classes.buyNow}
               initial={{ opacity: 0 }}
@@ -119,7 +123,11 @@ const Book = ({ isMobile }) => {
             className={classes.bookMobile}
             variants={mobileBookVarients}
           >
-            <img src={book} alt="ספר סיפורי חיישנים"/>
+            <img
+              src={book}
+              alt="ספר סיפורי חיישנים"
+              onClick={scrollTo.bind(this, "contact")}
+            />
             <motion.button
               className={classes.buyNowMobile}
               variants={mobileBuyNowVarients}
