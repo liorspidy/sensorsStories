@@ -4,8 +4,9 @@
   align-items: center;
   gap: 1rem;
   margin: 2rem auto;
-  width: 40dvw;
   animation: fadein 1s forwards;
+  width: 60dvw;
+  max-width: 800px;
 }
 
 @media (max-width: 1280px) {
@@ -60,11 +61,11 @@
   scroll-snap-align: center;
 }
 
-@keyframes fadein{
-  from{
+@keyframes fadein {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
-  } 
+  }
 }

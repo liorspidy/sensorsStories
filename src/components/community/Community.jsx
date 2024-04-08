@@ -64,10 +64,10 @@ const Community = ({ isMobile }) => {
         phone: phone,
       };
 
-      // await axios.post(
-      //   `https://sensorsstoriesbackend.glitch.me/ravmesser/addSubscriber/${mylistId}`,
-      //   subscriber
-      // );
+      await axios.post(
+        `https://sensorsstoriesbackend.glitch.me/ravmesser/addSubscriber/${mylistId}`,
+        subscriber
+      );
 
       setIsSubmitted(true);
       setSubscriberError("");
@@ -139,7 +139,10 @@ const Community = ({ isMobile }) => {
         <div className={classes.contentBox}>
           <motion.div className={classes.joinText} variants={aboutBoxVariants}>
             <h3 className={classes.boldText}>
-              <strong>ההרשמה לקהילה פתוחה לכולם!</strong>
+              <strong>
+                ההרשמה לקהילה פתוחה לכולם{" "}
+                <span className={classes.freeText}>ובחינם!</span>
+              </strong>
             </h3>
             <p>
               <br />
@@ -192,7 +195,7 @@ const Community = ({ isMobile }) => {
                     />
                   </div>
                   <div className={inputContainerClass}>
-                    <label htmlFor="email">אימייל</label>
+                    <label htmlFor="email">דוא"ל</label>
                     <input
                       id="email"
                       type="email"

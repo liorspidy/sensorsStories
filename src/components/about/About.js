@@ -23,7 +23,7 @@ const About = ({ isMobile }) => {
     <AutoplaySlider
       play={true}
       cancelOnInteraction={false}
-      interval={2000}
+      interval={1000}
       className={photoSliderClass}
       animation="foldOutAnimation"
     >

@@ -7,9 +7,10 @@
   height: 100dvh;
   width: 95%;
   margin: 0 auto;
+  max-width: 1500px;
 }
 
-.communityBox{
+.communityBox {
   padding-inline: 6rem;
   width: 100%;
 }
@@ -18,7 +19,7 @@
   font-family: "Rubik-Bold";
   text-align: end;
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: #f37b87;
 }
 
@@ -37,23 +38,44 @@
   color: #4c9aac;
 }
 
-.contentBox {
+.community .joinText .freeText {
+  font-size: 2.25rem;
+  color: #f37b87;
+  filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+}
+
+.community .contentBox {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  max-width: 1350px;
+  margin: 0 auto;
 }
 
 .joinText {
-  font-size: 1.2rem;
   font-family: "Rubik-Regular";
-  flex: 1;
+  flex: 1 1;
   margin-left: 4rem;
+  background-color: aliceblue;
+  padding: 0 2rem;
+  margin-top: 2rem;
+  border-radius: 16px;
+  border: 1px solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.joinText p {
+  color: #212121;
+  font-size: 1.25rem;
 }
 
 .listItem {
   margin-block: 1rem;
   font-family: "Rubik-Bold";
+  font-size: 1.35rem;
+  color: #212121;
 }
 
 .list {
@@ -65,7 +87,7 @@
   content: "✓";
   margin-left: 0.5rem;
   color: #4c9aac;
-  font-family: 'Rubik-Italic';
+  font-family: "Rubik-Italic";
 }
 
 .content {
@@ -83,7 +105,7 @@
   font-size: 1.5rem;
 }
 
-.inputContainer:has(input:required) label::after{
+.inputContainer:has(input:required) label::after {
   content: "*";
   color: red;
   font-size: 1.2rem;
@@ -371,7 +393,7 @@
   font-size: 3rem;
 }
 
-.inputContainerMobile:has(input:required) label::after{
+.inputContainerMobile:has(input:required) label::after {
   content: "*";
   color: red;
   font-size: 2.5rem;
@@ -408,33 +430,49 @@
   position: relative;
 }
 
+.communityMobile .communityBox{
+  padding-inline: 2rem;
+}
 
-.communityMobile .contentBox{
+.communityMobile .contentBox {
   flex-direction: column;
 }
 
-.communityMobile .title{
+.communityMobile .title {
   font-size: 5rem;
 }
 
 .communityMobile .joinText {
-  font-size: 2.5rem;
   margin-left: 0;
+  padding: 1rem 3rem 2rem 3rem;
 }
 
-.communityMobile .joinText .boldText{
-  font-size: 3rem;
+.communityMobile .joinText p {
+  font-size: 2.5rem;
+}
+
+.communityMobile .listItem {
+  font-size: 2.75rem;
+}
+
+.communityMobile .joinText .boldText {
+  font-size: 3.25rem;
   text-align: center;
 }
 
-.madadonMobile{
+.communityMobile .joinText .freeText {
+  font-size: 3.75rem;
+  color: #f37b87;
+  filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+}
+
+.madadonMobile {
   width: 80%;
   margin: 0 auto;
   position: relative;
 }
 
-
-.madadonMobile img{
+.madadonMobile img {
   object-fit: contain;
   width: 100%;
   margin: 0 auto;
@@ -455,7 +493,6 @@
   z-index: 1;
 }
 
-
 @media (min-width: 769px) and (max-width: 1280px) {
   .form {
     font-size: 1.25rem;
@@ -472,12 +509,25 @@
     font-size: 1rem;
   }
 
-  .joinText {
+  .community .joinText {
     font-size: 1rem;
   }
 
-  .joinText .boldText{
+  .community .joinText .boldText{
+    margin-bottom: 0;
+  }
+
+  .community .joinText p{
+    font-size: 1.15rem;
+    margin: 0;
+  }
+
+  .community .joinText .boldText {
     font-size: 1.4rem;
+  }
+
+  .community .joinText .listItem{
+    font-size: 1.25rem;
   }
 
   .unsubmitted .errorMessage {
@@ -485,15 +535,11 @@
     margin-bottom: 0;
   }
 
-  .title {
-    font-size: 2rem;
-  }
-
-  .content{
+  .content {
     gap: 3rem;
   }
 
-  .madadon img{
+  .madadon img {
     width: 12rem;
   }
 
@@ -501,7 +547,6 @@
     width: 12rem;
     height: 0.7rem;
   }
-
 }
 
 @media (max-width: 768px) {

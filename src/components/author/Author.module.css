@@ -5,6 +5,7 @@
   flex-direction: column;
   width: 95%;
   margin: 0 auto;
+  max-width: 1500px;
   /* background: rgb(65 122 247 / 20%);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -24,7 +25,7 @@
   font-family: "Rubik-Bold";
   text-align: end;
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: #f37b87;
   margin-bottom: 4rem;
 }
@@ -38,7 +39,7 @@
   display: flex;
 }
 
-.text{
+.text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -74,7 +75,7 @@
   direction: rtl;
   background-color: aliceblue;
   border-radius: 10px;
-  color: #4d4d4d;
+  color: #212121;
   font-size: 1.25rem;
   margin: 0;
   margin-block-end: 2rem;
@@ -106,17 +107,16 @@
   background-color: #56afc3;
 }
 
-.imageConatiner{
+.imageConatiner {
   display: flex;
   width: 20dvw;
   cursor: pointer;
 }
 
-.imageConatiner .image{
+.imageConatiner .image {
   object-fit: contain;
   width: 100%;
 }
-
 
 /* ---------------------------------------------------------------- */
 
@@ -189,7 +189,7 @@
   direction: rtl;
   background-color: aliceblue;
   border-radius: 50px;
-  color: #4d4d4d;
+  color: #212121;
   width: 90%;
   margin: 0 auto;
 }
@@ -215,7 +215,7 @@
   margin-top: 3rem;
 }
 
-.tellmemoreMobile{
+.tellmemoreMobile {
   color: white;
   text-decoration: none;
 }
@@ -226,13 +226,13 @@
   background-color: #56afc3;
 }
 
-.aboutBoxMobile .content{
+.aboutBoxMobile .content {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
 }
 
-.aboutBoxMobile .image{
+.aboutBoxMobile .image {
   display: none;
 }
 
@@ -277,7 +277,7 @@
     padding-inline-start: 10rem;
   }
 
-  .imageConatiner{
+  .imageConatiner {
     width: 15rem;
   }
 }

@@ -6,6 +6,7 @@
   flex-direction: column;
   width: 95%;
   margin: 0 auto;
+  max-width: 1500px;
 }
 
 .contactBox {
@@ -32,7 +33,7 @@
   font-family: "Rubik-Bold";
   text-align: end;
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: #f37b87;
   padding-right: 6rem;
 }
@@ -219,7 +220,7 @@
   flex-direction: column;
   width: 95%;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 4rem;
 }
 
 .contactBoxMobile {
@@ -380,10 +381,6 @@
 }
 
 @media (min-width: 1001px) and (max-width: 1280px) {
-  .title {
-    font-size: 1.5rem;
-  }
-
   .checkboxContainer input {
     width: 35px;
     height: 35px;

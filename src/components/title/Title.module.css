@@ -9,7 +9,7 @@
 }
 
 .title img {
-  max-width: 600px;
+  max-width: 700px;
   object-fit: contain;
   animation: floatUpDown 3s ease-in-out infinite;
 }

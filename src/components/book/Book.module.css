@@ -8,6 +8,7 @@
   width: 95%;
   padding: 1rem;
   margin: 0 auto;
+  max-width: 1350px;
 }
 
 .title {
@@ -46,6 +47,7 @@
   padding: 0.2rem 1rem;
   transition: scale 0.5s;
   z-index: 1;
+  padding: 1rem;
 }
 
 .reccomendation {
@@ -55,14 +57,13 @@
 .reccomendation p,
 .reccomendation2 p,
 .reccomendation3 p {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .reccomendation .reccomendor,
 .reccomendation2 .reccomendor,
 .reccomendation3 .reccomendor {
   margin-top: 0.5rem;
-  margin-bottom: 0.8rem;
   font-family: "Rubik-Bold";
 }
 
@@ -143,7 +144,7 @@
   padding: 1.5rem 3rem 1.5rem 4rem;
   direction: rtl;
   border-radius: 0 20px 20px 20px;
-  color: #4d4d4d;
+  color: #212121;
   background: rgba(255, 255, 255, 0.584);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -215,7 +216,7 @@
   position: relative;
   min-height: 100dvh;
   width: 90%;
-  padding: 1rem;
+  padding: 1rem 4rem;
   margin: 0 auto;
   gap: 3rem;
 }
@@ -255,12 +256,13 @@
   padding: 0.2rem 2rem;
   transition: scale 0.5s;
   z-index: 1;
+  padding: 2rem;
 }
 
 .reccomendationMobile p,
 .reccomendation2Mobile p,
 .reccomendation3Mobile p {
-  margin-bottom: 0;
+  margin: 0;
   font-size: 2.2rem;
 }
 
@@ -269,6 +271,7 @@
 .reccomendation3Mobile .reccomendor {
   font-family: "Rubik-Bold";
   font-size: 1.8rem;
+  margin-top: 1rem;
 }
 
 .reccomendationMobile:hover,
@@ -299,7 +302,7 @@
 }
 
 .bookMobile img {
-  max-width: 42rem;
+  max-width: 46rem;
   filter: drop-shadow(0px 2px 75px rgba(0, 0, 0, 0.3));
   transition: all 1s;
   cursor: pointer;
@@ -322,12 +325,12 @@
 .bookDescBoxMobile {
   position: relative;
   bottom: 9rem;
-  max-width: 90%;
-  padding: 2rem;
+  max-width: 85%;
+  padding: 3rem;
   margin: 0 auto;
   direction: rtl;
   border-radius: 20px;
-  color: #4d4d4d;
+  color: #212121;
   background: rgba(255, 255, 255, 0.584);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
@@ -337,7 +340,7 @@
 }
 
 .bookDesc1Mobile {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-family: "Rubik-LightItalic";
   line-height: 4rem;
 }
@@ -454,6 +457,7 @@
     padding: 0.2rem 1rem;
     transition: scale 0.5s;
     z-index: 1;
+    padding: 0.75rem;
   }
 
   .reccomendation {

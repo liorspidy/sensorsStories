@@ -6,6 +6,7 @@
   flex-direction: column;
   width: 95%;
   margin: 0 auto;
+  max-width: 1500px;
 }
 
 .chars {
@@ -20,16 +21,15 @@
   font-family: "Rubik-Bold";
   text-align: end;
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: #f37b87;
-  padding-right: 6rem;
   margin-block-end: 2rem;
+  padding-inline: 6rem;
 }
 
-.title h2{
+.title h2 {
   margin: 0;
   filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
-
 }
 
 .sensorsBox,
@@ -95,7 +95,7 @@
 
 .charDesc {
   direction: rtl;
-  color: #4d4d4d;
+  color: #212121;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,7 +215,7 @@
 
 .charDescMobile {
   direction: rtl;
-  color: #4d4d4d;
+  color: #212121;
   display: flex;
   flex-direction: column;
   align-items: center;
