@@ -81,6 +81,7 @@ const Book = ({ isMobile }) => {
     }
   };
 
+
   return (
     <motion.div
       id="book"
@@ -99,6 +100,7 @@ const Book = ({ isMobile }) => {
         <p className={classes.reccomendor}>ליאורה רנרט</p>
       </motion.div>
       <div className={bookmainClass}>
+
         {!isMobile && (
           <motion.div className={classes.book} variants={bookVarients}>
             <img
@@ -118,6 +120,7 @@ const Book = ({ isMobile }) => {
             </motion.button>
           </motion.div>
         )}
+
         {isMobile && (
           <motion.div
             className={classes.bookMobile}
@@ -139,6 +142,7 @@ const Book = ({ isMobile }) => {
             </motion.button>
           </motion.div>
         )}
+
         <div className={descBoxClass}>
           <motion.img
             className={ortzevaClass}
@@ -166,8 +170,7 @@ const Book = ({ isMobile }) => {
               ובסוף הסיפורים מעיין לומדת להתחבר לתחושותיה, להבין מה היא אוהבת
               ומה לא, ובעיקר – היא לומדת להביע זאת במילים כדי למנוע בכי ותסכול."
             </p>
-          <div>
-            <p className={bookDesc2Class}>
+            <p className={classes.bookDesc2}>
               הספר "סיפורי חישנים" הינו ספר לילדים ומבוגרים בנושא מודעות לתקשורת
               חושית מאת קטי בירמן. הספר מבוסס על עבודת חייה כמאמנת לתקשורת חושית
               ומפתחת "שפת הרגש", המתמקדת בהבדלים בקלט החושי שהם המפתח להבנת
@@ -176,14 +179,12 @@ const Book = ({ isMobile }) => {
               מהם מתאר קושי אחר בחוש אחר, שנפתרים בעזרת יצורים קסומים הנקראים
               "חישנים".
             </p>
-            <p className={bookDesc2Class}>
+            <p className={classes.bookDesc2}>
               קטי בירמן מלמדת אותנו להסתכל על השונות בינינו במשקפיים חדשים
               וללמוד כיצד לתקשר טוב יותר מתוך ההכרה בשונות הפרופיל הסנסורי של כל
               אחד מאיתנו.
             </p>
-          </div>
           </motion.div>
-
 
           {!isMobile && (
             <motion.button
@@ -194,6 +195,7 @@ const Book = ({ isMobile }) => {
               <img src={arrow} alt="arrow" />
             </motion.button>
           )}
+
         </div>
       </div>
       <div className={bottomRecClass}>
