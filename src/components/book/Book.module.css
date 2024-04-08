@@ -263,7 +263,7 @@
 .reccomendation2Mobile p,
 .reccomendation3Mobile p {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 
 .reccomendationMobile .reccomendor,
@@ -346,7 +346,6 @@
 }
 
 .bookDesc2Mobile {
-  font-weight: bold;
   font-family: "Rubik-Bold";
   font-size: 2.4rem;
   line-height: 4rem;
@@ -397,7 +396,7 @@
   }
 }
 
-@media screen and (min-width: 1480px) {
+@media screen and (min-width: 1280px) {
   .ortzeva {
     scale: 0.3;
     margin: 0;
@@ -430,7 +429,7 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media (max-width: 1280px) {
   .ortzeva {
     scale: 0.3;
     margin: 0;
@@ -483,39 +482,3 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .ortzeva {
-    scale: 0.3;
-    margin: 0;
-    position: absolute;
-    top: -17rem;
-    right: -22rem;
-    z-index: 2;
-  }
-
-  .bookDesc1 {
-    font-size: 1rem;
-  }
-
-  .bookDesc2 {
-    font-weight: bold;
-    font-family: "Rubik-Bold";
-    font-size: 0.8rem;
-  }
-
-  .book img {
-    max-width: 18rem;
-    filter: drop-shadow(0px 2px 75px rgba(0, 0, 0, 0.3));
-    transition: all 1s;
-    cursor: pointer;
-  }
-
-  .bookDescBox {
-    max-width: 55rem;
-    min-width: 25rem;
-    padding: 2rem 4rem;
-    direction: rtl;
-    background-color: rgb(246, 251, 255);
-    border-radius: 50px;
-  }
-}
