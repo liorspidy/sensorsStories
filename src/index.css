@@ -10,7 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
-  overscroll-behavior: none;
+  overscroll-behavior-x: none;
   background-color: #ffef5c;
 }
 
