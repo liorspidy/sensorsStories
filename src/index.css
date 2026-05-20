@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: none;
+  }
+}
+
 body {
   margin: 0;
   padding: 0 !important;

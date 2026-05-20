@@ -1,0 +1,222 @@
+.buyBox {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Rubik-Bold";
+  text-align: end;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #f37b87;
+  padding-right: 6rem;
+}
+
+.title h2 {
+  margin: 0;
+  filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+}
+
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 2rem;
+  padding: 4rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+}
+
+.storeImg img {
+  object-fit: contain;
+  width: 17rem;
+  filter: drop-shadow(0 2px 30px rgb(255, 255, 255));
+  cursor: pointer;
+  transition: scale 0.6s;
+}
+
+.storeImg img:hover {
+  scale: 1.05;
+  transition: scale 0.6s;
+}
+
+.kids img {
+  object-fit: contain;
+  width: 30rem;
+  z-index: 2;
+}
+
+.kids {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------------------------- */
+
+.buyBoxMobile {
+  min-height: 90dvh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.titleMobile {
+  font-family: "Rubik-Bold";
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #f37b87;
+}
+
+.titleMobile h2 {
+  margin: 0;
+  filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+}
+
+.storesMobile {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 1rem;
+  padding: 5rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+}
+
+.storeImgMobile img {
+  object-fit: contain;
+  width: 12rem;
+  filter: drop-shadow(0 2px 30px rgb(255, 255, 255));
+  cursor: pointer;
+  transition: scale 0.6s;
+}
+
+.storeImgMobile img:hover {
+  scale: 1.05;
+  transition: scale 0.6s;
+}
+
+.kidsMobile img {
+  object-fit: contain;
+  width: 15rem;
+  z-index: 2;
+}
+
+.kidsMobile {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1424px) {
+  .storeImg img {
+    width: 15rem;
+  }
+
+  .kids img {
+    width: 26rem;
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .storeImg img {
+    width: 15rem;
+  }
+
+  .stores {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 2rem;
+    padding: 2rem;
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.3px);
+    -webkit-backdrop-filter: blur(7.3px);
+  }
+
+  .kids img {
+    width: 26rem;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .storeImg img {
+    width: 18rem;
+  }
+
+  .kids img {
+    width: 26rem;
+  }
+}
+
+/* 
+@media (max-width: 680px) {
+  .title {
+    width: 80%;
+    padding: 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .stores {
+    gap: 2rem;
+  }
+
+  .kids {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .title {
+    font-family: "Rubik-Bold";
+    text-align: end;
+    width: 80%;
+    padding: 0;
+    font-size: 1rem;
+    color: #f37b87;
+    text-align: center;
+  }
+
+  .storeImg img {
+    width: 11rem;
+  }
+
+  .kids img {
+    width: 16rem;
+  }
+} */
