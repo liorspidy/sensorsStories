@@ -9,7 +9,7 @@
     margin-top: -5rem;
 
     @media (max-width: 768px) {
-        min-height: 80dvw;
+        min-height: 75dvw;
         margin-top: 1rem;
     }
 }
@@ -101,65 +101,23 @@
         max-width: 40rem;
         object-fit: contain;
     }
-
-    /* .titleBox {
-    min-height: 100vw;
-  } */
 }
 
-@media screen and (max-width: 680px) {
+@media (max-width: 768px) {
     .title img {
-        width: 22rem;
-        object-fit: contain;
-        z-index: 1;
-        animation: floatUpDown 3s ease-in-out infinite;
-    }
-
-    .title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 50dvh;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .title img {
-        width: 18rem;
-        object-fit: contain;
-        z-index: 1;
-        animation: floatUpDown 3s ease-in-out infinite;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .title img {
-        width: 14rem;
+        width: min(22rem, 82vw);
         object-fit: contain;
         z-index: 1;
         animation: floatUpDown 3s ease-in-out infinite;
     }
 
     .scrollDown {
-        width: 1.5rem;
-        height: 3rem;
-        border: 3px solid #b7b7b7;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-        cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.21);
-        z-index: 1;
+        display: none;
     }
 
     .scrollDownCircle {
-        background-color: #b7b7b7;
         width: 0.6rem;
         height: 0.6rem;
-        border-radius: 50%;
         margin: 1.5rem 0;
-        animation: scrollIcon 2s ease-in-out infinite;
     }
 }

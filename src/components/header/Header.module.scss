@@ -137,10 +137,9 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 
-@media (max-width: 450px) {
-  .header_logo {
+@media (max-width: 768px) {
+  .headerLogo {
     height: 3rem;
-    display: flex;
-    object-fit: contain;
+    width: 10rem;
   }
 }

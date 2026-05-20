@@ -10,9 +10,8 @@
   padding: 1rem;
 
   @media (max-width: 768px) {
-    width: 90%;
-    padding: 1rem 4rem;
-    gap: 3rem;
+    gap: 1.5rem;
+    justify-content: flex-start;
   }
 }
 
@@ -23,16 +22,30 @@
   font-size: 2rem;
   color: #f37b87;
   margin-bottom: 5rem;
-}
 
-.title h2 {
-  margin: 0 auto;
-  text-align: center;
+  h2 {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .book {
   object-fit: contain;
   z-index: 2;
+
+  img {
+    max-width: 22rem;
+    filter: drop-shadow(0px 2px 75px rgba(0, 0, 0, 0.3));
+    transition: all 1s;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:hover {
+      scale: 1.05;
+      transition: all 0.7s;
+      filter: drop-shadow(0px 2px 120px rgba(0, 0, 0, 0.2));
+    }
+  }
 
   @media (max-width: 768px) {
     display: none;
@@ -42,6 +55,15 @@
 .bookMobile {
   object-fit: contain;
   z-index: 2;
+
+  img {
+    width: 75vw;
+    max-width: 42rem;
+    filter: drop-shadow(0px 2px 75px rgba(0, 0, 0, 0.3));
+    transition: all 1s;
+    cursor: pointer;
+    border-radius: 15px;
+  }
 
   @media (min-width: 769px) {
     display: none;
@@ -62,44 +84,54 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 0.2rem 1rem;
+  padding: 1rem;
   transition: scale 0.5s;
   z-index: 1;
-  padding: 1rem;
+
+  p {
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .reccomendor {
+    margin-top: 0.5rem;
+    font-family: "Rubik-Bold";
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+      margin-top: 0.75rem;
+    }
+  }
+
+  &:hover {
+    scale: 1.1;
+    transition: scale 0.5s;
+
+    @media (max-width: 768px) {
+      scale: 1.03;
+    }
+  }
 
   @media (max-width: 768px) {
-    background: rgba(255, 255, 255, 0.416);
-    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 0.2rem 2rem;
-    padding: 2rem;
+    padding: 1.25rem 1.5rem;
+    top: 0;
+    margin-left: 0;
+    max-width: min(90vw, 28rem);
   }
 }
 
 .reccomendation {
   top: 2rem;
-}
-
-.reccomendation p,
-.reccomendation2 p,
-.reccomendation3 p {
-  margin: 0;
 
   @media (max-width: 768px) {
-    font-size: 2.5rem;
-  }
-}
-
-.reccomendation .reccomendor,
-.reccomendation2 .reccomendor,
-.reccomendation3 .reccomendor {
-  margin-top: 0.5rem;
-  font-family: "Rubik-Bold";
-
-  @media (max-width: 768px) {
-    font-size: 1.8rem;
-    margin-top: 1rem;
+    top: 0;
   }
 }
 
@@ -107,22 +139,20 @@
   margin-left: 10rem;
   max-width: 26rem;
   top: -1rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    top: 0;
+  }
 }
 
 .reccomendation3 {
-  /* margin-right: -16rem; */
   max-width: 35rem;
   top: -3rem;
-}
-
-.reccomendation:hover,
-.reccomendation2:hover,
-.reccomendation3:hover {
-  scale: 1.1;
-  transition: scale 0.5s;
 
   @media (max-width: 768px) {
-    scale: 1.05;
+    top: 0;
+    max-width: min(90vw, 28rem);
   }
 }
 
@@ -145,23 +175,24 @@
   cursor: pointer;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   transition: 0.2s;
-}
 
-.buyNow:hover {
-  background-color: #fd8c98;
-  scale: 1.1;
+  &:hover {
+    background-color: #fd8c98;
+    scale: 1.1;
+  }
 }
 
 .buyNowMobile {
   border: none;
-  margin: 2rem auto;
+  margin: 2rem auto 8rem;
   background-color: #f37b87;
   color: white;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
   font-family: "Rubik-Bold";
   font-size: 1.5rem;
   cursor: pointer;
@@ -176,29 +207,6 @@
   }
 }
 
-.book img:hover {
-  scale: 1.05;
-  transition: all 0.7s;
-  filter: drop-shadow(0px 2px 120px rgba(0, 0, 0, 0.2));
-}
-
-.book img {
-  max-width: 22rem;
-  filter: drop-shadow(0px 2px 75px rgba(0, 0, 0, 0.3));
-  transition: all 1s;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.bookMobile img {
-  width: 75vw;
-  max-width: 42rem;
-  filter: drop-shadow(0px 2px 75px rgba(0, 0, 0, 0.3));
-  transition: all 1s;
-  cursor: pointer;
-  border-radius: 15px;
-}
-
 .bookmain {
   display: flex;
   z-index: 1;
@@ -206,7 +214,10 @@
   align-items: center;
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
   }
 }
 
@@ -229,16 +240,12 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   @media (max-width: 768px) {
-    position: relative;
-    bottom: 9rem;
-    max-width: 85%;
+    position: static;
     min-width: unset;
-    padding: 3rem;
-    margin: 0 auto;
+    padding: 1.5rem;
     border-radius: 20px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    z-index: -1;
   }
 }
 
@@ -247,8 +254,8 @@
   font-family: "Rubik-LightItalic";
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -256,6 +263,11 @@
   font-weight: bold;
   font-family: "Rubik-Bold";
   font-size: 1.125rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
 }
 
 .bookDesc {
@@ -276,14 +288,14 @@
   border: none;
   border-radius: 50%;
 
+  &:hover {
+    filter: brightness(0.8);
+    transition: all 0.3s;
+  }
+
   @media (max-width: 768px) {
     display: none;
   }
-}
-
-.arrow:hover {
-  filter: brightness(0.8);
-  transition: all 0.3s;
 }
 
 .ortzeva {
@@ -296,8 +308,9 @@
   cursor: pointer;
 
   @media (max-width: 768px) {
-    scale: 0.8;
-    position: static;
+    right: unset;
+    left: 25%;
+    transform: translateX(-100%);
   }
 }
 
@@ -311,7 +324,7 @@
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
   }
 }
 
@@ -360,7 +373,7 @@
   }
 }
 
-@media (min-width: 981px) and (max-width: 1280px) {
+@media (min-width: 769px) and (max-width: 1280px) {
   .ortzeva {
     scale: 0.3;
     margin: 0;
@@ -373,20 +386,8 @@
   .reccomendation,
   .reccomendation2,
   .reccomendation3 {
-    direction: rtl;
-    font-family: "Rubik-LightItalic";
     font-size: 0.7rem;
     max-width: 26rem;
-    position: relative;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0.2rem 1rem;
-    transition: scale 0.5s;
-    z-index: 1;
     padding: 0.75rem;
   }
 
@@ -410,13 +411,5 @@
     filter: drop-shadow(0px 2px 75px rgba(0, 0, 0, 0.3));
     transition: all 1s;
     cursor: pointer;
-  }
-}
-
-@media (max-width: 980px){
-  .bookDesc2{
-    font-family: "Rubik-Bold";
-    font-size: 2.4rem;
-    line-height: 4rem;
   }
 }

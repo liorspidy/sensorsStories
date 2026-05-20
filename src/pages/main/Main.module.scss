@@ -58,7 +58,11 @@
   }
 }
 
-@media (max-width: 748px) {
+@media (max-width: 768px) {
+  .main {
+    padding-inline: 1rem;
+  }
+
   .arrowUp {
     display: none;
   }

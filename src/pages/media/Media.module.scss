@@ -30,12 +30,15 @@
 
 @media (max-width: 768px) {
   .media {
-    margin-top: 10rem;
+    margin-top: 5rem;
+    padding: 1rem;
+    height: auto;
+    min-height: 100dvh;
   }
 
   .title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 1.5rem;
     padding-inline-start: 0;
   }
 

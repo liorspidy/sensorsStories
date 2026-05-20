@@ -30,7 +30,7 @@
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
-        grid-template-rows: unset;
+        grid-template-rows: auto;
         grid-template-areas:
             "text"
             "button"
@@ -38,8 +38,9 @@
             "photo";
         flex: unset;
         height: auto;
-        gap: 1rem;
+        gap: 1.5rem;
         margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
     }
 }
 
@@ -64,8 +65,9 @@
     height: 100%;
 
     @media (max-width: 768px) {
-        width: 60dvw;
-        height: 75dvw;
+        width: min(75dvw, 22rem);
+        height: auto;
+        aspect-ratio: 3 / 4;
         border-radius: 20px;
         display: block;
         margin: 0 auto;
@@ -92,7 +94,11 @@
         border-radius: 16px;
         padding: 1.5rem;
         width: 90%;
-        justify-self: center;
+        justify-self: center; 
+
+        p {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -124,11 +130,12 @@
         text-align: center;
         font-size: 1.2rem;
         border-radius: 15px;
-        padding: 0.75rem 2rem;
+        padding: 0.875rem 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        white-space: normal;
     }
 }
 
@@ -140,7 +147,7 @@
     min-width: 0;
 
     @media (max-width: 768px) {
-        width: 60dvw;
+        width: min(70dvw, 20rem);
         justify-self: center;
     }
 
