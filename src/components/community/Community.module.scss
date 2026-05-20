@@ -1,457 +1,391 @@
 .community {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  direction: rtl;
-  height: 100dvh;
-  width: 95%;
-  margin: 0 auto;
-  max-width: 1500px;
-  scroll-snap-align: start;
-}
-
-.communityBox {
-  padding-inline: 6rem;
-  width: 100%;
-}
-
-.titleContainer {
-  font-family: "Rubik-Bold";
-  text-align: end;
-  width: 100%;
-  font-size: 1.75rem;
-  color: #f37b87;
-}
-
-.titleContainer .title {
-  margin: 0;
-  text-align: start;
-  filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "form     form      form     joinText joinText joinText"
+        "form     form      form     joinText joinText joinText"
+        "form     form      form     joinText joinText joinText"
+        "madadon  madadon   madadon  joinText joinText joinText"
+        "madadon  madadon   madadon  joinText joinText joinText";
+    gap: 1rem;
+    flex: 1;
+    min-height: 0;
+    width: 100%;
 }
 
 .boldText {
-  font-family: "Rubik-Bold";
-  width: 100%;
-  font-size: 1.75rem;
-  margin-block: 2rem;
-  text-align: start;
-  color: #4c9aac;
+    font-family: "Rubik-Bold";
+    width: 100%;
+    font-size: 1.75rem;
+    margin-block: 2rem;
+    text-align: start;
+    color: #4c9aac;
 }
 
 .community .joinText .freeText {
-  font-size: 2.25rem;
-  color: #f37b87;
-  filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
-}
-
-.community .contentBox {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  max-width: 1350px;
-  margin: 0 auto;
+    font-size: 2.25rem;
+    color: #f37b87;
+    filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
 }
 
 .joinText {
-  font-family: "Rubik-Regular";
-  flex: 1 1;
-  margin-left: 4rem;
-  background-color: aliceblue;
-  padding: 0 2rem;
-  margin-top: 2rem;
-  border-radius: 16px;
-  border: 1px solid white;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    grid-area: joinText;
+    font-family: "Rubik-Regular";
+    background-color: aliceblue;
+    padding: 0 2rem;
+    border-radius: 16px;
+    border: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow: auto;
 }
 
 .joinText p {
-  color: #212121;
-  font-size: 1.25rem;
+    color: #212121;
+    font-size: 1.25rem;
 }
 
 .listItem {
-  margin-block: 1rem;
-  font-family: "Rubik-Bold";
-  font-size: 1.35rem;
-  color: #212121;
+    margin-block: 1rem;
+    font-family: "Rubik-Bold";
+    font-size: 1.35rem;
+    color: #212121;
 }
 
 .list {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .list .listItem:before {
-  content: "✓";
-  margin-left: 0.5rem;
-  color: #4c9aac;
-  font-family: "Rubik-Italic";
-}
-
-.content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-block: 2rem;
-  flex: 1 1;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 5rem;
+    content: "✓";
+    margin-left: 0.5rem;
+    color: #4c9aac;
+    font-family: "Rubik-Italic";
 }
 
 .community .unsubmitted label {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .inputContainer:has(input:required) label::after {
-  content: "*";
-  color: red;
-  font-size: 1.2rem;
-  margin-inline: 0.25rem;
+    content: "*";
+    color: red;
+    font-size: 1.2rem;
+    margin-inline: 0.25rem;
 }
 
 .form {
-  width: 100%;
-  max-width: 650px;
-  direction: rtl;
-  font-family: "Rubik-Bold";
-  font-size: 1.2rem;
-  position: relative;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 2rem;
-  transition: scale 0.5s;
-  z-index: 1;
+    grid-area: form;
+    width: 100%;
+    direction: rtl;
+    font-family: "Rubik-Bold";
+    font-size: 1.2rem;
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    transition: scale 0.5s;
+    z-index: 1;
 }
 
 .unsubmitted {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form .unsubmitted button {
-  padding: 0.6rem 0.8rem;
-  border-radius: 10px;
-  background-color: #4c9aac;
-  color: white;
-  font-size: 1.2rem;
-  direction: rtl;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  font-family: "Rubik-Bold";
-  transition: all 0.3s;
-  border: none;
-  align-self: flex-end;
-}
-
-.form .unsubmitted button:hover {
-  transition: all 0.3s;
-  scale: 1.1;
-  background-color: #56afc3;
-}
-
-.submitted {
-  width: 100%;
-  font-size: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.submitted p {
-  margin-block: 0.5rem;
-}
-
-.submitted .imageContainer {
-  display: flex;
-  margin: 0 2rem;
-  width: 15rem;
-  text-align: center;
-  cursor: pointer;
-}
-
-.submitted .image {
-  object-fit: contain;
-  width: 100%;
-}
-
-.formButton {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-}
-
-.inputContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0.5rem;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.inputContainer input {
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  height: 2rem;
-  width: 100%;
-  margin: 0 auto;
-  padding-inline: 2dvw;
-  font-size: 1.2rem;
-  font-family: "Rubik-Regular";
-}
-
-.inputContainer textarea {
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  height: 12rem;
-  width: 100%;
-  margin: 0 auto;
-  padding-inline: 2rem;
-  font-size: 1.2rem;
-  font-family: "Rubik-Regular";
-}
-
-.submitted {
-  text-align: center;
-}
-
-.madadon {
-  position: relative;
-  align-self: end;
-  text-align: center;
-}
-
-.madadon img {
-  object-fit: contain;
-  width: 20rem;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-}
-
-.madadon::after {
-  content: "";
-  bottom: 0rem;
-  display: block;
-  width: 20rem;
-  height: 1.35rem;
-  border-radius: 50%;
-  position: absolute;
-  background-color: #0000003a;
-  filter: blur(5px);
-  z-index: 1;
-}
-
-.bottom {
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.bottom .talkbaloonContainer {
-  width: 8rem;
-  display: flex;
-  z-index: 10;
-  position: relative;
-  top: 3rem;
-  left: -3rem;
-}
-
-.bottom .talkbaloonContainer .talkbaloon {
-  width: 100%;
-}
-
-.checkmarkBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-
-.checkmark {
-  font-size: 2.5rem;
-  color: rgb(74, 165, 53);
-}
-
-@media (max-width: 768px) {
-  .titleContainer {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .titleContainer .title {
-    filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
-  }
-
-  .community {
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 85%;
-    height: auto;
-  }
-
-  .community .communityBox {
-    padding-inline: 2rem;
-  }
-
-  .community .contentBox {
-    flex-direction: column;
-  }
-
-  .community .title {
-    font-size: 2rem;
-  }
-
-  .community .joinText {
-    margin-left: 0;
-    padding: 1rem 3rem 2rem 3rem;
-    margin-bottom: 4rem;
-  }
-
-  .community .joinText p {
-    font-size: 1rem;
-  }
-
-  .community .listItem {
-    font-size: 1.1rem;
-  }
-
-  .community .joinText .boldText {
-    font-size: 1.3rem;
-    text-align: center;
-  }
-
-  .community .joinText .freeText {
-    font-size: 1.5rem;
-    color: #f37b87;
-    filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
-  }
-
-  .form {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 1.5rem;
-    font-size: 1.4rem;
-  }
+    gap: 1rem;
+}
 
-  .formButton {
-    width: 95%;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .formButton button {
-    padding: 1rem 1.5rem;
+.form .unsubmitted button {
+    padding: 0.6rem 0.8rem;
     border-radius: 10px;
+    background-color: #4c9aac;
+    color: white;
     font-size: 1.2rem;
-  }
+    direction: rtl;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Rubik-Bold";
+    transition: all 0.3s;
+    border: none;
+    align-self: flex-end;
+}
 
-  .inputContainer {
-    width: 90%;
-  }
+.form .unsubmitted button:hover {
+    transition: all 0.3s;
+    scale: 1.1;
+    background-color: #56afc3;
+}
 
-  .inputContainer input {
-    height: 3rem;
-    font-size: 1.2rem;
-  }
+.submitted {
+    width: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-  .inputContainer textarea {
-    height: 12rem;
-    padding-inline: 1rem;
-    font-size: 1.2rem;
-  }
+.submitted p {
+    margin-block: 0.5rem;
+}
 
-  .inputContainer:has(input:required) label::after {
-    font-size: 1rem;
-    margin-inline: 0.5rem;
-  }
+.submitted .imageContainer {
+    display: flex;
+    margin: 0 2rem;
+    width: 15rem;
+    text-align: center;
+    cursor: pointer;
+}
 
-  .madadon {
-    width: 80%;
+.submitted .image {
+    object-fit: contain;
+    width: 100%;
+}
+
+.formButton {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
     margin: 0 auto;
-  }
+}
 
-  .madadon img {
+.inputContainer input {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    height: 2rem;
     width: 100%;
-  }
+    margin: 0 auto;
+    padding-inline: 2dvw;
+    font-size: 1.2rem;
+    font-family: "Rubik-Regular";
+}
 
-  .madadon::after {
+.inputContainer textarea {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    height: 12rem;
     width: 100%;
-  }
+    margin: 0 auto;
+    padding-inline: 2rem;
+    font-size: 1.2rem;
+    font-family: "Rubik-Regular";
+}
+
+.madadon {
+    grid-area: madadon;
+    position: relative;
+    align-self: end;
+    justify-self: center;
+    text-align: center;
+}
+
+.madadon img {
+    object-fit: contain;
+    width: 20rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.madadon::after {
+    content: "";
+    bottom: 0rem;
+    display: block;
+    width: 20rem;
+    height: 1.35rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #0000003a;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.checkmarkBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.checkmark {
+    font-size: 2.5rem;
+    color: rgb(74, 165, 53);
+}
+
+/* ---------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .titleContainer {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .titleContainer .title {
+        filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+    }
+
+    .community {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 85%;
+        height: auto;
+    }
+
+    .communityBox {
+        grid-template-columns: 1fr;
+        grid-template-rows: unset;
+        grid-template-areas:
+            "joinText"
+            "form"
+            "madadon";
+        flex: unset;
+        height: auto;
+        padding-bottom: 0;
+        margin-bottom: 2rem;
+    }
+
+    .community .title {
+        font-size: 2rem;
+    }
+
+    .community .joinText {
+        padding: 1rem 3rem 2rem 3rem;
+    }
+
+    .community .joinText p {
+        font-size: 1rem;
+    }
+
+    .community .listItem {
+        font-size: 1.1rem;
+    }
+
+    .community .joinText .boldText {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .community .joinText .freeText {
+        font-size: 1.5rem;
+        color: #f37b87;
+        filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .formButton {
+        width: 95%;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .formButton button {
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        font-size: 1.2rem;
+    }
+
+    .inputContainer {
+        width: 90%;
+    }
+
+    .inputContainer input {
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+
+    .inputContainer textarea {
+        height: 12rem;
+        padding-inline: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .inputContainer:has(input:required) label::after {
+        font-size: 1rem;
+        margin-inline: 0.5rem;
+    }
+
+    .madadon {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .madadon img {
+        width: 100%;
+    }
+
+    .madadon::after {
+        width: 100%;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1280px) {
-  .form {
-    font-size: 1.25rem;
-    padding: 2rem;
-    gap: 0.5rem;
-  }
+    .form {
+        font-size: 1.25rem;
+        padding: 2rem;
+        gap: 0.5rem;
+    }
 
-  .community .unsubmitted label {
-    font-size: 1.25rem;
-  }
+    .community .unsubmitted label {
+        font-size: 1.25rem;
+    }
 
-  .inputContainer input {
-    height: 2rem;
-    font-size: 1rem;
-  }
+    .inputContainer input {
+        height: 2rem;
+        font-size: 1rem;
+    }
 
-  .community .joinText {
-    font-size: 1rem;
-  }
+    .community .joinText {
+        font-size: 1rem;
+    }
 
-  .community .joinText .boldText{
-    margin-bottom: 0;
-  }
+    .community .joinText .boldText {
+        margin-bottom: 0;
+        font-size: 1.4rem;
+    }
 
-  .community .joinText p{
-    font-size: 1.15rem;
-    margin: 0;
-  }
+    .community .joinText p {
+        font-size: 1.15rem;
+        margin: 0;
+    }
 
-  .community .joinText .boldText {
-    font-size: 1.4rem;
-  }
+    .community .joinText .listItem {
+        font-size: 1.25rem;
+    }
 
-  .community .joinText .listItem{
-    font-size: 1.25rem;
-  }
+    .unsubmitted .errorMessage {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
 
-  .unsubmitted .errorMessage {
-    font-size: 2rem;
-    margin-bottom: 0;
-  }
-
-  .content {
-    gap: 3rem;
-  }
-
-  .madadon img {
-    width: 12rem;
-  }
-
-  .madadon::after {
-    width: 12rem;
-    height: 0.7rem;
-  }
+    .madadon::after {
+        width: 12rem;
+        height: 0.7rem;
+    }
 }
-

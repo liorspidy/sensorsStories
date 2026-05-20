@@ -27,10 +27,7 @@ const Characters = () => {
       transition={{ staggerChildren: 0.4 }}
       viewport={{ once: true, amount: 0.1 }}
     >
-      <motion.div className={classes.title} variants={aboutBoxVarients}>
-        <h2>הכירו את החישנים</h2>
-      </motion.div>
-      <motion.div className={classes.chars}>
+<motion.div className={classes.chars}>
         {(CharactersJson as SensorData[]).map((sensor, index) => (
           <Character
             key={index}

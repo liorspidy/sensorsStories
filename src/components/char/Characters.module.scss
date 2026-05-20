@@ -1,13 +1,11 @@
 .Characters {
-  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 95%;
-  margin: 0 auto;
-  max-width: 1500px;
-  scroll-snap-align: start;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
 }
 
 .chars {
@@ -16,21 +14,6 @@
   align-items: center;
   gap: 1rem;
   margin: 1rem 3rem;
-}
-
-.title {
-  font-family: "Rubik-Bold";
-  text-align: end;
-  width: 100%;
-  font-size: 1.75rem;
-  color: #f37b87;
-  margin-block-end: 2rem;
-  padding-inline: 6rem;
-}
-
-.title h2 {
-  margin: 0;
-  filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
 }
 
 .sensorsBox {

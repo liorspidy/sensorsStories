@@ -54,10 +54,7 @@ const Contact = () => {
       transition={{ staggerChildren: 0.4 }}
       viewport={{ once: true, amount: 0.1 }}
     >
-      <motion.div className={classes.title} variants={aboutBoxVarients}>
-        <h2>צרו קשר </h2>
-      </motion.div>
-      <div className={classes.contactBox}>
+<div className={classes.contactBox}>
         <div className={classes.contactPhotos}>
           <motion.img
             variants={momVarients}

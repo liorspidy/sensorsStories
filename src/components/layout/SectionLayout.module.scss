@@ -1,0 +1,36 @@
+.section {
+    width: 100%;
+    max-width: 1028px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    scroll-snap-align: start;
+    padding-block: 1rem;
+
+    @media (max-width: 768px) {
+        height: auto;
+        padding-block: unset;
+    }
+}
+
+.titleContainer {
+    font-family: "Rubik-Bold";
+    text-align: end;
+    font-size: 1.75rem;
+    color: #f37b87;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+        text-align: center;
+        font-size: 1.5rem;
+        padding-block: 1rem;
+    }
+}
+
+.sectionTitle {
+    margin: 0;
+    filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+}

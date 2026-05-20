@@ -4,12 +4,10 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  min-height: 100dvh;
-  width: 95%;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
   padding: 1rem;
-  margin: 0 auto;
-  max-width: 1350px;
-  scroll-snap-align: start;
 
   @media (max-width: 768px) {
     width: 90%;

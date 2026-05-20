@@ -1,0 +1,78 @@
+{
+  "_Loading-iWe7187A.js": {
+    "file": "assets/Loading-iWe7187A.js",
+    "name": "Loading"
+  },
+  "_ketty-BYi68K_X.js": {
+    "file": "assets/ketty-BYi68K_X.js",
+    "name": "ketty",
+    "assets": [
+      "assets/ketty-C0o_BU-c.jpeg"
+    ]
+  },
+  "src/main.tsx": {
+    "file": "main.mjs",
+    "name": "main",
+    "src": "src/main.tsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/pages/main/Main.tsx",
+      "src/pages/about/About.tsx",
+      "src/pages/media/Media.tsx"
+    ],
+    "assets": [
+      "assets/logoEmpty-FhWtArQI.png",
+      "assets/Rubik-Regular-tpf8T38f.ttf",
+      "assets/Rubik-Bold-BDJ76Zj9.ttf",
+      "assets/Rubik-Italic-B8X2id_i.ttf",
+      "assets/Rubik-Light-DofZTQOd.ttf",
+      "assets/Rubik-LightItalic-Bu5eToiy.ttf"
+    ]
+  },
+  "src/pages/about/About.tsx": {
+    "file": "assets/About-DtdW8RkA.js",
+    "name": "About",
+    "src": "src/pages/about/About.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ketty-BYi68K_X.js"
+    ],
+    "assets": [
+      "assets/withbook-Bxs7-ukZ.jpeg",
+      "assets/withbookglasses-BhO58dur.jpeg",
+      "assets/books-CwanAqjn.jpeg"
+    ]
+  },
+  "src/pages/main/Main.tsx": {
+    "file": "assets/Main-Bt-O06qj.js",
+    "name": "Main",
+    "src": "src/pages/main/Main.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ketty-BYi68K_X.js",
+      "_Loading-iWe7187A.js"
+    ],
+    "assets": [
+      "assets/book-BJxHaI-W.jpg",
+      "assets/ortzeva-RemH7pAx.png",
+      "assets/kids-eTh-8wyF.png",
+      "assets/title-DvLWhY32.png",
+      "assets/hearts1-Y_7WctyW.png",
+      "assets/momandgirl-WOZ6ElNp.png",
+      "assets/madadon1-Ccqlq5XM.png",
+      "assets/background-C7q-YEIw.png"
+    ]
+  },
+  "src/pages/media/Media.tsx": {
+    "file": "assets/Media-CrZvWK2O.js",
+    "name": "Media",
+    "src": "src/pages/media/Media.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Loading-iWe7187A.js"
+    ],
+    "assets": [
+      "assets/background-C7q-YEIw.png"
+    ]
+  }
+}

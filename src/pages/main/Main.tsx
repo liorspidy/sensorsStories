@@ -10,6 +10,7 @@ import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import Community from "../../components/community/Community";
 import Buy from "../../components/buy/Buy";
 import { useMain } from "./useMain";
+import SectionLayout from "../../components/layout/SectionLayout";
 
 const Main = () => {
     const { showArrow, scrollToTop } = useMain();
@@ -42,13 +43,13 @@ const Main = () => {
                     <h4>חזרה למעלה</h4>
                 </button>
             )}
-            <Title />
-            <Book />
-            <Author />
-            <Community />
-            <Characters />
-            {/* <Buy /> */}
-            <Contact />
+            <SectionLayout><Title /></SectionLayout>
+            <SectionLayout><Book /></SectionLayout>
+            <SectionLayout title="אודות קטי"><Author /></SectionLayout>
+            <SectionLayout title="הצטרפו לקהילה"><Community /></SectionLayout>
+            <SectionLayout title="הכירו את החישנים"><Characters /></SectionLayout>
+            {/* <SectionLayout><Buy /></SectionLayout> */}
+            <SectionLayout title="צרו קשר"><Contact /></SectionLayout>
         </div>
     );
 };

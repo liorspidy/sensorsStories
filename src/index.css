@@ -16,12 +16,9 @@ body {
   margin: 0;
   padding: 0 !important;
   font-family: "Rubik-Regular", "Rubik-Bold", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
   overscroll-behavior-x: none;
   background-color: #ffef5c;
+  /* direction: rtl; */
 }
 
 code {
