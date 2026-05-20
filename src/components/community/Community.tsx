@@ -95,6 +95,7 @@ const Community = () => {
                                 onChange={(e) =>
                                     setSubscriberPhone(e.target.value)
                                 }
+                                required
                             />
                         </div>
                         {subscriberError.length > 0 && (

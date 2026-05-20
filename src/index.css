@@ -18,12 +18,6 @@ body {
   font-family: "Rubik-Regular", "Rubik-Bold", sans-serif;
   overscroll-behavior-x: none;
   background-color: #ffef5c;
-  /* direction: rtl; */
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 @font-face {

@@ -12,6 +12,86 @@
     flex: 1;
     min-height: 0;
     width: 100%;
+
+    .joinText {
+        grid-area: joinText;
+        font-family: "Rubik-Regular";
+        background-color: aliceblue;
+        padding: 0 2rem;
+        border-radius: 16px;
+        border: 1px solid white;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        direction: rtl;
+
+        p {
+            color: #212121;
+            font-size: 1.25rem;
+        }
+
+        .freeText {
+            font-size: 2.25rem;
+            color: #f37b87;
+            filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+        }
+
+        .boldText {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .listItem {
+            font-size: 1.1rem;
+        }
+    }
+
+    .unsubmitted {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+
+        label {
+            font-size: 1.5rem;
+        }
+
+        .errorMessage {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+    }
+
+    .madadon {
+        grid-area: madadon;
+        position: relative;
+        align-self: end;
+        justify-self: center;
+        text-align: center;
+
+        img {
+            object-fit: contain;
+            width: 20rem;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+        }
+
+        &::after {
+            content: "";
+            bottom: 0rem;
+            display: block;
+            width: 20rem;
+            height: 1.35rem;
+            border-radius: 50%;
+            position: absolute;
+            background-color: #0000003a;
+            filter: blur(5px);
+            z-index: 1;
+        }
+    }
 }
 
 .boldText {
@@ -21,29 +101,6 @@
     margin-block: 2rem;
     text-align: start;
     color: #4c9aac;
-}
-
-.community .joinText .freeText {
-    font-size: 2.25rem;
-    color: #f37b87;
-    filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
-}
-
-.joinText {
-    grid-area: joinText;
-    font-family: "Rubik-Regular";
-    background-color: aliceblue;
-    padding: 0 2rem;
-    border-radius: 16px;
-    border: 1px solid white;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-}
-
-.joinText p {
-    color: #212121;
-    font-size: 1.25rem;
 }
 
 .listItem {
@@ -56,24 +113,13 @@
 .list {
     list-style: none;
     padding: 0;
-}
 
-.list .listItem:before {
-    content: "✓";
-    margin-left: 0.5rem;
-    color: #4c9aac;
-    font-family: "Rubik-Italic";
-}
-
-.community .unsubmitted label {
-    font-size: 1.5rem;
-}
-
-.inputContainer:has(input:required) label::after {
-    content: "*";
-    color: red;
-    font-size: 1.2rem;
-    margin-inline: 0.25rem;
+    .listItem::before {
+        content: "✓";
+        margin-left: 0.5rem;
+        color: #4c9aac;
+        font-family: "Rubik-Italic";
+    }
 }
 
 .form {
@@ -92,36 +138,27 @@
     padding: 2rem;
     transition: scale 0.5s;
     z-index: 1;
-}
 
-.unsubmitted {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1rem;
-}
+    .unsubmitted button {
+        padding: 0.6rem 0.8rem;
+        border-radius: 10px;
+        background-color: #4c9aac;
+        color: white;
+        font-size: 1.2rem;
+        direction: rtl;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        font-family: "Rubik-Bold";
+        transition: all 0.3s;
+        border: none;
+        align-self: flex-end;
 
-.form .unsubmitted button {
-    padding: 0.6rem 0.8rem;
-    border-radius: 10px;
-    background-color: #4c9aac;
-    color: white;
-    font-size: 1.2rem;
-    direction: rtl;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    font-family: "Rubik-Bold";
-    transition: all 0.3s;
-    border: none;
-    align-self: flex-end;
-}
-
-.form .unsubmitted button:hover {
-    transition: all 0.3s;
-    scale: 1.1;
-    background-color: #56afc3;
+        &:hover {
+            transition: all 0.3s;
+            scale: 1.1;
+            background-color: #56afc3;
+        }
+    }
 }
 
 .submitted {
@@ -132,23 +169,23 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-}
 
-.submitted p {
-    margin-block: 0.5rem;
-}
+    p {
+        margin-block: 0.5rem;
+    }
 
-.submitted .imageContainer {
-    display: flex;
-    margin: 0 2rem;
-    width: 15rem;
-    text-align: center;
-    cursor: pointer;
-}
+    .imageContainer {
+        display: flex;
+        margin: 0 2rem;
+        width: 15rem;
+        text-align: center;
+        cursor: pointer;
+    }
 
-.submitted .image {
-    object-fit: contain;
-    width: 100%;
+    .image {
+        object-fit: contain;
+        width: 100%;
+    }
 }
 
 .formButton {
@@ -165,57 +202,28 @@
     gap: 0.5rem;
     width: 100%;
     margin: 0 auto;
-}
 
-.inputContainer input {
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    height: 2rem;
-    width: 100%;
-    margin: 0 auto;
-    padding-inline: 2dvw;
-    font-size: 1.2rem;
-    font-family: "Rubik-Regular";
-}
+    input {
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        height: 2rem;
+        width: 100%;
+        margin: 0 auto;
+        padding-inline: 2dvw;
+        font-size: 1.2rem;
+        font-family: "Rubik-Regular";
+    }
 
-.inputContainer textarea {
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    height: 12rem;
-    width: 100%;
-    margin: 0 auto;
-    padding-inline: 2rem;
-    font-size: 1.2rem;
-    font-family: "Rubik-Regular";
-}
-
-.madadon {
-    grid-area: madadon;
-    position: relative;
-    align-self: end;
-    justify-self: center;
-    text-align: center;
-}
-
-.madadon img {
-    object-fit: contain;
-    width: 20rem;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-}
-
-.madadon::after {
-    content: "";
-    bottom: 0rem;
-    display: block;
-    width: 20rem;
-    height: 1.35rem;
-    border-radius: 50%;
-    position: absolute;
-    background-color: #0000003a;
-    filter: blur(5px);
-    z-index: 1;
+    textarea {
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        height: 12rem;
+        width: 100%;
+        margin: 0 auto;
+        padding-inline: 2rem;
+        font-size: 1.2rem;
+        font-family: "Rubik-Regular";
+    }
 }
 
 .checkmarkBox {
@@ -233,20 +241,47 @@
 /* ---------------------------------------------------------------- */
 
 @media (max-width: 768px) {
-    .titleContainer {
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
-    .titleContainer .title {
-        filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
-    }
-
     .community {
         justify-content: center;
         flex-wrap: wrap;
         width: 85%;
         height: auto;
+
+        .title {
+            font-size: 2rem;
+        }
+
+        .joinText {
+            padding: 1rem 3rem 2rem 3rem;
+
+            p {
+                font-size: 1rem;
+            }
+
+            .boldText {
+                font-size: 1.3rem;
+                text-align: center;
+            }
+
+            .freeText {
+                font-size: 1.5rem;
+                color: #f37b87;
+                filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+            }
+
+            .listItem {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .titleContainer {
+        text-align: center;
+        font-size: 1.5rem;
+
+        .title {
+            filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
+        }
     }
 
     .communityBox {
@@ -260,33 +295,6 @@
         height: auto;
         padding-bottom: 0;
         margin-bottom: 2rem;
-    }
-
-    .community .title {
-        font-size: 2rem;
-    }
-
-    .community .joinText {
-        padding: 1rem 3rem 2rem 3rem;
-    }
-
-    .community .joinText p {
-        font-size: 1rem;
-    }
-
-    .community .listItem {
-        font-size: 1.1rem;
-    }
-
-    .community .joinText .boldText {
-        font-size: 1.3rem;
-        text-align: center;
-    }
-
-    .community .joinText .freeText {
-        font-size: 1.5rem;
-        color: #f37b87;
-        filter: drop-shadow(0 2px rgba(0, 0, 0, 1));
     }
 
     .form {
@@ -303,45 +311,45 @@
         width: 95%;
         justify-content: center;
         margin-top: 2rem;
-    }
 
-    .formButton button {
-        padding: 1rem 1.5rem;
-        border-radius: 10px;
-        font-size: 1.2rem;
+        button {
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
+        }
     }
 
     .inputContainer {
         width: 90%;
-    }
 
-    .inputContainer input {
-        height: 3rem;
-        font-size: 1.2rem;
-    }
+        input {
+            height: 3rem;
+            font-size: 1.2rem;
+        }
 
-    .inputContainer textarea {
-        height: 12rem;
-        padding-inline: 1rem;
-        font-size: 1.2rem;
-    }
+        textarea {
+            height: 12rem;
+            padding-inline: 1rem;
+            font-size: 1.2rem;
+        }
 
-    .inputContainer:has(input:required) label::after {
-        font-size: 1rem;
-        margin-inline: 0.5rem;
+        &:has(input:required) label::after {
+            font-size: 1rem;
+            margin-inline: 0.5rem;
+        }
     }
 
     .madadon {
         width: 80%;
         margin: 0 auto;
-    }
 
-    .madadon img {
-        width: 100%;
-    }
+        img {
+            width: 100%;
+        }
 
-    .madadon::after {
-        width: 100%;
+        &::after {
+            width: 100%;
+        }
     }
 }
 
@@ -352,31 +360,33 @@
         gap: 0.5rem;
     }
 
-    .community .unsubmitted label {
-        font-size: 1.25rem;
+    .community {
+        .unsubmitted label {
+            font-size: 1.25rem;
+        }
+
+        .joinText {
+            font-size: 1rem;
+
+            .boldText {
+                margin-bottom: 0;
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 1.15rem;
+                margin: 0;
+            }
+
+            .listItem {
+                font-size: 1.25rem;
+            }
+        }
     }
 
     .inputContainer input {
         height: 2rem;
         font-size: 1rem;
-    }
-
-    .community .joinText {
-        font-size: 1rem;
-    }
-
-    .community .joinText .boldText {
-        margin-bottom: 0;
-        font-size: 1.4rem;
-    }
-
-    .community .joinText p {
-        font-size: 1.15rem;
-        margin: 0;
-    }
-
-    .community .joinText .listItem {
-        font-size: 1.25rem;
     }
 
     .unsubmitted .errorMessage {
